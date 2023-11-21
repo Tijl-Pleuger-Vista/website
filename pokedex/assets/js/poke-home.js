@@ -61,7 +61,8 @@ let pokedex = () => {
       }, a * v)
     })
   })
-  document.cookie = Form.innerHTML
+  // document.cookie = Form.innerHTML
+
 };
 pokedex();
 
@@ -132,7 +133,7 @@ pokedex();
     })
 
     function updatGIF(){
-
+    
         var divId
 
         document.addEventListener('click', (e) =>
@@ -216,3 +217,18 @@ pokedex();
 
     }
 
+
+    function save(){
+      var MyDiv1 = document.getElementById('Form')
+      console.log(MyDiv1)
+      // document.cookie = MyDiv1;
+      createCookie("testCookie", MyDiv1);
+
+    }
+
+    function checkCookie()
+    {
+      var user = accessCookie("testCookie");
+      if (user!="")
+      alert("Welcome Back " + user + "!!!");
+    }

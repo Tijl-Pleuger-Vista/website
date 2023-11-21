@@ -15,7 +15,7 @@
         <script src="assets/js/poke-marketplace.js" type="text/javascript"></script>
 
     </head>
-<body class="bg-main">
+<body class="bg-main" onload="checkCookie()">
     <div class="main">
         <header class="card header">
             <ul class="row" style="padding-left: 0;">
@@ -47,6 +47,8 @@
                         <button class="button button-center" id="fairy" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Fairy</div></div></button>
                         <button class="button button-center" id="dragon" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Dragon</div></div></button>
                         <button class="button button-center" id="poison" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Poison</div></div></button>
+                        <button class="button button-center" id="poison" onclick="save()"><div class="row"><div class="grass visible">SAVE</div></div></button>
+
                     </div>
                         <div id="Form" class="row row-3 scrollbar mew">
                             
