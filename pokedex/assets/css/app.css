@@ -17,35 +17,6 @@ body{
   height: 100vh;
   overflow: hidden;
 }
-section{
-  visibility: hidden;
-  display: none;
-  height: calc(100% - 200px);
-}
-button, input[type="submit"], input[type="reset"]{
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  background: none;
-  color: white;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-}
-::placeholder {
-  color: white;
-}
-.button:hover{
-  background: var(--main-red);
-  color: black;
-  border-radius: 5px;
-  box-shadow: 0 0 5px var(--main-red), 0 0 25px var(--main-red), 0 0 50px var(--main-red), 0 0 100px var(--main-red);
-}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +25,9 @@ button, input[type="submit"], input[type="reset"]{
 .column{
   display: flex;
   flex-direction: column;
+}
+::placeholder {
+  color: white;
 }
 .bg-main{
   background-image: url('../../assets/content/main.webp');
@@ -80,13 +54,15 @@ button, input[type="submit"], input[type="reset"]{
   visibility: visible;
   display: block;
 }
-#navBtn, input[type="submit"], input[type="reset"]{
+section{
+  visibility: hidden;
+  display: none;
+  height: calc(100% - 200px);
+}
+button, input[type="submit"], input[type="reset"]{
   position: relative;
   display: inline-block;
-  /* padding: 20px 20px; */
-  padding-left: 350px;
-  padding-right: 200px;
-  padding-top: 10px;
+  padding: 10px 20px;
   background: none;
   color: white;
   border: none;
@@ -97,38 +73,25 @@ button, input[type="submit"], input[type="reset"]{
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  justify-content: center;
 }
-
-#navBtn h1{
-  text-align: left;
-  font-size: 30px;
-  padding-right: 50px;
-}
-#navBtn:hover{
+.button:hover{
   background: var(--main-red);
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px var(--main-red), 0 0 25px var(--main-red), 0 0 50px var(--main-red), 0 0 100px var(--main-red);
 }
-
-#searchbtn {
-  display: inline-block;
-  padding-bottom: 10px;
-  background: none;
-  color: white;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-
+@media (max-width: 1300px) {
+  .main{
+    margin: 25px 50px 0 50px;
+    height: 100%;
+  }
 }
-
-#searchbtn img {
-  margin-top: 10px;
-
+@media (max-width: 600px) {
+  .button{
+    padding: 10px 10px;
+  }
+  .main{
+    margin: 25px 25px 0 25px;
+    height: 100%;
+  }
 }
