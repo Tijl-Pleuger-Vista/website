@@ -255,3 +255,10 @@ pokedex();
       date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
       document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
     }
+
+    function load(){
+      var MyDiv1 = accessCookie("testCookie");
+      if (MyDiv1!="")
+      alert(MyDiv1);
+    console.log(MyDiv1)
+    }
