@@ -73,7 +73,7 @@ if (user="") {
   pokedex();
 }}
 if (user!="") {
-  Form.innerHTML = `${user}`
+  // Form.innerHTML = `${user}`
   console.log("not")
 }
 
@@ -275,5 +275,6 @@ if (user!="") {
       var MyDiv1 = accessCookie("testCookie");
       if (MyDiv1!="")
       alert(MyDiv1);
-    console.log(MyDiv1)
+      console.log(MyDiv1)
+      document.getElementById("Form").dataset.total = MyDiv1
     }
