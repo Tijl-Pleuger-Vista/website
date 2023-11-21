@@ -2,6 +2,7 @@ var pokemonList, numb = 0,
 limit = 12;
 var user = accessCookie("testCookie");
 
+function checkCookie(){
 if (user="") {
   console.log("yes")
 
@@ -70,7 +71,7 @@ if (user="") {
   
   };
   pokedex();
-}
+}}
 if (user!="") {
   Form.innerHTML += user
   console.log("not")
