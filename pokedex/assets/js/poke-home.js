@@ -220,10 +220,10 @@ pokedex();
 
     function save(){
       var user = "Cyan"
-      var MyDiv1 = document.getElementById('Form')
-      console.log(MyDiv1)
+      var user = document.getElementById('Form')
+      console.log(user)
       // document.cookie = MyDiv1;
-      createCookie("testCookie", user, MyDiv1);
+      createCookie("testCookie", user);
       let x = document.cookie; 
       console.log(x)
 
