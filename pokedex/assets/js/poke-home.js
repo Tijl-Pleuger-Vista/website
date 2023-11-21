@@ -73,7 +73,7 @@ if (user="") {
   pokedex();
 }}
 if (user!="") {
-  Form.innerHTML += user
+  Form.innerHTML = `${user}`
   console.log("not")
 }
 
