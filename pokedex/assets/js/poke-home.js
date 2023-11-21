@@ -235,7 +235,7 @@ if (user!="") {
 
     function save(){
       var user = "Cyan"
-      var user = document.getElementById('Form')
+      var user = document.getElementById('Form').innerHTML
       console.log(user)
       // document.cookie = MyDiv1;
       createCookie("testCookie", user);

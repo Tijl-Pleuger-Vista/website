@@ -1,41 +1,38 @@
 <html>
 <head>
 	<title>Cookie!!!</title>
-	<script type="text/javascript">
-		function createCookie(cookieName,cookieValue,daysToExpire)
-        {
-          var date = new Date();
-          date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
-          document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
-        }
-		function accessCookie(cookieName)
-        {
-          var name = cookieName + "=";
-          var allCookieArray = document.cookie.split(';');
-          for(var i=0; i<allCookieArray.length; i++)
-          {
-            var temp = allCookieArray[i].trim();
-            if (temp.indexOf(name)==0)
-            return temp.substring(name.length,temp.length);
-       	  }
-        	return "";
-        }
-		function checkCookie()
-        {
-          var user = accessCookie("testCookie");
-          if (user!="")
-        	alert("Welcome Back " + user + "!!!");
-          else
-          {
-            user = prompt("Please enter your name");
-            num = prompt("How many days you want to store your name on your computer?");
-            if (user!="" && user!=null)
-            {
-            createCookie("testCookie", user, num);
-            }
-          }
-        }
-	</script>
+
 </head>
-<body onload="checkCookie()"></body>
+<body onload="checkCookie()">
+  <div class="card search-card" id="infoCard">
+                
+    <img class="p-img-info" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif" alt="" style="width: 192px; height: 192px;">
+    
+    <div class="row type type-info">
+    <div class="grass">grass</div><div class="poison">poison</div>
+    </div>
+    <h2></h2>
+    <div class="row"><h3>Pokémon id:</h3>  <h3 class="stat">1</h3></div>
+    <div class="row"><h3>Abilities:</h3>
+    <div class="column">
+        <div><h3 class="stat">overgrow</h3></div>
+        <div><h3 class="stat">chlorophyll</h3></div>
+    </div>
+    </div>
+
+    <div class="row"><h3>Stats:</h3></div>
+    
+    <div class="row"><h3 style="margin-left: 75px;">hp</h3><h3 class="stat">45</h3></div>
+    <div class="row"><h3 style="margin-left: 75px;">attack</h3><h3 class="stat">49</h3></div>
+    <div class="row"><h3 style="margin-left: 75px;">defense</h3><h3 class="stat">49</h3></div>
+    <div class="row"><h3 style="margin-left: 75px;">special-attack</h3><h3 class="stat">65</h3></div>
+    <div class="row"><h3 style="margin-left: 75px;">special-defense</h3><h3 class="stat">65</h3></div>
+    <div class="row"><h3 style="margin-left: 75px;">speed</h3><h3 class="stat">45</h3></div>
+    </div>
+  <div id="Form"></div>
+  <script>
+      var meow = document.getElementById('infoCard').innerHTML
+    Form.innerHTML += meow
+  </script>
+</body>
 </html>
