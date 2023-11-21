@@ -234,7 +234,6 @@ if (user!="") {
 
 
     function save(){
-      var user = "Cyan"
       var user = document.getElementById('Form').innerHTML
       console.log(user)
       // document.cookie = MyDiv1;
@@ -277,4 +276,8 @@ if (user!="") {
       alert(MyDiv1);
       console.log(MyDiv1)
       document.getElementById("Form").outerHTML  = MyDiv1
+    }
+
+    function del(){
+      document.cookie = "testCookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
