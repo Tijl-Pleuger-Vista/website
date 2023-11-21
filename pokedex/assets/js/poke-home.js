@@ -276,5 +276,5 @@ if (user!="") {
       if (MyDiv1!="")
       alert(MyDiv1);
       console.log(MyDiv1)
-      document.getElementById("Form").dataset.total = MyDiv1
+      document.getElementById("Form").innerHTML  = MyDiv1
     }
