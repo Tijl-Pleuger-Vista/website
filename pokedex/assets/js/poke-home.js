@@ -2829,7 +2829,6 @@ var mewmew =
       createCookie("testCookie", user);
       let x = document.cookie; 
       console.log(x)
-
     }
 
     // function checkCookie()
@@ -2852,12 +2851,7 @@ var mewmew =
       return "";
     }
 
-    function createCookie(cookieName,cookieValue,daysToExpire)
-    {
-      var date = new Date();
-      date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
-      document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
-    }
+
 
     function load(){
       var MyDiv1 = accessCookie("testCookie");

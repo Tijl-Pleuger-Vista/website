@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/project-5/main/app/assets/content/logo/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/project-5/main/app/assets/content/logo/favicon-32x32.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/project-5/main/app/assets/content/logo/favicon-16x16.png" type="image/png" sizes="16x16">
+        <link rel="manifest" href="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/project-5/main/app/assets/content/logo/site.webmanifest">
+        <title>Your Pokédex!</title>
+        <link rel="stylesheet" href="assets/css/app.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <script src="assets/js/button-main.js" type="text/javascript"></script>
+        <script src="assets/js/poke-home.js" type="text/javascript"></script>
+        <script src="assets/js/poke-marketplace.js" type="text/javascript"></script>
+
+    </head>
+<body class="bg-main">
+    <div class="main">
+        <header class="card header">
+            <ul class="row" style="padding-left: 0;">
+                <li><button class="button button-center" id="Home" onclick="btnClicked(this.id)"><div class="row"><img class="icon" src="assets/content/pikachu.webp" alt=""><h1 class="icon-text">Home</h1></div></button></li>
+                <li><button class="button button-center" id="Dex" onclick="btnClicked(this.id)"><div class="row"><img class="icon" src="assets/content/pokedex.webp" alt=""><h1 class="icon-text">Pokedex</h1></div></button></li>
+                <li><button class="button button-center" id="Videogames" onclick="btnClicked(this.id)"><div class="row"><img class="icon" src="assets/content/videogames.webp" alt=""><h1 class="icon-text">Videogames</h1></div></button></li>
+                <li><button class="button button-center" id="Marketplace" onclick="btnClicked(this.id)"><div class="row"><img class="icon" src="assets/content/marketplace.webp" alt=""><h1 class="icon-text">Marketplace</h1></div></button></li>
+            </ul>
+        </header>
+        <section id="pokeHome" class="visible">
+            <div class="home-max">
+                <div class="flex-box">
+                    <div class="card search-box-card row">
+                        <button class="button button-center" id="poke-card" onclick="btnClickedSearch(this.id)"><div class="row"><div class="Full visible">Pokédex</div></div></button>
+                        <button class="button button-center" id="normal" onclick="btnClickedSearch(this.id)"><div class="row"><div class="fire visible">Normal</div></div></button>
+                        <button class="button button-center" id="grass" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Grass</div></div></button>
+                        <button class="button button-center" id="water" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Water</div></div></button>
+                        <button class="button button-center" id="ice" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Ice</div></div></button>
+                        <button class="button button-center" id="electric" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Electric</div></div></button>
+                        <button class="button button-center" id="fighting" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Fighting</div></div></button>
+                        <button class="button button-center" id="flying" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Flying</div></div></button>
+                        <button class="button button-center" id="bug" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Bug</div></div></button>
+                        <button class="button button-center" id="ghost" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Ghost</div></div></button>
+                        <button class="button button-center" id="rock" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Rock</div></div></button>
+                        <button class="button button-center" id="ground" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Ground</div></div></button>
+                        <button class="button button-center" id="steel" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Steel</div></div></button>
+                        <button class="button button-center" id="dark" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Dark</div></div></button>
+                        <button class="button button-center" id="psychic" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Psychic</div></div></button>
+                        <button class="button button-center" id="fairy" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Fairy</div></div></button>
+                        <button class="button button-center" id="dragon" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Dragon</div></div></button>
+                        <button class="button button-center" id="poison" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Poison</div></div></button>
+                        <button class="button button-center" id="save" onclick="save()"><div class="row"><div class="grass visible">save</div></div></button>
+                        <button class="button button-center" id="save" onclick="setCookie()"><div class="row"><div class="grass visible">cookie</div></div></button>
+
+                    </div>
+                        <div id="Form" class="row row-3 scrollbar mew">
+                            
+                        </div>
+                </div>
+                <div class="card search-card" id="infoCard">
+                </div>
+            </div>
+        </section>
+        <section id="pokeDex" class="">
+        </section>
+        <section id="pokeVideogames" class="">
+        </section>
+        <section id="pokeMarketplace" class="">
+            <div id="marketplace" class="row row-3 scrollbar">
+            </div>
+        </section>
+    </div>
+    <!-- <script>
+        var user
+            function save() {
+      var user = document.getElementById('Form').innerHTML
+      console.log(user)
+      // document.cookie = MyDiv1;
+      createCookie("testCookie", user);
+      let x = document.cookie;
+      console.log(x)
+  
+  }
+
+  function createCookie(cookieName,cookieValue,daysToExpire)
+    {
+      var date = new Date();
+      date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+    //   document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString()    
+}
+
+function setCookie(variable, value, expires_seconds) {
+    var d = new Date();
+    d = new Date(d.getTime() + 1000 * expires_seconds);
+    document.cookie = '; expires=' + d.toGMTString();
+    console.log(d)
+
+}
+    </script> -->
+    <script>
+//         function setCookie(){  
+//             var today = new Date();
+//   var validity_days = 5;
+//   var expires = validity_days * 1000 ;
+// //   var expires_date = new Date( today.getTime() + (expires) );
+// var _expires_date = today.getTime();
+// var expires_date = _expires_date + expires
+  
+//   document.cookie= ";expires=" + expires_date.toUTCString() + ";";
+// }
+
+function setCookie(cname, cvalue, exdays) {     
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires="+d.toUTCString();
+
+}
+
+function getCookie(cname) {        
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function checkCookie() {
+  var user = getCookie("username");
+  if (user != "") {
+     //your code goes here
+  } else {
+     //your code goes here
+    if (user != "" && user != null) {
+        setCookie("username", user, 5);
+    }
+  }
+}
+    </script>
+</body>
+</html>
