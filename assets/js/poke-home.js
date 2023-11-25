@@ -13,6 +13,7 @@ var v = 100;
 //         setTimeout(function() {
 //             var v = i.results[numb].name;
 //             numb++, fetch(`https://pokeapi.co/api/v2/pokemon/${v}`).then(i => i.json()).then(i => {
+//                 console.log(i)
 //             var s = i.sprites.front_default,
 //             a = "";
 //                 if (i.types[0]) {
@@ -64,10 +65,6 @@ var v = 100;
 //                     <div id="${v}" class="card poke-card ${d} ${c} visible" onclick="updatGIF()">
 //                     <img id="${v}" class="p-img" src="${s}" alt="" style="width: 128px; height: 128px;"><div class="p-name">${v}</div><div class="row type">${a}${r}</div>
 //                     </div>
-//                     `
-//                 wizard.innerHTML += 
-//                     `
-//                     <option>${v}</option>
 //                     `
 //                 })
 //             }, a * v)
@@ -128,6 +125,7 @@ let pokemarket = () => {
     fetch(`https://pokeapi.co/api/v2/item/poke-ball`)
     .then(itemList => itemList.json())
     .then(itemList => {
+        console.log(itemList)
         var name = itemList.name;
         var cost = itemList.cost;
         var sprite = itemList.sprites.default;
