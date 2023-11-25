@@ -31,7 +31,7 @@
                     <div class="card search-box-card row">
                         <button class="button button-center" id="poke-card" onclick="btnClickedSearch(this.id)"><div class="row"><div class="Full visible">Pokédex</div></div></button>
                         <button class="button button-center" id="normal" onclick="btnClickedSearch(this.id)"><div class="row"><div class="fire visible">Normal</div></div></button>
-                        <button class="button button-center" id="grass" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Grass</div></div></button>
+                        <!-- <button class="button button-center" id="grass" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Grass</div></div></button>
                         <button class="button button-center" id="water" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Water</div></div></button>
                         <button class="button button-center" id="ice" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Ice</div></div></button>
                         <button class="button button-center" id="electric" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Electric</div></div></button>
@@ -46,10 +46,10 @@
                         <button class="button button-center" id="psychic" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Psychic</div></div></button>
                         <button class="button button-center" id="fairy" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Fairy</div></div></button>
                         <button class="button button-center" id="dragon" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Dragon</div></div></button>
-                        <button class="button button-center" id="poison" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Poison</div></div></button>
-                        <button class="button button-center" id="save" onclick="save()"><div class="row"><div class="grass visible">save</div></div></button>
-                        <button class="button button-center" id="save" onclick="setCookie()"><div class="row"><div class="grass visible">cookie</div></div></button>
-
+                        <button class="button button-center" id="poison" onclick="btnClickedSearch(this.id)"><div class="row"><div class="grass visible">Poison</div></div></button> -->
+                        <button class="button button-center" id="save" onclick="saveCookie()"><div class="row"><div class="grass visible">save</div></div></button>
+                        <button class="button button-center" id="save" onclick="loadCookie()"><div class="row"><div class="grass visible">cookie</div></div></button>
+                        <button class="button button-center" id="save" onclick="logCookie()"><div class="row"><div class="grass visible">cookie</div></div></button>
                     </div>
                         <div id="Form" class="row row-3 scrollbar mew">
                             
@@ -68,78 +68,5 @@
             </div>
         </section>
     </div>
-    <!-- <script>
-        var user
-            function save() {
-      var user = document.getElementById('Form').innerHTML
-      console.log(user)
-      // document.cookie = MyDiv1;
-      createCookie("testCookie", user);
-      let x = document.cookie;
-      console.log(x)
-  
-  }
-
-  function createCookie(cookieName,cookieValue,daysToExpire)
-    {
-      var date = new Date();
-      date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
-    //   document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
-document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString()    
-}
-
-function setCookie(variable, value, expires_seconds) {
-    var d = new Date();
-    d = new Date(d.getTime() + 1000 * expires_seconds);
-    document.cookie = '; expires=' + d.toGMTString();
-    console.log(d)
-
-}
-    </script> -->
-    <script>
-//         function setCookie(){  
-//             var today = new Date();
-//   var validity_days = 5;
-//   var expires = validity_days * 1000 ;
-// //   var expires_date = new Date( today.getTime() + (expires) );
-// var _expires_date = today.getTime();
-// var expires_date = _expires_date + expires
-  
-//   document.cookie= ";expires=" + expires_date.toUTCString() + ";";
-// }
-
-function setCookie(cname, cvalue, exdays) {     
-  var d = new Date();
-  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-  var expires = "expires="+d.toUTCString();
-
-}
-
-function getCookie(cname) {        
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-function checkCookie() {
-  var user = getCookie("username");
-  if (user != "") {
-     //your code goes here
-  } else {
-     //your code goes here
-    if (user != "" && user != null) {
-        setCookie("username", user, 5);
-    }
-  }
-}
-    </script>
 </body>
 </html>
