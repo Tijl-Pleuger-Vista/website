@@ -1,5 +1,3 @@
-var ref = location.href
-console.log(ref)
 function getCookie(name) {
     var dc = document.cookie;
     var prefix = name + "=";
@@ -26,12 +24,12 @@ function checkUser() {
 
     if (myCookie == null) {
         // do cookie doesn't exist stuff;
-        window.location = "https://tijl-pleuger-vista.github.io/website.github.io/";
+        window.location = "http://tijl-pleuger-vista.github.io/website.github.io/index.html";
     }
     else {
         // do cookie exists stuff
         console.log(myCookie)
-        fetch("http://212.127.233.88:5000/check/?key=" + myCookie, {
+        fetch("http://pokedexauth.ddns.net:5000/check/?key=" + myCookie, {
         method: "POST"
         })
         .then((response) => response.json())
@@ -48,13 +46,12 @@ function checkLogedin() {
     }
     else {
         // do cookie exists stuff
-        window.location = "https://tijl-pleuger-vista.github.io/website.github.io/main.html";
-
+        window.location = "http://tijl-pleuger-vista.github.io/website.github.io/main.html";
     }
 }
 
 function userLogout() {
     var myCookie = getCookie("user");
     document.cookie = "user=" + myCookie + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    window.location = "https://tijl-pleuger-vista.github.io/website.github.io/";
+    window.location = "http://tijl-pleuger-vista.github.io/website.github.io/index.html";
 }
