@@ -107,24 +107,90 @@ function searchTerminal (_search){
     let searchLength = _search.length;
     if(_search == "meow") {terminal.innerHTML += 
         `
-        <div class="row">
-        <p style="margin-right: 8px;">PS C:\\Users/admin></p><p></p><p>I am not a cat</p>
-        </div>
+        <br><p> I am not a cat</p><br>
         `
+    }
+    else if(_search == "romy") {terminal.innerHTML += 
+        `
+        <br>
+        <p>██████╗░░█████╗░███╗░░░███╗██╗░░░██╗</p>
+        <p>██╔══██╗██╔══██╗████╗░████║╚██╗░██╔╝</p>
+        <p>██████╔╝██║░░██║██╔████╔██║░╚████╔╝░</p>
+        <p>██╔══██╗██║░░██║██║╚██╔╝██║░░╚██╔╝░░</p>
+        <p>██║░░██║╚█████╔╝██║░╚═╝░██║░░░██║░░░</p>
+        <p>╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝░░░╚═╝░░░</p>
+        <br>
+        <p>credit: tester</p>
+        <br>
+        `
+    }
+    else if(_search == "j") {terminal.innerHTML += 
+        `
+        <br>
+        <p>░░█ █▀▀ █▀▀ █░█ ▄█ ░ █▀█</p>
+        <p>█▄█ ██▄ ██▄ ▀▄▀ ░█ ▄ █▄█</p>
+        <br>
+        <p>credit: application</p>
+        <br>
+        `
+    }
+    else if(_search == "headbodyscript") {terminal.innerHTML += 
+        `
+        <br><br><p style="font-family: Dimitra;">HeadBodyScript</p><br>
+        <p>credit: website</p>
+        <br>
+        `
+    }
+    else if(_search == "him") {terminal.innerHTML += 
+        `
+        <br>
+        <p>██╗░░██╗██╗░░██╗██╗░░██╗██╗░░██╗░░██╗██╗██████╗░░█████╗░
+        <p>╚██╗██╔╝╚██╗██╔╝╚██╗██╔╝╚██╗██╔╝░██╔╝██║╚════██╗██╔══██╗
+        <p>░╚███╔╝░░╚███╔╝░░╚███╔╝░░╚███╔╝░██╔╝░██║░░███╔═╝██║░░██║
+        <p>░██╔██╗░░██╔██╗░░██╔██╗░░██╔██╗░███████║██╔══╝░░██║░░██║
+        <p>██╔╝╚██╗██╔╝╚██╗██╔╝╚██╗██╔╝╚██╗╚════██║███████╗╚█████╔╝
+        <p>╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░░░░░╚═╝╚══════╝░╚════╝░
+        <br>
+        <p>██████╗░██╗░░░░░░░██╗██╗███████╗███████╗██╗████████╗██╗░░██╗██╗░░██╗██╗░░██╗██╗░░██╗
+        <p>██╔══██╗██║░░░░░░██╔╝██║╚════██║██╔════╝██║╚══██╔══╝╚██╗██╔╝╚██╗██╔╝╚██╗██╔╝╚██╗██╔╝
+        <p>██████╦╝██║░░░░░██╔╝░██║░░███╔═╝█████╗░░██║░░░██║░░░░╚███╔╝░░╚███╔╝░░╚███╔╝░░╚███╔╝░
+        <p>██╔══██╗██║░░░░░███████║██╔══╝░░██╔══╝░░██║░░░██║░░░░██╔██╗░░██╔██╗░░██╔██╗░░██╔██╗░
+        <p>██████╦╝███████╗╚════██║███████╗███████╗██║░░░██║░░░██╔╝╚██╗██╔╝╚██╗██╔╝╚██╗██╔╝╚██╗
+        <p>╚═════╝░╚══════╝░░░░░╚═╝╚══════╝╚══════╝╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝
+        <br>
+        <p>credit: security</p>
+        <br>
+        `
+    }
+    else if(_search == "tempo") {terminal.innerHTML += 
+        `
+        <br><br><p style="font-family: Dimitra;">user2</p><br>
+        <p>credit: N/A</p>
+        <br>
+        `
+    }
+    else if(_search == "website") {terminal.innerHTML += 
+        `
+        <br><a href="https://aka.ms/PSWindows">>> Click here if you didn't get redirected www.Website.nl <i class="bi bi-box-arrow-up-right"></i></a><br><br>
+        `
+        window.open("https://www.w3schools.com")
     }
     else if(_search == "help") {terminal.innerHTML += 
         `
-        <div class="row">
-        <p style="margin-right: 8px;">PS C:\\Users/admin></p><p></p><p>all commands: help, meow, ip, log, contact, website</p>
-        </div>
+        <br><p>all commands: help, meow, ip, log, contact, website, headbodyscript, romy, j</p><br>
         `
     }
     else if (searchLength > 0) {
         terminal.innerHTML += 
         `
-        <div class="row">
-        <p style="margin-right: 8px;">PS C:\\Users/admin></p><p></p><p>This is not a valid command</p>
-        </div>
+        <p class="error">${_search} : The term '${_search}' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the</p>
+        <p class="error">spelling of the name, or if a path was included, verify that the path is correct and try again.</p>
+        <p class="error">At line:1 char:1</p>
+        <p class="error">+ ${_search}</p>
+        <p class="error">+ ~~</p>
+        <p class="error">    + CategoryInfo          : ObjectNotFound: (${_search}:String) [], CommandNotFoundException</p>
+        <p class="error">    + FullyQualifiedErrorId : CommandNotFoundException</p>
+        <br>
         `
     }
 }
