@@ -1,27 +1,27 @@
-fetch(`https://api.my-ip.io/v2/ip.json	`)
-.then(userData => userData.json())
-.then(userData => {
-data.innerHTML +=
-`
-<p>Response. . . . . . . . . . . . . : ${userData.success}</p>
-<p>Address type. . . . . . . . . . . : ${userData.type}</p>
-<p>IPv4 Address. . . . . . . . . . . : ${userData.ip}</p>
-<br>
-<p>User Location</p>
-<p>User time zone. . . . . . . . . . : ${userData.timeZone}</p>
-<p>User region . . . . . . . . . . . : ${userData.region}</p>
-<p>User city . . . . . . . . . . . . : ${userData.city}</p>
-<p>Country code. . . . . . . . . . . : ${userData.country.code}</p>
-<p>Country name. . . . . . . . . . . : ${userData.country.name}</p>
-<br>
-<p>User location . . . . . . . . . . : ${userData.location.lat} - ${userData.location.lon}</p>
-<br>
-<p>User autonomous system number (ASN)</p>
-<p>Name. . . . . . . . . . . . . . . : ${userData.asn.name}</p>
-<p>Number. . . . . . . . . . . . . . : ${userData.asn.number}</p>
-<p>Network . . . . . . . . . . . . . : ${userData.asn.network}</p>
-`
-})
+// fetch(`https://api.my-ip.io/v2/ip.json	`)
+// .then(userData => userData.json())
+// .then(userData => {
+// data.innerHTML +=
+// `
+// <p>Response. . . . . . . . . . . . . : ${userData.success}</p>
+// <p>Address type. . . . . . . . . . . : ${userData.type}</p>
+// <p>IPv4 Address. . . . . . . . . . . : ${userData.ip}</p>
+// <br>
+// <p>User Location</p>
+// <p>User time zone. . . . . . . . . . : ${userData.timeZone}</p>
+// <p>User region . . . . . . . . . . . : ${userData.region}</p>
+// <p>User city . . . . . . . . . . . . : ${userData.city}</p>
+// <p>Country code. . . . . . . . . . . : ${userData.country.code}</p>
+// <p>Country name. . . . . . . . . . . : ${userData.country.name}</p>
+// <br>
+// <p>User location . . . . . . . . . . : ${userData.location.lat} - ${userData.location.lon}</p>
+// <br>
+// <p>User autonomous system number (ASN)</p>
+// <p>Name. . . . . . . . . . . . . . . : ${userData.asn.name}</p>
+// <p>Number. . . . . . . . . . . . . . : ${userData.asn.number}</p>
+// <p>Network . . . . . . . . . . . . . : ${userData.asn.network}</p>
+// `
+// })
 
 window.addEventListener("keydown", function(event) {
     letter = event.key;
@@ -96,7 +96,7 @@ window.addEventListener("keydown", function(event) {
         terminal.innerHTML +=
         `
         <div class="row">
-        <p style="margin-right: 8px;">PS C://Users/admin></p><p class="code" id="log"></p><p class="underscore">_</p>
+        <p style="margin-right: 8px;">PS C:/Users/admin></p><p class="code" id="log"></p><p class="underscore">_</p>
         </div>
         `
     }
@@ -108,6 +108,41 @@ function searchTerminal (_search){
     if(_search == "meow") {terminal.innerHTML += 
         `
         <br><p> I am not a cat</p><br>
+        `
+    }
+    else if(_search == "log") {terminal.innerHTML += 
+        `
+        <br><p> put the userData response here</p><br>
+        `
+    }
+    else if(_search == "download") {terminal.innerHTML += 
+        `
+        <br><p> download stuff</p><br>
+        `
+    }
+    else if(_search == "ip") {terminal.innerHTML += 
+        `
+        <br><p> put the userData response here</p><br>
+        `
+    }
+    else if(_search == "contact") {terminal.innerHTML += 
+        `
+        <br><p> put the userData response here</p><br>
+        `
+    }
+    else if(_search == "cookies") {terminal.innerHTML += 
+        `
+        <br><p> put the userData response here</p><br>
+        `
+    }
+    else if(_search == "tos") {terminal.innerHTML += 
+        `
+        <br><p> terms and conditions</p><br>
+        `
+    }
+    else if(_search == "faq") {terminal.innerHTML += 
+        `
+        <br><p> terms and conditions</p><br>
         `
     }
     else if(_search == "romy") {terminal.innerHTML += 
@@ -177,7 +212,7 @@ function searchTerminal (_search){
     }
     else if(_search == "help") {terminal.innerHTML += 
         `
-        <br><p>all commands: help, meow, ip, log, contact, website, headbodyscript, romy, j</p><br>
+        <br><p>all commands: help, download, meow, ip, log, contact, website, headbodyscript, romy, j</p><br>
         `
     }
     else if (searchLength > 0) {
