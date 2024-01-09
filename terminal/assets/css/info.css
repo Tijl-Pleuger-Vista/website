@@ -62,7 +62,7 @@ header {
   z-index: 10;
   background-color: var(--sidebar);
   bottom: 0;
-  height: 200px;
+  height: 120px;
   overflow-y: auto;
   position: fixed;
   top: 0;
@@ -120,6 +120,8 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display:flex;
+  justify-content: center;
 }
 
 strong {
@@ -142,15 +144,7 @@ strong {
 
 /* boxes */
 
-.b-box {
-  position: absolute;
-  aspect-ratio: 1/1;
-  border-style: solid;
-  border-radius: 1px;
-  border-color: var(--divider);
-  transform: rotate(45deg);
-  z-index: -1
-}
+
 
 .b-one {
   height: 35%;
@@ -208,30 +202,27 @@ strong {
     top: 49.5vh
   }
 }
-
+.b-box {
+    position: relative;
+    border-style: solid;
+    border-radius: 1px;
+    z-index: -1;
+    margin-bottom: 10%;
+  }
 .b-mid {
-  height: 100%;
-  top: 95px;
+  width: 70%;
   left: 50%;
-  transform: translate(-50%, 0) rotate(45deg);
-  background-color: var(--divider);
-  border-image: linear-gradient(to right, #AD2831, darkorchid) 1
+  transform: translate(-50%, 0);
+  border-image: linear-gradient(to right, #AD2831, darkorchid) 1;
+  border-right: transparent;
+  border-left: transparent;
+  border-bottom: transparent;
 }
 
 .text {
   width: max-content;
   position: absolute;
-  /* top: 30%; */
 }
-
-/* #fade-1 {
-  top: -10%;
-  z-index: 1;
-}
-
-#fade-2 {
-  float: right;
-} */
 
 #TakeMeHome {
   overflow-x:hidden;
@@ -239,11 +230,7 @@ strong {
 }
 .content {
   max-height: 70vh;
-
   position: relative;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, 10%); */
 }
 
 .links {
@@ -255,7 +242,13 @@ strong {
   display: flex;
   flex-direction: row;
 }
-
+.logo-img{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 128px;
+    z-index: 512;
+}
 .logo {
   position: absolute;
   top: 50%;
@@ -438,6 +431,9 @@ strong {
   }
 }
 @media (max-width: 800px) {
+    .logo-img{
+        top: 15px;
+    }
   #fade-1 {
     /* left: 50%;
     transform: translate(-50%, 0); */
