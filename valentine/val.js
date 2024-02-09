@@ -41,7 +41,4 @@ function yesyes(){
     mew0.innerHTML = "YAY";
     mew1.innerHTML = "YAY";
     mew.innerHTML = "YAY";
-
-
-
 }
