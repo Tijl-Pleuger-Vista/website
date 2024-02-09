@@ -1,10 +1,4 @@
-var check = 0
 function mewcheck(){
-    check++
-    console.log(check)
-    if (check === 1){
-        console.log(check)
-    
         setInterval(createHeart,100);
         setInterval(function name(params) {
             var heartArr = document.querySelectorAll(".fa-heart")
@@ -13,7 +7,6 @@ function mewcheck(){
             }
             //console.log(heartArr);
         },100)
-    }
 }
 const body = document.querySelector("body");
 
