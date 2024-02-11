@@ -14,6 +14,7 @@ function copyPhone(){
     navigator.clipboard.writeText ("045 523 2576"); 
 }
 function btnTheme(){
+    console.log("mew")
     theme++
     if(theme === 1){
         // 75

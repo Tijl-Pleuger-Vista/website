@@ -29,20 +29,22 @@
     <link rel="manifest" href="./assets/logo/site.webmanifest">
 
     <link rel="stylesheet" href="../assets/css/phone-app.css">
+    <link rel="stylesheet" href="../assets/css/phone-home.css">
+
     <script src="../assets/js/app.js"></script>
 </head>
-<body>
-    <header class="column">
+<body id="contrast" class="light">
+        <header class="column">
         <div class="row">
-            <button><img class="logo" src="assets/logo/android-chrome-512x512.png" alt=""></button>
-            <button><h1 class="logo-text">Leet </h1><h1 class="logo-text">Handbook</h1></button>
+            <a href="Home"><img class="logo" src="assets/logo/android-chrome-512x512.png" alt=""></a>
+            <a class="center" href="home"><h1 class="logo-text mr-20">Leet</h1><h1 class="logo-text">Handbook</h1></a>
         </div>
         <div>
             <ul class="row">
-                <li class="space"><button onclick="FuncScroll(x = 0)"><h2>Home</h2></button></li>
-                <li class="space"><button onclick="FuncScroll(x = 1)"><h2>About</h2></button></li>
-                <li class="space"><button onclick="FuncScroll(x = 2)"><h2>Handbook</h2></button></li>
-                <li class="space"><button onclick="FuncScroll(x = 3)"><h2>Download</h2></button></li>
+                <li class="space"><a href="home">Home</a></li>
+                <li class="space"><a href="about">About</a></li>
+                <li class="space"><a href="handbook">Handbook</a></li>
+                <li class="space"><a href="download">Download</a></li>
             </ul>
         </div>
         <div>
@@ -60,7 +62,7 @@
                     </button>
                 </li>
                 <li class="center">
-                    <button><h2>login</h2></button>
+                    <a href="login"><h2>login</h2></a>
                 </li>
                 <li>
                     <div class="skill">
@@ -86,7 +88,34 @@
             </ul>
         </div>
     </header>
-    <div class="card card-1">
+    <div class="card w h">
+        <div class="card-content w h contrast-100">
+        </div>
+    </div>
+    <div class="card center column">
+        <div class="row">
+            <ul class="center column">
+                <h3>Contact us</h3>
+                <li class="tooltip"><a href="https://www.google.com/maps/place/Breukerweg+200,+6412+ZL+Heerlen/@50.9049177,5.9436252,17z/data=!3m1!4b1!4m6!3m5!1s0x47c0be80382293b7:0xc04ecfe224df6dec!8m2!3d50.9049177!4d5.9436252!16s%2Fg%2F11bw3zzzss?entry=ttu" target="_blank"><i class="bi bi-geo-alt-fill"></i>Heerlen, Breukerweg 200</a><span class="tooltiptext">Click To Open Google Maps</span></li>
+                <li class="tooltip"><button onclick="copyPhone()"><i class="bi bi-telephone-fill"></i>045 523 2576</button><span class="tooltiptext">Click To Copy</span></li>
+                <li class="tooltip"><i class="bi bi-envelope-fill"></i>pvo.help@gmail.com<span class="tooltiptext">Click To Open Mail</span></li>
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="center column">
+                <h3>About The Handbook</h3>
+                <li>This handbook is designed to help you learn about security</li>
+                <li>With our experience based system you will earn exp for completing levels</li>
+                <li>Defend your privacy in a fun way!</li>
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="center column">
+                <h3>Platform Veilig Ondernemen</h3>
+                <li class="tooltip"><a href="https://twitter.com/home" target="_blank"><i class="bi bi-twitter"></i>Twitter</a><span class="tooltiptext">Click To Open Twitter</span></li>
+                <li class="tooltip"><a href="https://www.linkedin.com/" target="_blank"></a><i class="bi bi-linkedin"></i>Linked-IN<span class="tooltiptext">Click To Open LinkedIN</span></li>
+            </ul>
+        </div>
     </div>
     <script src="../assets/js/level.js"></script>
 </body>
