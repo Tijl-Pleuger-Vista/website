@@ -105,8 +105,8 @@ a:active {
 
 /* IMG */
 svg{
-    position: absolute;
-    top: 10px;
+    position: relative;
+    bottom: 80px;
 }
 .logo{
     height: 48px;
@@ -365,13 +365,28 @@ circle{
         width: 50%;
     }
 }
+@media (max-width: 1250px) {
+    .main{
+        display: none;
+        visibility: hidden;
+    }
+    header{
+        height: 100dvh;
+    }
+    header div{
+        width: fit-content;
+        height: fit-content;
+    }
+    .x{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
 @media (max-width: 1200px) {
     .mascot{
         width: 250px;
         height: 250px;
-    }
-    header{
-        height: 195px;
     }
     .download-button{
         padding: 20px 90px 20px 90px;
@@ -392,12 +407,6 @@ circle{
         font-size: 40px;
     }   
 }
-@media (max-width: 500px) {
-    footer div:nth-child(3){
-        display: none;
-        visibility: hidden;
-    }
-}
 @media (max-width: 800px) {
     .square{
         padding: 5px;
@@ -406,5 +415,11 @@ circle{
     .mascot{
         width: 180px;
         height: 180px;
+    }
+}
+@media (max-width: 500px) {
+    footer div:nth-child(3){
+        display: none;
+        visibility: hidden;
     }
 }
