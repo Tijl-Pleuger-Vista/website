@@ -85,7 +85,7 @@ a:active {
 }
 
 /* FLEX BOX */
-.row{
+.row, .row1200{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -327,18 +327,17 @@ circle{
 #theme{
     text-decoration: none;
 }
-.temp{
+.mascot{
     width: 400px;
     height: 400px;
 }
 .desc p{
     font-size: large;
+    padding-bottom: 15px;
 }
-
-
-
-
-
+.title{
+    font-size: 75px;
+}
 
 /* Special */
 .mb-10{
@@ -352,4 +351,51 @@ circle{
 }
 .w{
     width: 100%;
+}
+
+@media (max-width: 1920px) {
+    .square{
+        padding: 20px;
+        width: 50%;
+    }
+}
+@media (max-width: 1200px) {
+    .mascot{
+        width: 250px;
+        height: 250px;
+    }
+    .download-button{
+        padding: 20px 90px 20px 90px;
+        font-size: xx-small;
+    }
+    .row-1200{
+        flex-direction: column;
+    }
+    .btn-size{
+        width: 80%;
+        margin-top: 10px;
+    }
+    footer div:nth-child(2){
+        display: none;
+        visibility: hidden;
+    }
+    .title{
+        font-size: 40px;
+    }
+}
+@media (max-width: 500px) {
+    footer div:nth-child(3){
+        display: none;
+        visibility: hidden;
+    }
+}
+@media (max-width: 800px) {
+    .square{
+        padding: 5px;
+        width: 50%;
+    }
+    .mascot{
+        width: 180px;
+        height: 180px;
+    }
 }
