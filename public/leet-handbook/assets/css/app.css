@@ -387,6 +387,10 @@ circle{
     .title{
         font-size: 40px;
     }
+    .temp-fix{
+        display: none;
+        visibility: hidden;
+    }    
 }
 @media (max-width: 500px) {
     footer div:nth-child(3){
