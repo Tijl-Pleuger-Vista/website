@@ -340,6 +340,10 @@ circle{
 .title{
     font-size: 75px;
 }
+.temp-fix{
+    display: none;
+    visibility: hidden;
+} 
 
 /* Special */
 .mb-10{
@@ -386,11 +390,7 @@ circle{
     }
     .title{
         font-size: 40px;
-    }
-    .temp-fix{
-        display: none;
-        visibility: hidden;
-    }    
+    }   
 }
 @media (max-width: 500px) {
     footer div:nth-child(3){
