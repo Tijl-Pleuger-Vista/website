@@ -2,8 +2,8 @@ let experienceNumber = document.getElementById("experience");
 let levelNumber = document.getElementById("level");
 
 let experienceCounter = 0;
-let experience = 0
-let level = 0
+let experience = 80
+let level = 10
 levelNumber.innerHTML = "lvl " + level
 setInterval(() => {
     if(experienceCounter == experience){
