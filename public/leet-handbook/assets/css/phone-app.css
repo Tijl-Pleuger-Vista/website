@@ -218,6 +218,25 @@ svg{
 .bi-moon-stars-fill:hover{
     opacity: 1;
 }
+.bi-geo-alt-fill,
+.bi-telephone-fill,
+.bi-twitter,
+.bi-linkedin{
+    position: relative;
+    bottom: 2px;
+    margin-right: 2px;
+}
+.bi-box-arrow-in-right,
+.bi-download{
+    position: relative;
+    bottom: 4px;
+    right: 5px;
+}
+.bi-envelope-fill{
+    position: relative;
+    bottom: 1px;
+    margin-right: 2px;  
+}
 
 /* OTHER */
 .logo-text{
@@ -230,7 +249,9 @@ svg{
 #theme{
     text-decoration: none;
 }
-
+.f-l{
+    font-size: large;
+}
 /* CARDS */
 .card{
     height: 100dvh;
