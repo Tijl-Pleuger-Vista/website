@@ -281,3 +281,8 @@ svg{
 .mr-15{
     margin-right: 15px;
 }
+@media (max-width: 600px) {
+    .logo-text h1{
+        font-size: smaller;
+    }
+}
