@@ -60,7 +60,7 @@ button, input[type="submit"], input[type="reset"] {
 button:hover{
     text-decoration: underline;
 }
-h2{
+h1, h2{
     font-weight: normal;
 }
 ul{
