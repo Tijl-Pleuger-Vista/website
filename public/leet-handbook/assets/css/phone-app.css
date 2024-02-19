@@ -270,7 +270,7 @@ svg{
     right: 20px;
 }
 .w{
-    width: 100%;
+    width: 100dvw;
 }
 .h{
     height: 100%;
