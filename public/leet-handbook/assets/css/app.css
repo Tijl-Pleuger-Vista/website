@@ -280,6 +280,7 @@ circle {
     position: relative;
     top: 12px;
     padding: 0 18px;
+    font-size: small;
 }
 
 h2,
@@ -287,11 +288,12 @@ h1 {
     color: var(--txt);
     font-weight: normal;
     margin: 0;
+    font-size: large;
 }
 
-h1 {
+/* h1 {
     font-size: x-large;
-}
+} */
 
 /* Special */
 .mb-10 {
