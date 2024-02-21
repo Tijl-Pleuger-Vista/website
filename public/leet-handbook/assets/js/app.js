@@ -18,45 +18,58 @@ function btnTheme(){
     theme++
     if(theme === 1){
         // 75
-        document.querySelectorAll(".contrast-100").forEach(s => {
-            s.classList.remove("contrast-100")
-            s.classList.add("contrast-75")
-            }
-        )
+        // document.querySelectorAll(".contrast-100").forEach(s => {
+        //     s.classList.remove("contrast-100")
+        //     s.classList.add("contrast-75")
+        //     }
+        // )
+        var r = document.querySelector(':root');
+        r.style.setProperty('--filter', "rgba(46, 46, 46, 0.15)");
+        r.style.setProperty('--txt', "#000000");
+
     }
     if(theme === 2){
         // 50 
-        document.querySelectorAll(".contrast-75").forEach(s => {
-            s.classList.remove("contrast-75")
-            s.classList.add("contrast-50")
-            }
-        )
-        document.querySelectorAll(".light").forEach(s => {
-            s.classList.remove("light")
-            s.classList.add("dark")
-            }
-        )
+        // document.querySelectorAll(".contrast-75").forEach(s => {
+        //     s.classList.remove("contrast-75")
+        //     s.classList.add("contrast-50")
+        //     }
+        // )
+        // document.querySelectorAll(".light").forEach(s => {
+        //     s.classList.remove("light")
+        //     s.classList.add("dark")
+        //     }
+        // )
+        var r = document.querySelector(':root');
+        r.style.setProperty('--filter', "rgba(46, 46, 46, 0.25)");
+
     }
     if(theme === 3){
         // 25
-        document.querySelectorAll(".contrast-50").forEach(s => {
-            s.classList.remove("contrast-50")
-            s.classList.add("contrast-25")
-            }
-        )
+        // document.querySelectorAll(".contrast-50").forEach(s => {
+        //     s.classList.remove("contrast-50")
+        //     s.classList.add("contrast-25")
+        //     }
+        // )
+        var r = document.querySelector(':root');
+        r.style.setProperty('--filter', "rgba(46, 46, 46, 0.45)");
+        r.style.setProperty('--txt', "#ffffff");
+
     }
     if(theme === 4){
         // reset
-        document.querySelectorAll(".contrast-25").forEach(s => {
-            s.classList.remove("contrast-25")
-            s.classList.add("contrast-100")
-            }
-        )
-        document.querySelectorAll(".dark").forEach(s => {
-            s.classList.remove("dark")
-            s.classList.add("light")
-            }
-        )
+        // document.querySelectorAll(".contrast-25").forEach(s => {
+        //     s.classList.remove("contrast-25")
+        //     s.classList.add("contrast-100")
+        //     }
+        // )
+        // document.querySelectorAll(".dark").forEach(s => {
+        //     s.classList.remove("dark")
+        //     s.classList.add("light")
+        //     }
+        // )
         theme = 0
+        var r = document.querySelector(':root');
+        r.style.setProperty('--filter', "rgba(46, 46, 46, 0.65)");
     }
 }
