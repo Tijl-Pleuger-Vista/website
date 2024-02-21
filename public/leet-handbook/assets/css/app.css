@@ -395,3 +395,11 @@ h1 {
 .btn-size{
     width: 35%;
 }
+
+/* MEDIA */
+@media (max-width: 850px) {
+    footer div:nth-child(3){
+        display: none;
+        visibility: hidden;
+    }
+}
