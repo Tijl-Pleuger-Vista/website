@@ -91,8 +91,7 @@ a:active {
 }
 
 /* FLEX BOX */
-.row,
-.row1200 {
+.row {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -208,6 +207,15 @@ svg{
     bottom: 80px;
 }
 
+.pfp{
+    height: 70px;
+    width: 70px;
+}
+.mascot{
+    width: 400px;
+    height: 400px;
+}
+
 /* ToolTip */
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -300,9 +308,20 @@ h1 {
     font-size: large;
 }
 
-/* h1 {
-    font-size: x-large;
-} */
+.title{
+    font-size: xx-large;
+}
+
+/* SPACER */
+.space{
+    padding: 0 10px 0 10px;
+}
+.space-around{
+    justify-content: space-around;
+}
+.space-between{  
+    justify-content: space-between;
+}
 
 /* Special */
 .mb-10 {
@@ -347,4 +366,32 @@ h1 {
 
 #theme {
     text-decoration: none;
+}
+
+.square{
+    padding: 50px;
+    width: 50%;
+}
+
+
+
+/* BUTTON */
+.download-button{
+    border-radius: 40px;
+    padding: 20px 90px 20px 90px;
+    background: rgba(46, 46, 46, 0.15);
+    box-sizing: border-box;
+    box-shadow: 0 0s 25px rgba(0,0,0,.6);
+}
+.download-button:hover{
+    background: rgba(46, 46, 46, 0.45);
+}
+.download-text{
+    margin: 0 15px;
+}
+.download-text:hover{
+    text-decoration: none;
+}
+.btn-size{
+    width: 35%;
 }
