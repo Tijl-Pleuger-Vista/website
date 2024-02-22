@@ -26,25 +26,11 @@ body {
     overflow-x: hidden;
 }
 
-/* header,
 footer {
-    position: absolute;
-    background: rgba(46, 46, 46, 0.15);
-    box-sizing: border-box;
-    box-shadow: 0 0s 25px rgba(0, 0, 0, .6);
-    color: var(--txt);
     height: 100px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
 }
 
-footer {
-    background: rgba(46, 46, 46, 0.35);
-    color: var(--txt);
-} */
 
 button,
 input[type="submit"],
