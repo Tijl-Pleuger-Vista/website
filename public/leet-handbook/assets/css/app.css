@@ -445,6 +445,8 @@ input:-webkit-autofill:focus {
     visibility: hidden;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px) contrast(60%);
+    -webkit-backdrop-filter: blur(2px) contrast(60%);
     z-index: 255;
 }
 
