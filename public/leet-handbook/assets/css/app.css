@@ -26,7 +26,7 @@ body {
     overflow-x: hidden;
 }
 
-header,
+/* header,
 footer {
     position: absolute;
     background: rgba(46, 46, 46, 0.15);
@@ -43,9 +43,8 @@ footer {
 
 footer {
     background: rgba(46, 46, 46, 0.35);
-    top: calc(400vh - 100px);
     color: var(--txt);
-}
+} */
 
 button,
 input[type="submit"],
