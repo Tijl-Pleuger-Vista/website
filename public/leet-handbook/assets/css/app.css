@@ -443,10 +443,10 @@ input:-webkit-autofill:focus {
     height: 100dvh;
     display: none;
     visibility: hidden;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    backdrop-filter: blur(2px) contrast(60%);
-    -webkit-backdrop-filter: blur(2px) contrast(60%);
+    /* -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px) contrast(90%) !important;
+    -webkit-backdrop-filter: blur(10px) contrast(90%) !important;
     z-index: 255;
 }
 
