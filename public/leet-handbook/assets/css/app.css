@@ -424,6 +424,8 @@ h1 {
         margin-bottom: 20px;
     }
     .mascot{
+        width: 0px;
+        height: 0px;
         display: none;
         visibility: hidden;
     }
