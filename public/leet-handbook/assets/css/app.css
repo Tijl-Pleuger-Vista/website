@@ -443,6 +443,7 @@ input:-webkit-autofill:focus {
     height: 100dvh;
     display: none;
     visibility: hidden;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 255;
 }
