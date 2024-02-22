@@ -19,8 +19,6 @@ function btnTheme(){
     theme++
     if(theme === 1){
         r.style.setProperty('--filter', "rgba(46, 46, 46, 0.15)");
-        r.style.setProperty('--txt', "#000000");
-
     }
     if(theme === 2){
         r.style.setProperty('--filter', "rgba(46, 46, 46, 0.25)");
@@ -32,7 +30,23 @@ function btnTheme(){
 
     }
     if(theme === 4){
-        theme = 0
         r.style.setProperty('--filter', "rgba(46, 46, 46, 0.65)");
     }
+    if(theme === 5){
+        theme = 0
+        r.style.setProperty('--filter', "rgba(46, 46, 46, 0)");
+        r.style.setProperty('--txt', "#000000");
+    }
+}
+
+
+function userLoginOpen(){
+    var r = document.querySelector('.login');
+    r.style.setProperty('display', "flex");
+    r.style.setProperty('visibility', "visible");
+}
+function userLoginClose(){
+    var r = document.querySelector('.login');
+    r.style.setProperty('display', "none");
+    r.style.setProperty('visibility', "hidden");
 }

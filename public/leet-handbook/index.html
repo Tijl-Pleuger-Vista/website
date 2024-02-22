@@ -55,9 +55,9 @@
                         </svg>
                     </button>
                 </div>
-                <div class="center"><a href="">
-                        <h2>Login</h2>
-                    </a></div>
+                <div class="center">
+                    <h2><button onclick="userLoginOpen()">Login</button></h2>
+                </div>
                 <div>
                     <div class="skill">
                         <div class="outer">
@@ -76,13 +76,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="center ml-30">
+                <div class="center ml-30 mr-30">
                     <div id="level"></div>
                 </div>
             </div>
             <div class="row logo center">
                 <div class="logo-txt mb-30">
-                    <h1>leer</h1>
+                    <h1>Security</h1>
                 </div>
                 <div class="logo-txt mb-30">
                     <h1>handbook</h1>
@@ -197,40 +197,73 @@
             <div class="ml-30 column">
                 <div class="column mb-30">
                         <div class="center">
-                            <h2 class="mb-20">Platform Veilig Ondernemen</h2>
+                            <h1 class="mb-20 title">Platform Veilig Ondernemen</h1>
                         </div>
-                    <p class="ml-10 tooltip"><a href="https://twitter.com/home" target="_blank"><i class="bi bi-twitter"></i>Twitter</a>
-                        <span class="tooltiptext phone-false">Click To Open Twitter</span>
-                    </p>
-                    <p class="ml-10 tooltip"><a href="https://www.linkedin.com/" target="_blank"></a><i class="bi bi-linkedin"></i>Linked-IN
-                        <span class="tooltiptext phone-false">Click To Open LinkedIN</span>
-                    </p>
+                        <div class="center column">
+                            <p class="ml-10 tooltip"><a href="https://twitter.com/home" target="_blank"><i class="bi bi-twitter"></i>Twitter</a>
+                                <span class="tooltiptext phone-false">Click To Open Twitter</span>
+                            </p>
+                            <p class="ml-10 tooltip"><a href="https://www.linkedin.com/" target="_blank"></a><i class="bi bi-linkedin"></i>Linked-IN
+                                <span class="tooltiptext phone-false">Click To Open LinkedIN</span>
+                            </p>
+                        </div>
                 </div>
                 <div class="column mb-30">
                         <div class="center">
-                            <h2 class="mb-10">About The Handbook</h2>
+                            <h1 class="mb-10 title">About The Handbook</h1>
                         </div>
-                    <p class="ml-10">This handbook is designed to help you learn about security</p>
-                    <p class="ml-10">With our experience based system you will earn exp for completing levels</p>
-                    <p class="ml-10">Defend your privacy in a fun way!</p>
+                        <div class="center column">
+                            <p class="ml-10">This handbook is designed to help you learn about security</p>
+                            <p class="ml-10">With our experience based system you will earn exp for completing levels</p>
+                            <p class="ml-10">Defend your privacy in a fun way!</p>
+                        </div>
                 </div>
                 <div class="column mb-30">
                         <div class="center">
-                            <h2 class="mb-10">Contact us</h2>
+                            <h1 class="mb-10 title">Contact us</h1>
                         </div>
-                    <p class="ml-10 tooltip"><a href="https://www.google.com/maps/place/Breukerweg+200,+6412+ZL+Heerlen/@50.9049177,5.9436252,17z/data=!3m1!4b1!4m6!3m5!1s0x47c0be80382293b7:0xc04ecfe224df6dec!8m2!3d50.9049177!4d5.9436252!16s%2Fg%2F11bw3zzzss?entry=ttu" target="_blank"><i class="bi bi-geo-alt-fill"></i>Heerlen, Breukerweg 200</a>
-                        <span class="tooltiptext phone-false">Click To Open Google Maps</span>
-                    </p>
-                    <p class="ml-10 tooltip"><button onclick="copyPhone()"><i class="bi bi-telephone-fill"></i>045 523 2576</button>
-                        <span class="tooltiptext phone-false">Click To Copy</span>
-                    </p>
-                    <p class="ml-10 tooltip"><i class="bi bi-envelope-fill"></i>pvo.help@gmail.com
-                        <span class="tooltiptext phone-false">Click To Open Mail</span>
-                    </p>
+                        <div class="center column">
+                            <p class="ml-10 tooltip"><a href="https://www.google.com/maps/place/Breukerweg+200,+6412+ZL+Heerlen/@50.9049177,5.9436252,17z/data=!3m1!4b1!4m6!3m5!1s0x47c0be80382293b7:0xc04ecfe224df6dec!8m2!3d50.9049177!4d5.9436252!16s%2Fg%2F11bw3zzzss?entry=ttu" target="_blank"><i class="bi bi-geo-alt-fill"></i>Heerlen, Breukerweg 200</a>
+                                <span class="tooltiptext phone-false">Click To Open Google Maps</span>
+                            </p>
+                            <p class="ml-10 tooltip"><button onclick="copyPhone()"><i class="bi bi-telephone-fill"></i>045 523 2576</button>
+                                <span class="tooltiptext phone-false">Click To Copy</span>
+                            </p>
+                            <p class="ml-10 tooltip"><i class="bi bi-envelope-fill"></i>pvo.help@gmail.com
+                                <span class="tooltiptext phone-false">Click To Open Mail</span>
+                            </p>
+                        </div>
                 </div>
             </div>
         </div>
     </footer>
+    <div class="login center column">
+        <div class="center column">
+            <form class="center column" name="loginForm" method="post" action="http://pokedexauth.ddns.net:5000/auth/" onsubmit="return validateLoginForm()">
+                <div>
+                    <input type="username" name="username" required="" placeholder="Username">
+                </div>
+                <div class="mb-20">
+                    <input type="password" name="password" required="" placeholder="Password">
+                </div>
+                <div class="row mb-20">
+                    <input class="button" type="submit" value="Login">
+                </div>
+            </form>
+            <div class="mb-20">OR</div>
+            <button class="button button-center" id="LoginDiv" onclick="btnClicked(this.id)">Create an account</button>
+        </div>
+        <div class="mt-75">
+            <button class="button button-center" id="LoginDiv0" onclick="btnClicked(this.id)">Forgot Password?</button>
+         </div>
+         <h2 class="login-button">
+            <button onclick="userLoginClose()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" style="position:relative; top:-10">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </button>
+        </h2>
+    </div>
     <script src="assets/js/level.js"></script>
 </body>
 </html>
