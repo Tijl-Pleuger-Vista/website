@@ -72,7 +72,7 @@ a:active {
 
 /* FLEX BOX */
 .row {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -291,6 +291,9 @@ h1 {
 .title{
     font-size: xx-large;
 }
+.sub-title {
+    margin-bottom: 15px;
+}
 
 /* SPACER */
 .space{
@@ -399,7 +402,7 @@ h1 {
         visibility: visible;
     }
     .phone-false{
-        display: none;
+        display: none !important;
         visibility: hidden;
     }
     .btn-size{
