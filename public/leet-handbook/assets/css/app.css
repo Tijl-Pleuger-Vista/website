@@ -423,6 +423,10 @@ h1 {
     .mb-20-phone {
         margin-bottom: 20px;
     }
+    .mascot{
+        display: none;
+        visibility: hidden;
+    }
 }
 
 
