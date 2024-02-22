@@ -89,18 +89,18 @@
                 </div>
             </div>
             <div class="row download center">
-                <div><a href="home.html">
-                        <h2>Home</h2>
-                    </a></div>
-                <div><a href="about-us.html">
-                        <h2>About</h2>
-                    </a></div>
-                <div><a href="handbook.html">
-                        <h2>Handbook</h2>
-                    </a></div>
-                <div><a href="download.html">
-                        <h2>Download</h2>
-                    </a></div>
+                <div>
+                    <h2><button id="0" onclick="btnScroll(this.id)">Home</button></h2>
+                </div>
+                <div>
+                    <h2><button id="1" onclick="btnScroll(this.id)">About</button></h2>
+                </div>
+                <div>
+                    <h2><button id="2" onclick="btnScroll(this.id)">Handbook</button></h2>
+                </div>
+                <div>
+                    <h2><button id="3" onclick="btnScroll(this.id)">Download</button></h2>
+                </div>
             </div>
         </div>
     </header>
@@ -247,14 +247,14 @@
                     <input type="password" name="password" required="" placeholder="Password">
                 </div>
                 <div class="row mb-20">
-                    <input class="button" type="submit" value="Login">
+                    <input class="color" type="submit" value="Login">
                 </div>
             </form>
-            <div class="mb-20">OR</div>
-            <button class="button button-center" id="LoginDiv" onclick="btnClicked(this.id)">Create an account</button>
+            <div class="mb-20 color">OR</div>
+            <button class="color" id="LoginDiv" onclick="btnClicked(this.id)">Create an account</button>
         </div>
         <div class="mt-75">
-            <button class="button button-center" id="LoginDiv0" onclick="btnClicked(this.id)">Forgot Password?</button>
+            <button class="color" id="LoginDiv0" onclick="btnClicked(this.id)">Forgot Password?</button>
          </div>
          <h2 class="login-button">
             <button onclick="userLoginClose()">

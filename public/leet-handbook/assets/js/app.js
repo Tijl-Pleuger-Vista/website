@@ -1,6 +1,6 @@
 var amount = window.innerHeight;
 var theme = 0
-function FuncScroll (x){
+function btnScroll (x){
     _amount = x * amount
     window.scrollTo({top: _amount, left: 0});
     if (x === 0){document.title = "Home - Leet handbook";}

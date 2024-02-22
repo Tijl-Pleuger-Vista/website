@@ -357,23 +357,11 @@ h1 {
 
 /* OTHER */
 
-/* input{
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: var(--txt);
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid var(--txt-light);
-    outline: none;
-    background: transparent;
-} */
-
 input {
     width: 300px;
     padding: 10px 20px;
     border-color: transparent;
-    border-bottom: 1px solid var(--txt-dark);
+    border-bottom: 1px solid var(--txt);
     font-size: 15px;
     background: transparent;
 }
@@ -385,36 +373,46 @@ input:focus {
 input::-webkit-input-placeholder {
     padding-left: 5px;
     font-size: 15px;
-    color: var(--txt-dark);
+    color: var(--txt);
 }
 
 input:-moz-placeholder {
     /* Firefox 18- */
     padding-left: 5px;
     font-size: 15px;
-    color: var(--txt-dark);
+    color: var(--txt);
 }
 
 input::-moz-placeholder {
     /* Firefox 19+ */
     padding-left: 5px;
     font-size: 15px;
-    color: var(--txt-dark);
+    color: var(--txt);
 }
 
 input:-ms-input-placeholder {
     padding-left: 5px;
     font-size: 15px;
-    color: var(--txt-dark);
+    color: var(--txt);
+}
+
+.color{
+    color: var(--txt);
 }
 
 input,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 50px rgba(255, 255, 255, 0) inset !important;
-  background-color: transparent !important;
-  background-clip: text;
+    -webkit-box-shadow: 0 0 50px rgba(255, 255, 255, 0) inset !important;
+    background-color: transparent !important;
+    background-clip: text;
+    color: var(--txt);
+    -webkit-text-fill-color: var(--txt);
+}
+
+input, select, textarea{
+    color: var(--txt);
 }
 
 .download div {
