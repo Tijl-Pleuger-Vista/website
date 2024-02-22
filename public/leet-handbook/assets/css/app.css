@@ -346,6 +346,9 @@ h1 {
 .w {
     width: 100%;
 }
+.w-m {
+    width: fit-content;
+}
 
 /* OTHER */
 
