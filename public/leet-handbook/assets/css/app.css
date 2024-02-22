@@ -348,6 +348,10 @@ h1 {
     margin-left: 30px;
 }
 
+.mb-20-phone {
+    margin-bottom: 0;
+}
+
 .w {
     width: 100%;
 }
@@ -398,8 +402,37 @@ h1 {
 
 /* MEDIA */
 @media (max-width: 850px) {
-    footer div:nth-child(3){
+    /* footer div:nth-child(3){
         display: none;
         visibility: hidden;
+    } */
+    .phone-true{
+        display: block;
+        visibility: visible;
+    }
+    .phone-false{
+        display: none;
+        visibility: hidden;
+    }
+    .btn-size{
+        width: 90%;
+    }
+    .download-text{
+        margin: 0;
+    }
+    .mb-20-phone {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (min-width: 850px) {
+    .phone-true{
+        display: none;
+        visibility: hidden;
+    }
+    .phone-false{
+        display: block;
+        visibility: visible;
     }
 }
