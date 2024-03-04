@@ -31,6 +31,7 @@
 
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/user.js"></script>
 </head>
 
 <body>
@@ -238,24 +239,23 @@
         </div>
     </footer>
     <div class="login center column">
-        <div class="center column">
-            <form class="center column" name="loginForm" method="post" action="http://pokedexauth.ddns.net:5000/auth/" onsubmit="return validateLoginForm()">
-                <div>
-                    <input type="username" name="username" required="" placeholder="Username">
-                </div>
-                <div class="mb-20">
-                    <input type="password" name="password" required="" placeholder="Password">
-                </div>
-                <div class="row mb-20">
-                    <input class="color" type="submit" value="Login">
-                </div>
-            </form>
-            <div class="mb-20 color">OR</div>
-            <button class="color" id="LoginDiv" onclick="btnClicked(this.id)">Create an account</button>
+        <div id="mewreplace" class="center column">
+            <div class="center column">
+                <form id="mainForm">
+                    <div class="center column mb-20">
+                        <input type="email" id="email" placeholder="Email">
+                        <input type="password" id="password" placeholder="New Password">    
+                        <button class="mt-20" type="submit">Login</button>
+
+                    </div>
+                </form>
+                <div class="mt-20 color">OR</div>
+                <button class="mt-20 color" onclick="divRegister()">Create an account instead</button>
+            </div>
+            <div class="mt-75">
+                <button class="color" onclick="btnClicked()">Forgot Password?</button>
+             </div>
         </div>
-        <div class="mt-75">
-            <button class="color" id="LoginDiv0" onclick="btnClicked(this.id)">Forgot Password?</button>
-         </div>
          <h2 class="login-button">
             <button onclick="userLoginClose()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" style="position:relative; top:-10">
@@ -266,4 +266,54 @@
     </div>
     <script src="assets/js/level.js"></script>
 </body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCqm-YZF8LyrBd3t-pmtG6vzbtD7hpkPWg",
+      authDomain: "vista-400927.firebaseapp.com",
+      databaseURL: "https://vista-400927-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "vista-400927",
+      storageBucket: "vista-400927.appspot.com",
+      messagingSenderId: "958008839817",
+      appId: "1:958008839817:web:d16140eaca542134128058",
+      measurementId: "G-B448GJXJ9H"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getDatabase();
+    const auth = getAuth(app);
+
+    let userName = document.getElementById('username');
+    let userEmail = document.getElementById('email');
+    let userPassword = document.getElementById('email');
+    let userForm = document.getElementById('email');
+
+    let RegisterUser = evt => {
+        evt.preventDefault();
+        createUserWithEmailAndPassword(auth, userEmail.value, userPassword.value)
+        .then((credentials)=>{
+            console.log(credentials);
+        })
+        .catch((error)=>{
+            alert(error.message);
+            console.log(error.code);
+            console.log(error.message);
+        })
+    }
+
+    // maybe change to a button event
+    mainForm.addEventListener('submit', RegisterUser)
+  </script>
 </html>
