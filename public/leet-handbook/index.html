@@ -38,6 +38,9 @@
     <header class="card center column">
         <div class="card-content center column">
             <div class="row user">
+                <div id="displayUsername" class="center mr-30">
+                    temp
+                </div>
                 <div class="row">
                     <button id="theme" onclick="btnTheme()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -239,22 +242,35 @@
         </div>
     </footer>
     <div class="login center column">
-        <div id="mewreplace" class="center column">
+        <div id="form-login" class="center column visible" style="position: absolute;">
             <div class="center column">
-                <form id="mainForm">
+                <form id="loginForm">
                     <div class="center column mb-20">
-                        <input type="email" id="email" placeholder="Email">
-                        <input type="password" id="password" placeholder="New Password">    
+                        <input type="email" id="emailL" placeholder="Email">
+                        <input type="password" id="passwordL" placeholder="New Password">    
                         <button class="mt-20" type="submit">Login</button>
-
                     </div>
                 </form>
                 <div class="mt-20 color">OR</div>
-                <button class="mt-20 color" onclick="divRegister()">Create an account instead</button>
+                <button class="mt-40 color" onclick="divRegister()">Create an account instead</button>
             </div>
-            <div class="mt-75">
+            <div class="mt-75 center">
                 <button class="color" onclick="btnClicked()">Forgot Password?</button>
              </div>
+        </div>
+        <div id="form-register" class="center column not-visible" style="position: absolute;">
+            <div class="center column">
+                <form id="registerForm">
+                    <div class="center column mb-20">
+                        <input type="text" id="usernameR" placeholder="Username">
+                        <input type="email" id="emailR" placeholder="Email">
+                        <input type="password" id="passwordR" placeholder="New Password">    
+                        <button class="mt-20" type="submit">Register</button>
+                    </div>
+                </form>
+                <div class="mt-20 color">OR</div>
+                <button class="mt-40 color" onclick="divLogin()">Login instead</button>
+            </div>
         </div>
          <h2 class="login-button">
             <button onclick="userLoginClose()">
@@ -267,17 +283,11 @@
     <script src="assets/js/level.js"></script>
 </body>
 <script type="module">
-    // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-
+    import { getDatabase, set, ref, get, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
     const firebaseConfig = {
       apiKey: "AIzaSyCqm-YZF8LyrBd3t-pmtG6vzbtD7hpkPWg",
       authDomain: "vista-400927.firebaseapp.com",
@@ -289,22 +299,30 @@
       measurementId: "G-B448GJXJ9H"
     };
   
-    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const db = getDatabase();
     const auth = getAuth(app);
+    const dbref = ref(db);
 
-    let userName = document.getElementById('username');
-    let userEmail = document.getElementById('email');
-    let userPassword = document.getElementById('email');
-    let userForm = document.getElementById('email');
+        // Register
+    let userNameR = document.getElementById('usernameR');
+    let userEmailR = document.getElementById('emailR');
+    let userPasswordR = document.getElementById('passwordR');
+
+        // Login
+    let userEmailL = document.getElementById('emailL');
+    let userPasswordL = document.getElementById('passwordL');
 
     let RegisterUser = evt => {
         evt.preventDefault();
-        createUserWithEmailAndPassword(auth, userEmail.value, userPassword.value)
+        createUserWithEmailAndPassword(auth, userEmailR.value, userPasswordR.value)
         .then((credentials)=>{
-            console.log(credentials);
+            set(ref(db, 'UserAuthList/' + credentials.user.uid),{
+                username: userNameR.value,
+                exp: 0,
+                level: 0,
+            })
         })
         .catch((error)=>{
             alert(error.message);
@@ -313,7 +331,62 @@
         })
     }
 
-    // maybe change to a button event
-    mainForm.addEventListener('submit', RegisterUser)
-  </script>
+    let LoginUser = evt => {
+        evt.preventDefault();
+        signInWithEmailAndPassword(auth, userEmailL.value, userPasswordL.value)
+        .then((credentials)=>{
+            get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
+               if(snapshot.exists){
+                    sessionStorage.setItem("user-info", JSON.stringify({
+                        username: snapshot.val().username,
+                        exp: snapshot.val().exp,
+                        level: snapshot.val().level
+                    }))
+                    sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
+                    loginUserCompleted()
+               }
+            })
+        })
+        .catch((error)=>{
+            alert(error.message);
+            console.log(error.code);
+            console.log(error.message);
+        })
+    }
+
+    function loginUserCompleted(){
+        let experienceNumber = document.getElementById("experience");
+        let levelNumber = document.getElementById("level");
+
+        let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+        let userInfo = JSON.parse(sessionStorage.getItem("user-info"));
+
+        let experienceCounter = 0;
+        let experience = userInfo.exp
+        let level = userInfo.level
+        console.log(experience)
+        console.log(level)
+        console.log(userInfo.username)
+
+        let username = userInfo.username
+
+        levelNumber.innerHTML = "lvl " + level
+        setInterval(() => {
+            if(experienceCounter == experience){
+                clearInterval();
+            }else{
+                experienceCounter += 1;
+                experienceNumber.innerHTML = experienceCounter + "%"; 
+            }
+        },20 );
+
+        displayUsername.innerHTML = username;
+        var r = document.querySelector(':root');
+        _experience = 471 - experience - experience
+        r.style.setProperty('--experience', _experience);
+    }
+
+    registerForm.addEventListener('submit', RegisterUser)
+    loginForm.addEventListener('submit', LoginUser)
+</script>
 </html>

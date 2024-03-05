@@ -12,7 +12,6 @@
     --txt-light: #000000;
     --filter: rgba(46, 46, 46, 0);
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -30,8 +29,14 @@ footer {
     height: 100px;
     width: 100%;
 }
-
-
+.visible{
+    visibility: visible;
+    display:flex;
+}
+.not-visible{
+    visibility: hidden;
+    display: none;
+}
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -333,6 +338,10 @@ h1 {
 
 .mt-20{
     margin-top: 20px;
+}
+
+.mt-40{
+    margin-top: 40px;
 }
 
 .mt-75 {
