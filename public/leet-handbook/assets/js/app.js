@@ -44,9 +44,47 @@ function userLoginOpen(){
     var r = document.querySelector('.login');
     r.style.setProperty('display', "flex");
     r.style.setProperty('visibility', "visible");
+
+    document.getElementById('form-register').classList.add('not-visible');
+    document.getElementById('form-register').classList.remove('visible');
+
+    document.getElementById('form-login').classList.add('visible');
+    document.getElementById('form-login').classList.remove('not-visible');
 }
 function userLoginClose(){
     var r = document.querySelector('.login');
     r.style.setProperty('display', "none");
     r.style.setProperty('visibility', "hidden");
+}
+
+function userLogoutOpen(){
+    localStorage.removeItem("user-info");
+    localStorage.removeItem("user-email");
+    localStorage.removeItem("user-password");
+    localStorage.removeItem("user-creds");
+    location.reload();
+}
+
+function openHandbook(){
+    if(localStorage.getItem("user-creds")){
+        window.location.href = 'handbook.html';
+    }
+    else{
+        userLoginOpen()
+    }
+}
+
+function divRegister(){
+    document.getElementById('form-login').classList.add('not-visible');
+    document.getElementById('form-login').classList.remove('visible');
+
+    document.getElementById('form-register').classList.add('visible');
+    document.getElementById('form-register').classList.remove('not-visible');
+}
+function divLogin(){
+    document.getElementById('form-register').classList.add('not-visible');
+    document.getElementById('form-register').classList.remove('visible');
+
+    document.getElementById('form-login').classList.add('visible');
+    document.getElementById('form-login').classList.remove('not-visible');
 }

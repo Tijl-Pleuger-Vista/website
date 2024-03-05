@@ -31,7 +31,6 @@
 
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/user.js"></script>
 </head>
 
 <body>
@@ -39,7 +38,6 @@
         <div class="card-content center column">
             <div class="row user">
                 <div id="displayUsername" class="center mr-30">
-                    temp
                 </div>
                 <div class="row">
                     <button id="theme" onclick="btnTheme()">
@@ -59,14 +57,14 @@
                         </svg>
                     </button>
                 </div>
-                <div class="center">
+                <div id="displayLoginLogout" class="center">
                     <h2><button onclick="userLoginOpen()">Login</button></h2>
                 </div>
                 <div>
                     <div class="skill">
                         <div class="outer">
                             <div class="inner column">
-                                <div id="experience">0%</div>
+                                <div id="displayExperience">0%</div>
                             </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="80px" height="80px">
@@ -81,7 +79,7 @@
                     </div>
                 </div>
                 <div class="center ml-30 mr-30">
-                    <div id="level"></div>
+                    <div id="displayLevel"></div>
                 </div>
             </div>
             <div class="row logo center">
@@ -162,7 +160,7 @@
     <div class="card">
         <div class="card-content column">
             <div class="w row center">
-                <button class="download-text btn-size mb-20-phone"><div class="download-button"><h1><i class="bi bi-box-arrow-in-right"></i>Open Handbook</h1></div></button>
+                <button class="download-text btn-size mb-20-phone" onclick="openHandbook()"><div class="download-button"><h1><i class="bi bi-box-arrow-in-right"></i>Open Handbook</h1></div></button>
                 <button class="download-text btn-size mb-20-phone phone-false" onclick="FuncScroll(x = 3)"><div class="download-button"><h1><i class="bi bi-download"></i>Download Handbook</h1></div></button>
                 <button class="download-text btn-size mb-20-phone phone-true"><div class="download-button"><h1><i class="bi bi-box-arrow-in-right"></i>Open app-store</h1></div></button>
 
@@ -246,8 +244,8 @@
             <div class="center column">
                 <form id="loginForm">
                     <div class="center column mb-20">
-                        <input type="email" id="emailL" placeholder="Email">
-                        <input type="password" id="passwordL" placeholder="New Password">    
+                        <input type="email" id="emailLogin" placeholder="Email">
+                        <input type="password" id="passwordLogin" placeholder="New Password">    
                         <button class="mt-20" type="submit">Login</button>
                     </div>
                 </form>
@@ -262,9 +260,9 @@
             <div class="center column">
                 <form id="registerForm">
                     <div class="center column mb-20">
-                        <input type="text" id="usernameR" placeholder="Username">
-                        <input type="email" id="emailR" placeholder="Email">
-                        <input type="password" id="passwordR" placeholder="New Password">    
+                        <input type="text" id="usernameRegister" placeholder="Username">
+                        <input type="email" id="emailRegister" placeholder="Email">
+                        <input type="password" id="passwordRegister" placeholder="New Password">    
                         <button class="mt-20" type="submit">Register</button>
                     </div>
                 </form>
@@ -280,113 +278,6 @@
             </button>
         </h2>
     </div>
-    <script src="assets/js/level.js"></script>
 </body>
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-    import { getDatabase, set, ref, get, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyCqm-YZF8LyrBd3t-pmtG6vzbtD7hpkPWg",
-      authDomain: "vista-400927.firebaseapp.com",
-      databaseURL: "https://vista-400927-default-rtdb.europe-west1.firebasedatabase.app",
-      projectId: "vista-400927",
-      storageBucket: "vista-400927.appspot.com",
-      messagingSenderId: "958008839817",
-      appId: "1:958008839817:web:d16140eaca542134128058",
-      measurementId: "G-B448GJXJ9H"
-    };
-  
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const db = getDatabase();
-    const auth = getAuth(app);
-    const dbref = ref(db);
-
-        // Register
-    let userNameR = document.getElementById('usernameR');
-    let userEmailR = document.getElementById('emailR');
-    let userPasswordR = document.getElementById('passwordR');
-
-        // Login
-    let userEmailL = document.getElementById('emailL');
-    let userPasswordL = document.getElementById('passwordL');
-
-    let RegisterUser = evt => {
-        evt.preventDefault();
-        createUserWithEmailAndPassword(auth, userEmailR.value, userPasswordR.value)
-        .then((credentials)=>{
-            set(ref(db, 'UserAuthList/' + credentials.user.uid),{
-                username: userNameR.value,
-                exp: 0,
-                level: 0,
-            })
-        })
-        .catch((error)=>{
-            alert(error.message);
-            console.log(error.code);
-            console.log(error.message);
-        })
-    }
-
-    let LoginUser = evt => {
-        evt.preventDefault();
-        signInWithEmailAndPassword(auth, userEmailL.value, userPasswordL.value)
-        .then((credentials)=>{
-            get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
-               if(snapshot.exists){
-                    sessionStorage.setItem("user-info", JSON.stringify({
-                        username: snapshot.val().username,
-                        exp: snapshot.val().exp,
-                        level: snapshot.val().level
-                    }))
-                    sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
-                    loginUserCompleted()
-               }
-            })
-        })
-        .catch((error)=>{
-            alert(error.message);
-            console.log(error.code);
-            console.log(error.message);
-        })
-    }
-
-    function loginUserCompleted(){
-        let experienceNumber = document.getElementById("experience");
-        let levelNumber = document.getElementById("level");
-
-        let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
-        let userInfo = JSON.parse(sessionStorage.getItem("user-info"));
-
-        let experienceCounter = 0;
-        let experience = userInfo.exp
-        let level = userInfo.level
-        console.log(experience)
-        console.log(level)
-        console.log(userInfo.username)
-
-        let username = userInfo.username
-
-        levelNumber.innerHTML = "lvl " + level
-        setInterval(() => {
-            if(experienceCounter == experience){
-                clearInterval();
-            }else{
-                experienceCounter += 1;
-                experienceNumber.innerHTML = experienceCounter + "%"; 
-            }
-        },20 );
-
-        displayUsername.innerHTML = username;
-        var r = document.querySelector(':root');
-        _experience = 471 - experience - experience
-        r.style.setProperty('--experience', _experience);
-    }
-
-    registerForm.addEventListener('submit', RegisterUser)
-    loginForm.addEventListener('submit', LoginUser)
-</script>
+<script type="module" src="assets/js/user.js"></script>
 </html>
