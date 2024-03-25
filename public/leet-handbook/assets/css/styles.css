@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'silver';
-    src: url(../assets/fonts/Silver.ttf);
+    src: url(../fonts/silver.ttf);
 }
 @font-face {
     font-family:"Madimi One";
@@ -52,7 +52,7 @@ body {
 }
 
 .timer {
-    background-image: url(../../assets/img/pvo_limburg_logo.jpeg);
+    /* background-image: url(../../assets/img/pvo_limburg_logo.jpeg); */
     background-repeat: no-repeat;
     background-size:cover;
     font-family: 'silver';

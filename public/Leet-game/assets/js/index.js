@@ -1,6 +1,8 @@
 import { player, enemy } from './Fighter.js'
 import { background, shop } from './Sprite.js';
-import { loadKeyDownEvents, loadkeyUpEvents } from './Keys.js'
+// import { loadKeyDownEvents, loadkeyUpEvents } from './Keys.js'
+
+var answer = 1
 
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
@@ -9,54 +11,70 @@ let timerID;    // Used to clearTimeout.
 let gameEnded = false;  // Flag to determinate whenever game's has ended or not.
 // TODO: Reset button.
 
-loadKeyDownEvents(player, enemy);   // Load player and enemy KeyDown events.
-loadkeyUpEvents(player, enemy);     // Load player and enemy KeyUp events.
+// loadKeyDownEvents(player, enemy);
+// loadkeyUpEvents(player, enemy);
 
 const onePlayer = document.getElementById('1player');
-const btnYes = document.getElementById('btnYes');
-const btnNo = document.getElementById('btnNo');
-const questions = document.getElementById('questions');
-let myJson
+const btn0 = document.getElementById('btn0');
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
 
-window.addEventListener("load", (event) => {
-    fetch('../Json/Q&A.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(jsonData => {
-      // Use the jsonData variable as needed
-      myJson = jsonData
-    })
-    .catch(error => {
-      console.error('There was a problem fetching the JSON file:', error);
-    });
 
-  });
+// const questions = document.getElementById('questions');
+// let myJson
+
+// window.addEventListener("load", (event) => {
+//     fetch('../Json/Q&A.json')
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+//       return response.json();
+//     })
+//     .then(jsonData => {
+//       // Use the jsonData variable as needed
+//       myJson = jsonData
+//     })
+//     .catch(error => {
+//       console.error('There was a problem fetching the JSON file:', error);
+//     });
+
+//   });
 
 onePlayer.addEventListener("click", () => {
         // console.log(myJson.questions[0].explanation)
     // creaMyJson()
     startGame();
-    document.getElementById('myPart').style.visibility = 'visible';
+    document.getElementById('displayButtons').style.visibility = 'visible';
     
-    questions.innerHTML = myJson.questions[0].question;
-    creaMyJson()
-
- 
+    // questions.innerHTML = myJson.questions[0].question;
+    // creaMyJson()
 });
-btnYes.addEventListener("click", () => {
-    player.isAttacking = true;
-
+btn0.addEventListener("click", () => {
+    // player.isAttacking = true;
+    answerCheck(1)
+});
+btn1.addEventListener("click", () => {
+    // enemy.isAttacking = true;
+    answerCheck(2)
+});
+btn2.addEventListener("click", () => {
+    answerCheck(3)
+});
+btn3.addEventListener("click", () => {
+    answerCheck(4)
 });
 
-btnNo.addEventListener("click", () => {
-    enemy.isAttacking = true;
-
-});
-
+function answerCheck(check){
+    if (answer === check){
+        console.log("Corrent answer")
+        player.isAttacking = true;
+    } else {
+        console.log("Not the answer")
+        enemy.isAttacking = true;
+    }
+}
 // Main function to start the game after the menu is dismissed.
 function startGame() {
     document.getElementById('menu').style.display = "none"; // Hide the menu.
@@ -168,10 +186,10 @@ function determineWinner({ player, enemy, timerID }) {
     }
 }
 
- function creaMyJson() {
+//  function creaMyJson() {
 
 
-    console.log(questions.innerHTML[0])
+//     console.log(questions.innerHTML[0])
 
 
-}
+// }

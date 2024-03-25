@@ -172,38 +172,38 @@ export const player = new Fighter({
         x: 75,
         y: 0
     },
-    imageSrc: 'https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/game/samuraiMack/Idle.png',
+    imageSrc: 'assets/img/samuraiMack/Idle.png',
     scale: 2.5,
     maxFrames: 8,
     holdFrames: 4,
     offsetFrame: { x: 215, y: 154 },
     sprites: {  // Sprites for different animations.
         idle: {
-            imageSrc: 'https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/game/samuraiMack/Idle.png',
+            imageSrc: 'assets/img/samuraiMack/Idle.png',
             maxFrames: 8,
         },
         run: {
-            imageSrc: '/assets/img/samuraiMack/Run.png',
+            imageSrc: 'assets/img/samuraiMack/Run.png',
             maxFrames: 8,
         },
         jump: {
-            imageSrc: '/assets/img/samuraiMack/Jump.png',
+            imageSrc: 'assets/img/samuraiMack/Jump.png',
             maxFrames: 2,
         },
         fall: {
-            imageSrc: '/assets/img/samuraiMack/Fall.png',
+            imageSrc: 'assets/img/samuraiMack/Fall.png',
             maxFrames: 2,
         },
         death: {
-            imageSrc: '/assets/img/samuraiMack/Death.png',
+            imageSrc: 'assets/img/samuraiMack/Death.png',
             maxFrames: 6,
         },
         attack1: {
-            imageSrc: '/assets/img/samuraiMack/Attack1.png',
+            imageSrc: 'assets/img/samuraiMack/Attack1.png',
             maxFrames: 6,
         },
         takeHit: {
-            imageSrc: '/assets/img/samuraiMack/Take hit White.png',
+            imageSrc: 'assets/img/samuraiMack/Take hit White.png',
             maxFrames: 4,
         }
 
@@ -236,38 +236,38 @@ export const enemy = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: '/assets/img/kenji/Idle.png',
+    imageSrc: 'assets/img/kenji/Idle.png',
     scale: 2.5,
     maxFrames: 4,
     holdFrames: 6,
     offsetFrame: { x: 215, y: 172 },
     sprites: {   // Sprites for different animations.
         idle: {
-            imageSrc: '/assets/img/kenji/Idle.png',
+            imageSrc: 'assets/img/kenji/Idle.png',
             maxFrames: 4,
         },
         run: {
-            imageSrc: '/assets/img/kenji/Run.png',
+            imageSrc: 'assets/img/kenji/Run.png',
             maxFrames: 8,
         },
         jump: {
-            imageSrc: '/assets/img/kenji/Jump.png',
+            imageSrc: 'assets/img/kenji/Jump.png',
             maxFrames: 2,
         },
         fall: {
-            imageSrc: '/assets/img/kenji/Fall.png',
+            imageSrc: 'assets/img/kenji/Fall.png',
             maxFrames: 2,
         },
         death: {
-            imageSrc: '/assets/img/kenji/Death.png',
+            imageSrc: 'assets/img/kenji/Death.png',
             maxFrames: 7,
         },
         attack1: {
-            imageSrc: '/assets/img/kenji/Attack1.png',
+            imageSrc: 'assets/img/kenji/Attack1.png',
             maxFrames: 4,
         },
         takeHit: {
-            imageSrc: '/assets/img/kenji/Take hit white.png',
+            imageSrc: 'assets/img/kenji/Take hit white.png',
             maxFrames: 3,
         }
     },
