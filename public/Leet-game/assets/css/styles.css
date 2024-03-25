@@ -21,7 +21,6 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding-top: 20px;
 }
 
 .center {
@@ -42,11 +41,15 @@ body {
     flex-direction: column;
 }
 
+.mt-10{
+    margin-top: 10px;
+}
 .mr-5 {
     margin-right: 5px;
+}
+.ml-5{
     margin-left: 5px;
 }
-
 .mr-btn {
     margin: 8px;
 }
@@ -228,9 +231,15 @@ body {
     }
 }
 
+.bossName{
+    color: aliceblue;
+    position: absolute;
+    z-index: 10;
+    top: 6px;
+}
 .btn{
     font-family: "Madimi One";
-    width: 150px;
+    width: 170px;
     height: 50px;
     /* background: linear-gradient(to right, gray, gray); */
     color: black;
@@ -245,8 +254,18 @@ body {
     background: rgba(46, 46, 46, 0.15);
     box-sizing: border-box;
     box-shadow: 0 0s 25px rgba(0, 0, 0, .6);
+    padding: 0;
 }
 
 .w {
     width: 100%;
+}
+
+.question{
+    position: absolute;
+    left: 10px;
+    bottom: 28px;
+    background-color: white;
+    width: 335px;
+    height: 50px;
 }

@@ -8,7 +8,7 @@
     <title>Een veilige reis voor een MKB-ondernemer</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-10">
         <div id="menu" class="menu">
             <div class="title; animate-charcter row center">
                 <p class="mr-5">Een</p><p class="mr-5">veilige</p><p class="mr-5">reis</p><p class="mr-5">voor</p><p class="mr-5">een</p>
@@ -29,27 +29,30 @@
             <div id="hud" class="hud">
                 <!-- Player's health -->
                 <div class="healthLayout">
+                    <div class="center">
+                        <p class="bossName">The hacker!</p>
+                    </div>
                     <div class="remainingHealthbar"></div>
-                    <div id="playerHealth" class="totalHealthBar"></div>
+                    <div id="enemyHealth" class="totalHealthBar"></div>
+                </div>
+                <div id="question" class="question">
+                    <p>Question 1:</p>
                 </div>
                 <!-- Enemy's health -->
                 <!-- <div class="healthLayout" style="display: none; visibility: none;">
                     <div class="remainingHealthbar"></div>
-                    <div id="enemyHealth" class="totalHealthBar"></div>
+                    <div id="playerHealth" class="totalHealthBar"></div>
                 </div> -->
             </div>
         </div>
     </div>
     <div class="w mt-20 center">
         <div id="displayButtons" class="center column" style="visibility: hidden; width: 350px;">
-            <div id="question">
-                
-            </div>
             <div class="center row">
-                <button class="btn mr-btn" id="btn0">Answer 1</button>
-                <button class="btn mr-btn" id="btn1">Answer 2</button>
-                <button class="btn mr-btn" id="btn2">Answer 2</button>
-                <button class="btn mr-btn" id="btn3">Answer 2</button>
+                <button class="btn mr-5" id="btn0">Answer 1</button>
+                <button class="btn ml-5" id="btn1">Answer 2</button>
+                <button class="btn mr-5 mt-10" id="btn2">Answer 2</button>
+                <button class="btn ml-5 mt-10" id="btn3">Answer 2</button>
             </div>
         </div>
     </div>
