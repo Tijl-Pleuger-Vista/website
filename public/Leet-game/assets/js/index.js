@@ -25,16 +25,17 @@ var displayQuestion = document.getElementById('question');
 
 localStorage.setItem("i", 0);
 
-onePlayer.addEventListener("click", () => {
-    startGame();
-    let checkJson = JSON.parse(localStorage.getItem("json"));
-    nextQuestion(checkJson)
-    document.getElementById('displayButtons').style.visibility = 'visible';
-});
+
 
 let answerCheckPre = () => {
     let checkJson = JSON.parse(localStorage.getItem("json"));
     console.log(checkJson)
+
+    onePlayer.addEventListener("click", () => {
+        startGame();
+        nextQuestion(checkJson)
+        document.getElementById('displayButtons').style.visibility = 'visible';
+    });
 
     btn0.addEventListener("click", () => {answerCheck(1)});
     btn1.addEventListener("click", () => {answerCheck(2)});
@@ -55,22 +56,17 @@ let answerCheckPre = () => {
 answerCheckPre();
 
 function nextQuestion(checkJson){
-    var length = checkJson.questions.length + 1
-
+    var length = checkJson.questions.length - 1
     var i = localStorage.getItem("i")
-    if (i < checkJson.questions.length){
-        displayQuestion.innerHTML =  checkJson.questions[i].question
-    }
+        if (length < i){
+            console.log("meow")
+        }
+        if (i < checkJson.questions.length){
+            console.log("Question " + i)
+            displayQuestion.innerHTML =  checkJson.questions[i].question
+        }
     i++
     localStorage.setItem("i", i);
-
-    console.log(i)
-    console.log(checkJson.questions.length)
-
-    
-    if (length === i){
-        console.log("meow")
-    }
 }
 
 
