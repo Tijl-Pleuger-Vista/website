@@ -26,6 +26,13 @@
     },
     {
       "question": "4. Do you teach your team how to stay safe online?",
+      "answer": "0",
+      "btn": [
+        {
+          "btn0": "Yes",
+          "btn1": "No"
+        }
+      ],
       "explanation": "Provide cybersecurity training to your employees, covering topics like phishing awareness and safe internet browsing habits."
     },
     {
