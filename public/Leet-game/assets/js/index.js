@@ -24,27 +24,10 @@ const btn3 = document.getElementById('btn3');
 // const questions = document.getElementById('questions');
 // let myJson
 
-// window.addEventListener("load", (event) => {
-//     fetch('../Json/Q&A.json')
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
-//       return response.json();
-//     })
-//     .then(jsonData => {
-//       // Use the jsonData variable as needed
-//       myJson = jsonData
-//     })
-//     .catch(error => {
-//       console.error('There was a problem fetching the JSON file:', error);
-//     });
 
-//   });
 
 onePlayer.addEventListener("click", () => {
         // console.log(myJson.questions[0].explanation)
-    // creaMyJson()
     startGame();
     document.getElementById('displayButtons').style.visibility = 'visible';
     
