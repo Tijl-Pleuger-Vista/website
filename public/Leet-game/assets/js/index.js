@@ -27,13 +27,14 @@ localStorage.setItem("i", 0);
 
 onePlayer.addEventListener("click", () => {
     startGame();
+    let checkJson = JSON.parse(localStorage.getItem("json"));
+    nextQuestion(checkJson)
     document.getElementById('displayButtons').style.visibility = 'visible';
 });
 
 let answerCheckPre = () => {
     let checkJson = JSON.parse(localStorage.getItem("json"));
     console.log(checkJson)
-    nextQuestion(checkJson)
 
     btn0.addEventListener("click", () => {answerCheck(1)});
     btn1.addEventListener("click", () => {answerCheck(2)});

@@ -25,6 +25,10 @@
       "explanation": "(2FA) is an identity and access management security method that requires two forms of identification to access resources and data"
     },
     {
+      "question": "4. Do you teach your team how to stay safe online?",
+      "explanation": "Provide cybersecurity training to your employees, covering topics like phishing awareness and safe internet browsing habits."
+    },
+    {
       "question": "Is it smart to click on unknown links",
       "answer": "1",
       "btn": [
