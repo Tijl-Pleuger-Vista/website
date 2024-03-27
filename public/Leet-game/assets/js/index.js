@@ -1,18 +1,19 @@
 import { player, enemy } from './Fighter.js'
 import { background, shop } from './Sprite.js';
-// import { loadKeyDownEvents, loadkeyUpEvents } from './Keys.js'
+
+wait()
+async function wait() {
+    var response = await fetch(`https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/Leet-game/assets/json/AYS.json`)
+    var response = await response.json();
+    localStorage.setItem("json", JSON.stringify(response));
+}
 
 var answer = 1
-
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 let timer = 30; // Game timer.
 let timerID;    // Used to clearTimeout.
 let gameEnded = false;  // Flag to determinate whenever game's has ended or not.
-// TODO: Reset button.
-
-// loadKeyDownEvents(player, enemy);
-// loadkeyUpEvents(player, enemy);
 
 const onePlayer = document.getElementById('1player');
 const btn0 = document.getElementById('btn0');
@@ -20,67 +21,68 @@ const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
 
+var displayQuestion = document.getElementById('question');
 
-// const questions = document.getElementById('questions');
-// let myJson
-
-
+localStorage.setItem("i", 0);
 
 onePlayer.addEventListener("click", () => {
-        // console.log(myJson.questions[0].explanation)
     startGame();
     document.getElementById('displayButtons').style.visibility = 'visible';
+});
+
+let answerCheckPre = () => {
+    let checkJson = JSON.parse(localStorage.getItem("json"));
+    console.log(checkJson)
+    nextQuestion(checkJson)
+
+    btn0.addEventListener("click", () => {answerCheck(1)});
+    btn1.addEventListener("click", () => {answerCheck(2)});
+    btn2.addEventListener("click", () => {answerCheck(3)});
+    btn3.addEventListener("click", () => {answerCheck(4)});
     
-    // questions.innerHTML = myJson.questions[0].question;
-    // creaMyJson()
-});
-btn0.addEventListener("click", () => {
-    // player.isAttacking = true;
-    answerCheck(1)
-});
-btn1.addEventListener("click", () => {
-    // enemy.isAttacking = true;
-    answerCheck(2)
-});
-btn2.addEventListener("click", () => {
-    answerCheck(3)
-});
-btn3.addEventListener("click", () => {
-    answerCheck(4)
-});
-
-function answerCheck(check){
-    if (answer === check){
-        console.log("Corrent answer")
-        player.isAttacking = true;
-    } else {
-        console.log("Not the answer")
-        enemy.isAttacking = true;
+    function answerCheck(check){
+        if (answer === check){
+            console.log("Corrent answer")
+            player.isAttacking = true;
+            nextQuestion(checkJson)
+        } else {
+            console.log("Not the answer")
+            enemy.isAttacking = true;
+        }
     }
 }
-// Main function to start the game after the menu is dismissed.
+answerCheckPre();
+
+function nextQuestion(checkJson){
+    var length = checkJson.questions.length + 1
+
+    var i = localStorage.getItem("i")
+    if (i < checkJson.questions.length){
+        displayQuestion.innerHTML =  checkJson.questions[i].question
+    }
+    i++
+    localStorage.setItem("i", i);
+
+    console.log(i)
+    console.log(checkJson.questions.length)
+
+    
+    if (length === i){
+        console.log("meow")
+    }
+}
+
+
+
 function startGame() {
-    document.getElementById('menu').style.display = "none"; // Hide the menu.
-    c.fillRect(0, 0, canvas.width, canvas.height);          // Simulate loading with black screen lol
+    document.getElementById('menu').style.display = "none";
+    c.fillRect(0, 0, canvas.width, canvas.height);
     setTimeout(() => {
-    animate();          // Start recursive animate function.
-    // decreaseTimer();    // Start the timer countdown.
+    animate();
     document.getElementById('hud').style.display = "flex";  // Show the hud.
-    }, 1000)    // Wait 1 sec to start the game.
+    }, 1000)
 }
 
-// Decrease the timer. If it reaches 0 announce the winner based on remaining health.
-function decreaseTimer() {
-    if (timer > 0) {
-        timerID = setTimeout(decreaseTimer, 1000);  // Call this function againg in 1 second.
-        timer--;
-        document.querySelector('#timer').innerHTML = timer; // Write the html with the new timer.
-    } else {    // Timer runs out, announce the winner.
-        determineWinner({ player, enemy, timerID });
-    }
-}
-
-// Animate the sprites every frame.
 function animate() {
     window.requestAnimationFrame(animate);  // Set this as a recursive function.
     background.update();
@@ -90,13 +92,13 @@ function animate() {
     player.velocity.x = 0;  // Reset the "x" velocity of the player each frame. So it doesn't "slide" every frame.
     enemy.velocity.x = 0;   // Same for the enemy.
 
-    if (!player.movement() && !player.isAttacking && !player.isTakingHit) {  // If player is not running, set his sprite to idle.
-        player.switchSprite('idle');
-    }
+        if (!player.movement() && !player.isAttacking && !player.isTakingHit) {  // If player is not running, set his sprite to idle.
+            player.switchSprite('idle');
+        }
 
-    if (!enemy.movement() && !enemy.isAttacking && !enemy.isTakingHit) {    // If enemy is not running, set his sprite to idle.
-        enemy.switchSprite('idle')  // TODO: Disable enemy movement for arrow keys when playing VS IA.
-    }
+        if (!enemy.movement() && !enemy.isAttacking && !enemy.isTakingHit) {    // If enemy is not running, set his sprite to idle.
+            enemy.switchSprite('idle')  // TODO: Disable enemy movement for arrow keys when playing VS IA.
+        }
 
     // Check if a fighter is attacking.
     player.attack(enemy);
@@ -106,39 +108,6 @@ function animate() {
         if (enemy.health <= 0 || player.health <= 0) {
             determineWinner({ player, enemy, timerID });
         }
-    }
-}
-
-// Manages the behavior of the bot, his movement is completly random right now.
-// function intervalBot() {
-//     setInterval(botMoves, 1000);    // Evaluates if moving every 1 second.
-//     setInterval(botAttack, 1000);   // Evaluates if attacking every 1 second.
-// }
-
-// Bot moves randomly: a 45% chances of going forward, another 45% of going backward and a 10% of not moving. This every 1 second.
-// The period of time the bot is moving is random too: 'randomFloat * 4000'
-function botMoves() {
-    let randomFloat = Math.random();
-    //console.log(randomFloat)
-    if (randomFloat < 0.45) {   // Forwards.
-        window.dispatchEvent(new KeyboardEvent('keydown', { 'key': 'ArrowLeft' }))
-        setTimeout(() => {
-            window.dispatchEvent(new KeyboardEvent('keyup', { 'key': 'ArrowLeft' }))
-        }, randomFloat * 3000)
-    } else if (randomFloat < 0.85) {    // Backwards.
-        window.dispatchEvent(new KeyboardEvent('keydown', { 'key': 'ArrowRight' }))
-        setTimeout(() => {
-            window.dispatchEvent(new KeyboardEvent('keyup', { 'key': 'ArrowRight' }))
-        }, randomFloat * 3000)
-    }
-}
-
-// Bot attacks the player if in range and his cooldown is available.
-function botAttack() {
-    if (enemy.attackCooldown && enemy.isHitting(player)) {
-        enemy.isAttacking = true;
-        enemy.attack(player);
-        setTimeout(() => { enemy.isAttacking = false; }, 1000)
     }
 }
 
@@ -153,26 +122,19 @@ function update(fighter) {
 }
 
 function determineWinner({ player, enemy, timerID }) {
-    clearTimeout(timerID);  // Stop the timer, the game ended.
-    gameEnded = true;
-    document.querySelector('#result').style.display = 'flex'    // Change from 'none' to 'flex'
-    if (player.health === enemy.health) {
-        document.querySelector('#result').innerHTML = 'Tie!';   // Player's and enemy's health are the same.
-    } else if (player.health > enemy.health) {
-        document.querySelector('#result').innerHTML = 'Player 1 won!'; // Player's health is greater.
-        enemy.health = 0;
-        enemy.switchSprite('death');
-    } else {
-        document.querySelector('#result').innerHTML = 'Player 2 won!'; // Enemy's health is greater.
-        player.health = 0;
-        player.switchSprite('death');
-    }
+    // clearTimeout(timerID);  // Stop the timer, the game ended.
+    // gameEnded = true;
+    // document.querySelector('#result').style.display = 'flex'    // Change from 'none' to 'flex'
+    // if (player.health === enemy.health) {
+    //     document.querySelector('#result').innerHTML = 'Tie!';   // Player's and enemy's health are the same.
+    // } else if (player.health > enemy.health) {
+    //     document.querySelector('#result').innerHTML = 'Player 1 won!'; // Player's health is greater.
+    //     enemy.health = 0;
+    //     enemy.switchSprite('death');
+    // } else {
+    //     document.querySelector('#result').innerHTML = 'Player 2 won!'; // Enemy's health is greater.
+    //     player.health = 0;
+    //     player.switchSprite('death');
+    // }
 }
 
-//  function creaMyJson() {
-
-
-//     console.log(questions.innerHTML[0])
-
-
-// }
