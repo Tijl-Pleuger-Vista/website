@@ -21,8 +21,47 @@ export const keys = {
     }
 }
 
+
+
+
+
 export function loadKeyDownEvents(player, enemy) {
     // Whenever a key is pressed.
+
+    (function(delay, callback){
+        var loop = function(){
+            callback();
+            setTimeout(loop, delay);
+        }; loop();
+    })(1000, function(){
+
+        var d = localStorage.getItem("d");
+        switch (d) {
+            // Player keys.
+            case 'd':
+                player.keys.d.pressed = true;
+                player.lastKey = 'd';
+                break;
+            }
+
+    });
+
+    // function repeat(func, times) {
+    //     func();
+    //     times && --times && repeat(func, times);
+    // }
+    
+    // repeat(function () { 
+    //     var d = localStorage.getItem("d");
+    //     switch (d) {
+    //         // Player keys.
+    //         case 'd':
+    //             player.keys.d.pressed = true;
+    //             player.lastKey = 'd';
+    //             break;
+    //         }
+    //  }, 9999);
+
     window.addEventListener('keydown', (event) => {
         event.preventDefault(); // Prevent any keys' default behaviour i.e using the arrow keys to navigate the page.
         switch (event.key) {

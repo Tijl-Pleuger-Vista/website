@@ -1,5 +1,9 @@
 import { player, enemy } from './Fighter.js'
 import { background, shop } from './Sprite.js';
+import { loadKeyDownEvents, loadkeyUpEvents } from './Keys.js'
+
+loadKeyDownEvents(player, enemy);   // Load player and enemy KeyDown events.
+loadkeyUpEvents(player, enemy);     // Load player and enemy KeyUp events.
 
 wait()
 async function wait() {
@@ -8,7 +12,7 @@ async function wait() {
     localStorage.setItem("json", JSON.stringify(response));
 }
 
-var answer = 1
+
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 let timer = 30; // Game timer.
@@ -18,8 +22,6 @@ let gameEnded = false;  // Flag to determinate whenever game's has ended or not.
 const onePlayer = document.getElementById('1player');
 const btn0 = document.getElementById('btn0');
 const btn1 = document.getElementById('btn1');
-const btn2 = document.getElementById('btn2');
-const btn3 = document.getElementById('btn3');
 
 var displayQuestion = document.getElementById('question');
 
@@ -28,6 +30,10 @@ localStorage.setItem("i", 0);
 
 
 let answerCheckPre = () => {
+    localStorage.setItem("d", "q");
+    localStorage.setItem("i", 0);
+
+
     let checkJson = JSON.parse(localStorage.getItem("json"));
     console.log(checkJson)
 
@@ -39,10 +45,13 @@ let answerCheckPre = () => {
 
     btn0.addEventListener("click", () => {answerCheck(1)});
     btn1.addEventListener("click", () => {answerCheck(2)});
-    btn2.addEventListener("click", () => {answerCheck(3)});
-    btn3.addEventListener("click", () => {answerCheck(4)});
-    
+
     function answerCheck(check){
+        var i = localStorage.getItem("i")
+        var answer = checkJson.questions[i].answer
+        console.log(i)
+        console.log(answer + "ans")
+
         if (answer === check){
             console.log("Corrent answer")
             player.isAttacking = true;
@@ -60,10 +69,13 @@ function nextQuestion(checkJson){
     var i = localStorage.getItem("i")
         if (length < i){
             console.log("meow")
+            localStorage.setItem("d", "d");
         }
         if (i < checkJson.questions.length){
             console.log("Question " + i)
             displayQuestion.innerHTML =  checkJson.questions[i].question
+            btn0.innerHTML = checkJson.questions[i].btn[0].btn0
+            btn1.innerHTML = checkJson.questions[i].btn[0].btn1
         }
     i++
     localStorage.setItem("i", i);
