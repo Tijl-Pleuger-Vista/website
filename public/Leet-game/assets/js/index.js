@@ -43,16 +43,19 @@ let answerCheckPre = () => {
         document.getElementById('displayButtons').style.visibility = 'visible';
     });
 
-    btn0.addEventListener("click", () => {answerCheck(1)});
-    btn1.addEventListener("click", () => {answerCheck(2)});
+    btn0.addEventListener("click", () => {answerCheck(0)});
+    btn1.addEventListener("click", () => {answerCheck(1)});
 
     function answerCheck(check){
         var i = localStorage.getItem("i")
+        var i = i - 1
         var answer = checkJson.questions[i].answer
         console.log(i)
-        console.log(answer + "ans")
 
-        if (answer === check){
+        var i = i + 1
+        console.log(answer + " = answer")
+
+        if (answer == check){
             console.log("Corrent answer")
             player.isAttacking = true;
             nextQuestion(checkJson)
@@ -70,6 +73,7 @@ function nextQuestion(checkJson){
         if (length < i){
             console.log("meow")
             localStorage.setItem("d", "d");
+            window.location.href = "https://vista-400927.web.app/leet-handbook/";
         }
         if (i < checkJson.questions.length){
             console.log("Question " + i)
@@ -84,6 +88,8 @@ function nextQuestion(checkJson){
 
 
 function startGame() {
+    localStorage.setItem("d", "q");
+    localStorage.setItem("i", 0);
     document.getElementById('menu').style.display = "none";
     c.fillRect(0, 0, canvas.width, canvas.height);
     setTimeout(() => {
@@ -147,3 +153,12 @@ function determineWinner({ player, enemy, timerID }) {
     // }
 }
 
+setTimeout(()=>{
+    var reloaded = localStorage.getItem("reload")
+    console.log(reloaded)
+    if(reloaded !== "1"){
+        console.log(reloaded)
+        localStorage.setItem("reload", 1);
+        location.reload();
+    }
+}, 1000);

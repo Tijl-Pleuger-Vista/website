@@ -17,9 +17,7 @@
       "btn": [
         {
           "btn0": "A football team",
-          "btn1": "An app",
-          "btn2": "A Two factor authentication system",
-          "btn3": "Nothing"
+          "btn1": "A Two factor authentication system"
         }
       ],
       "explanation": "(2FA) is an identity and access management security method that requires two forms of identification to access resources and data"
