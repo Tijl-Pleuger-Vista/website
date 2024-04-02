@@ -60,15 +60,5 @@ export const background = new Sprite({
     scale: 1.57,
 })
 
-export const shop = new Sprite({
-    position: {
-        x: 620,
-        y: 128
-    },
-    imageSrc: 'assets/img/shop.png',
-    scale: 2.75,
-    maxFrames: 6,
-    holdFrames: 9
-})
 
 export default Sprite;

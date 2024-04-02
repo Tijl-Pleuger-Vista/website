@@ -1,4 +1,27 @@
 {
+  "sprites":{
+    "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/background.png",
+    "hero": [
+      {
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/idle.png",
+        "attack0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack0.png",
+        "attack1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack1.png",
+        "damage0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage0.png",
+        "damage1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage1.png",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png"
+      }
+    ],
+    "villain": [
+      {
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/idle.png",
+        "attack0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack0.png",
+        "attack1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack1.png",
+        "damage0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage0.png",
+        "damage1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage1.png",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/death.png"
+      }
+    ]
+  },
   "questions": [
     {
       "question": "Should you update your software regularly?",
@@ -27,8 +50,10 @@
       "answer": "0",
       "btn": [
         {
-          "btn0": "Yes",
-          "btn1": "No"
+          "btn": "Yes"
+        },
+        {
+          "btn": "No"
         }
       ],
       "explanation": "Provide cybersecurity training to your employees, covering topics like phishing awareness and safe internet browsing habits."
