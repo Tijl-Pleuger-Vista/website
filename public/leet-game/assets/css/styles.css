@@ -14,6 +14,7 @@
 }
 body {
     box-sizing: border-box;
+    background-size: 100% 100dvh;
     background-image: url(https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/webp/2.webp);
 }
 
@@ -259,6 +260,10 @@ body {
 
 .w {
     width: 100%;
+}
+
+.h {
+    height: 100dvh;
 }
 
 .question{

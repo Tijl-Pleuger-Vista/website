@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="assets/logo/site.webmanifest">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Cyber-security game</title>
+</head>
+<body>
+    <div class="container mt-10">
+        <div id="menu" class="menu">
+            <div class="title; animate-charcter row center">
+                <p class="mr-5">Een</p><p class="mr-5">veilige</p><p class="mr-5">reis</p><p class="mr-5">voor</p><p class="mr-5">een</p>
+                <p>MKB-ondernemer</p>
+            </div>
+            <div class="options">
+                <div id="1player" class="menuOption">
+                    <p>Klik om te beginnen</p>
+                </div>
+            </div>
+            <div class="author">Vista-College Studenten</div>
+        </div>
+        <div id="result" class="result"> result </div>
+        <div class="column">
+            <div class="game">
+                <canvas id="gameWindow"> </canvas>
+            </div>
+            <div id="hud" class="hud">
+                <!-- Player's health -->
+                <div class="healthLayout">
+                    <div class="center">
+                        <p class="bossName">The hacker!</p>
+                    </div>
+                    <div class="remainingHealthbar"></div>
+                    <div id="enemyHealth" class="totalHealthBar"></div>
+                </div>
+                <div id="question" class="question center">
+                    <p>Question 1:</p>
+                </div>
+                <!-- Enemy's health -->
+                <!-- <div class="healthLayout" style="display: none; visibility: none;">
+                    <div class="remainingHealthbar"></div>
+                    <div id="playerHealth" class="totalHealthBar"></div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="w mt-20 center">
+        <div id="displayButtons" class="center column" style="visibility: hidden; width: 350px;">
+            <div class="center row">
+                <button class="btn mr-5" id="btn0">Answer 1</button>
+                <button class="btn ml-5" id="btn1">Answer 2</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="assets/js/index.js"></script>
+</body>
+
+</html>

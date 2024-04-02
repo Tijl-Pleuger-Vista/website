@@ -18,21 +18,21 @@ let gameScope = () => {
         console.log(checkJson)
     // var
 
-    if(localStorage.getItem("reboot") === "true") {
-        document.getElementById('displayButtons').style.visibility = 'visible';
-        startGame();
-        nextQuestion(checkJson)
-    }
+    // if(localStorage.getItem("reboot") === "true") {
+    //     document.getElementById('displayButtons').style.visibility = 'visible';
+    //     startGame();
+    //     nextQuestion(checkJson)
+    // }
 
-    if (localStorage.getItem("json") === null) {
-        wait()
-            async function wait() {
-            var checkJson = await fetch(`https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/json/pvo-1.json`)
-            var checkJson = await checkJson.json();
-            localStorage.setItem("json", JSON.stringify(checkJson));
-            nextQuestion(checkJson)
-        }
-    }
+    // if (localStorage.getItem("json") === null) {
+    //     wait()
+    //         async function wait() {
+    //         var checkJson = await fetch(`https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/json/pvo-1.json`)
+    //         var checkJson = await checkJson.json();
+    //         localStorage.setItem("json", JSON.stringify(checkJson));
+    //         nextQuestion(checkJson)
+    //     }
+    // }
 
     function startGame() {
         document.getElementById('menu').style.display = "none";
@@ -50,7 +50,7 @@ let gameScope = () => {
         i++
             if (length < i){
                 localStorage.removeItem("json");
-                localStorage.removeItem("reboot");
+                // localStorage.removeItem("reboot");
                 window.location.href = "https://vista-400927.web.app/leet-handbook/";
             }
             if (i < checkJson.questions.length){
@@ -94,10 +94,10 @@ let gameScope = () => {
 
     onePlayer.addEventListener("click", () => {
 
-        if(localStorage.getItem("reboot") === null) {
-            localStorage.setItem("reboot", "true");
-            location.reload();
-        }
+        // if(localStorage.getItem("reboot") === null) {
+        //     localStorage.setItem("reboot", "true");
+        //     location.reload();
+        // }
 
         document.getElementById('displayButtons').style.visibility = 'visible';
         startGame();
