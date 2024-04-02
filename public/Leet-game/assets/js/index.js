@@ -22,7 +22,8 @@ let gameScope = () => {
         console.log("json test")
         wait()
             async function wait() {
-            var response = await fetch(`https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/Leet-game/assets/json/pvo-1.json`).json()
+            var response = await fetch(`https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/Leet-game/assets/json/pvo-1.json`)
+            var response = await response.json();
                 console.log(response)
             localStorage.setItem("json", JSON.stringify(response));
         }

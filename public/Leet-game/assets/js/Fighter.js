@@ -172,38 +172,34 @@ export const player = new Fighter({
         x: 75,
         y: 0
     },
-    imageSrc: 'assets/img/samuraiMack/Idle.png',
+    imageSrc: 'assets/img/samurai/idle.png',
     scale: 2.5,
     maxFrames: 8,
     holdFrames: 4,
     offsetFrame: { x: 215, y: 154 },
     sprites: {  // Sprites for different animations.
         idle: {
-            imageSrc: 'assets/img/samuraiMack/Idle.png',
+            imageSrc: 'assets/img/samurai/idle.png',
             maxFrames: 8,
         },
         run: {
-            imageSrc: 'assets/img/samuraiMack/Run.png',
+            imageSrc: 'assets/img/samurai/run.png',
             maxFrames: 8,
         },
-        jump: {
-            imageSrc: 'assets/img/samuraiMack/Jump.png',
-            maxFrames: 2,
-        },
         fall: {
-            imageSrc: 'assets/img/samuraiMack/Fall.png',
-            maxFrames: 2,
+            imageSrc: 'assets/img/samurai/idle.png',
+            maxFrames: 8,
         },
         death: {
-            imageSrc: 'assets/img/samuraiMack/Death.png',
+            imageSrc: 'assets/img/samurai/death.png',
             maxFrames: 6,
         },
         attack1: {
-            imageSrc: 'assets/img/samuraiMack/Attack1.png',
+            imageSrc: 'assets/img/samurai/attack1.png',
             maxFrames: 6,
         },
         takeHit: {
-            imageSrc: 'assets/img/samuraiMack/Take hit White.png',
+            imageSrc: 'assets/img/samurai/damage1.png',
             maxFrames: 4,
         }
 
@@ -236,38 +232,34 @@ export const enemy = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: 'assets/img/kenji/Idle.png',
+    imageSrc: 'assets/img/samurai-enemy/idle.png',
     scale: 2.5,
     maxFrames: 4,
     holdFrames: 6,
     offsetFrame: { x: 215, y: 172 },
     sprites: {   // Sprites for different animations.
         idle: {
-            imageSrc: 'assets/img/kenji/Idle.png',
+            imageSrc: 'assets/img/samurai-enemy/idle.png',
             maxFrames: 4,
         },
         run: {
-            imageSrc: 'assets/img/kenji/Run.png',
+            imageSrc: 'assets/img/samurai-enemy/run.png',
             maxFrames: 8,
         },
-        jump: {
-            imageSrc: 'assets/img/kenji/Jump.png',
-            maxFrames: 2,
-        },
         fall: {
-            imageSrc: 'assets/img/kenji/Fall.png',
+            imageSrc: 'assets/img/samurai-enemy/idle.png',
             maxFrames: 2,
         },
         death: {
-            imageSrc: 'assets/img/kenji/Death.png',
+            imageSrc: 'assets/img/samurai-enemy/death.png',
             maxFrames: 7,
         },
         attack1: {
-            imageSrc: 'assets/img/kenji/Attack1.png',
+            imageSrc: 'assets/img/samurai-enemy/attack1.png',
             maxFrames: 4,
         },
         takeHit: {
-            imageSrc: 'assets/img/kenji/Take hit white.png',
+            imageSrc: 'assets/img/samurai-enemy/damage1.png',
             maxFrames: 3,
         }
     },
