@@ -18,14 +18,22 @@ let gameScope = () => {
         console.log(checkJson)
     // var
 
+    if(localStorage.getItem("reboot") === "true") {
+        document.getElementById('displayButtons').style.visibility = 'visible';
+        startGame();
+        nextQuestion(checkJson)
+    }
+
     if (localStorage.getItem("json") === null) {
         console.log("json test")
         wait()
             async function wait() {
-            var response = await fetch(`https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/Leet-game/assets/json/pvo-1.json`)
-            var response = await response.json();
-                console.log(response)
-            localStorage.setItem("json", JSON.stringify(response));
+            var checkJson = await fetch(`https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/json/pvo-1.json`)
+            var checkJson = await checkJson.json();
+                console.log(checkJson)
+            localStorage.setItem("json", JSON.stringify(checkJson));
+            nextQuestion(checkJson)
+            return checkJson
         }
     }
 
@@ -40,7 +48,7 @@ let gameScope = () => {
 
     function nextQuestion(checkJson){
         var length = checkJson.questions.length
-            if (length < i){
+            if (length - 1 < i){
                 console.log("meow")
                 window.location.href = "https://vista-400927.web.app/leet-handbook/";
             }
@@ -85,9 +93,15 @@ let gameScope = () => {
     }
 
     onePlayer.addEventListener("click", () => {
+
+        if(localStorage.getItem("reboot") === null) {
+            localStorage.setItem("reboot", "true");
+            location.reload();
+        }
+
+        document.getElementById('displayButtons').style.visibility = 'visible';
         startGame();
         nextQuestion(checkJson)
-        document.getElementById('displayButtons').style.visibility = 'visible';
     });
 
     btn0.addEventListener("click", () => {answerCheck(0)});
