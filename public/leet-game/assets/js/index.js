@@ -12,7 +12,7 @@ let gameScope = () => {
         const btn1 = document.getElementById('btn1');
         
         var displayQuestion = document.getElementById('question');
-        var i = 0
+        var i = -1
 
         let checkJson = JSON.parse(localStorage.getItem("json"));
         console.log(checkJson)
@@ -25,15 +25,12 @@ let gameScope = () => {
     }
 
     if (localStorage.getItem("json") === null) {
-        console.log("json test")
         wait()
             async function wait() {
             var checkJson = await fetch(`https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/json/pvo-1.json`)
             var checkJson = await checkJson.json();
-                console.log(checkJson)
             localStorage.setItem("json", JSON.stringify(checkJson));
             nextQuestion(checkJson)
-            return checkJson
         }
     }
 
@@ -48,17 +45,20 @@ let gameScope = () => {
 
     function nextQuestion(checkJson){
         var length = checkJson.questions.length
-            if (length - 1 < i){
-                console.log("meow")
+        var length = length - 1
+
+        i++
+            if (length < i){
+                localStorage.removeItem("json");
+                localStorage.removeItem("reboot");
                 window.location.href = "https://vista-400927.web.app/leet-handbook/";
             }
             if (i < checkJson.questions.length){
                 displayQuestion.innerHTML =  checkJson.questions[i].question
-                btn0.innerHTML = checkJson.questions[i].btn[0].btn0
-                btn1.innerHTML = checkJson.questions[i].btn[0].btn1
+                btn0.innerHTML = checkJson.questions[i].btn[0].btn
+                btn1.innerHTML = checkJson.questions[i].btn[1].btn
             }
-            i++
-            console.log(i)
+            
     }
     
     function animate() {

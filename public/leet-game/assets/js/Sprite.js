@@ -1,7 +1,5 @@
 import Fighter from './Fighter.js'
 
-let checkJson = JSON.parse(localStorage.getItem("json"));
-
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
