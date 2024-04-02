@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  canvas {
+    border: 1px solid white;
+  }
+
+  #fieldset{
+    position: absolute;
+    height: 5%;
+    width: 295px;
+    top: -1%;
+  }
+  
+  #highscore{
+    color: aliceblue;
+    position: absolute;
+    top: 0%;
+  }
+
+  #highscore2{
+    color: aliceblue;
+    position: absolute;
+    top: 0%;
+    margin-left: 45%;
+  }

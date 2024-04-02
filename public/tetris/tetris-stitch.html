@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tetris</title>
+  <link rel="stylesheet" href="assets/css/tetris-stitch.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <fieldset class="row score">
+    <p class="scoreboard-current" id="idscore">score:</p>
+    <p class="coreboard-highscore" id="idhighscore">high score:</p>
+  </fieldset>
+  <fieldset class="time">
+    <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+  </fieldset>
+  <canvas width="320" height="640" id="game"></canvas>
+  <button class="btn" onClick="window.location.reload();">Refresh Page</button>
+  <script src="assets/js/tetris-stitch.js"></script>
+</body>
+</html>
