@@ -4,21 +4,37 @@
     "hero": 
       {
         "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/idle.png",
-        "attack0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack0.png",
-        "attack1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack1.png",
-        "damage0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage0.png",
-        "damage1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage1.png",
-        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png"
+        "idleMaxFrames": "8",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack.png",
+        "attackMaxFrames": "6",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage.png",
+        "damageMaxFrames": "4",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png",
+        "deathMaxFrames": "6"
       },
     
     "villain": 
       {
         "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/idle.png",
-        "attack0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack0.png",
-        "attack1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack1.png",
-        "damage0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage0.png",
-        "damage1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage1.png",
-        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/death.png"
+        "idleMaxFrames": "4",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack.png",
+        "attackMaxFrames": "4",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage.png",
+        "damageMaxFrames": "3",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/death.png",
+        "deathMaxFrames": "7"
+      }
+  },
+  "colors":{
+    "hero": 
+      {
+        "min": "6C192B",
+        "max": "AF2424"
+      },
+    "villain": 
+      {
+        "min": "004ff9",
+        "max": "000000"
       }
   },
   "questions": [

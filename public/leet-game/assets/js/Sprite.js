@@ -1,5 +1,7 @@
 import Fighter from './Fighter.js'
 
+let checkJson = JSON.parse(localStorage.getItem("json"));
+
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
@@ -56,7 +58,7 @@ export const background = new Sprite({
         x: 0,
         y: 0
     },
-    imageSrc: 'assets/img/background.png',
+    imageSrc: checkJson.sprites.background,
     scale: 1.57,
 })
 

@@ -1,4 +1,7 @@
 import Sprite from './Sprite.js'
+
+let checkJson = JSON.parse(localStorage.getItem("json"));
+
 const canvas = document.querySelector('canvas');
 
 // Canvas' dimension.
@@ -172,35 +175,31 @@ export const player = new Fighter({
         x: 75,
         y: 0
     },
-    imageSrc: 'assets/img/samurai/idle.png',
+    imageSrc: checkJson.sprites.hero.idle,
     scale: 2.5,
-    maxFrames: 8,
+    maxFrames: checkJson.sprites.hero.idleMaxframes,
     holdFrames: 4,
     offsetFrame: { x: 215, y: 154 },
     sprites: {  // Sprites for different animations.
         idle: {
-            imageSrc: 'assets/img/samurai/idle.png',
-            maxFrames: 8,
-        },
-        run: {
-            imageSrc: 'assets/img/samurai/run.png',
-            maxFrames: 8,
+            imageSrc: checkJson.sprites.hero.idle,
+            maxFrames: checkJson.sprites.hero.idleMaxframes,
         },
         fall: {
-            imageSrc: 'assets/img/samurai/idle.png',
-            maxFrames: 8,
+            imageSrc: checkJson.sprites.hero.idle,
+            maxFrames: checkJson.sprites.hero.idleMaxframes,
         },
         death: {
-            imageSrc: 'assets/img/samurai/death.png',
-            maxFrames: 6,
+            imageSrc: checkJson.sprites.hero.death,
+            maxFrames: checkJson.sprites.hero.deathMaxframes,
         },
         attack1: {
-            imageSrc: 'assets/img/samurai/attack1.png',
-            maxFrames: 6,
+            imageSrc: checkJson.sprites.hero.attack,
+            maxFrames: checkJson.sprites.hero.attackMaxframes,
         },
         takeHit: {
-            imageSrc: 'assets/img/samurai/damage1.png',
-            maxFrames: 4,
+            imageSrc: checkJson.sprites.hero.damage,
+            maxFrames: checkJson.sprites.hero.damageMaxframes,
         }
 
     },
@@ -232,35 +231,31 @@ export const enemy = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: 'assets/img/samurai-enemy/idle.png',
+    imageSrc: checkJson.sprites.enemy.idle,
     scale: 2.5,
-    maxFrames: 4,
+    maxFrames: checkJson.sprites.enemy.idleMaxframes,
     holdFrames: 6,
     offsetFrame: { x: 215, y: 172 },
     sprites: {   // Sprites for different animations.
         idle: {
-            imageSrc: 'assets/img/samurai-enemy/idle.png',
-            maxFrames: 4,
-        },
-        run: {
-            imageSrc: 'assets/img/samurai-enemy/run.png',
-            maxFrames: 8,
+            imageSrc: checkJson.sprites.enemy.idle,
+            maxFrames: checkJson.sprites.enemy.idleMaxframes,
         },
         fall: {
-            imageSrc: 'assets/img/samurai-enemy/idle.png',
-            maxFrames: 2,
+            imageSrc: checkJson.sprites.enemy.idle,
+            maxFrames: checkJson.sprites.enemy.idleMaxframes,
         },
         death: {
-            imageSrc: 'assets/img/samurai-enemy/death.png',
-            maxFrames: 7,
+            imageSrc: checkJson.sprites.enemy.death,
+            maxFrames: checkJson.sprites.enemy.deathMaxframes,
         },
         attack1: {
-            imageSrc: 'assets/img/samurai-enemy/attack1.png',
-            maxFrames: 4,
+            imageSrc: checkJson.sprites.enemy.attack,
+            maxFrames: checkJson.sprites.enemy.attackMaxframes,
         },
         takeHit: {
-            imageSrc: 'assets/img/samurai-enemy/damage1.png',
-            maxFrames: 3,
+            imageSrc: checkJson.sprites.enemy.damage,
+            maxFrames: checkJson.sprites.enemy.damageMaxframes,
         }
     },
     keys: {
