@@ -55,8 +55,8 @@ let gameScope = () => {
             }
             if (i < checkJson.questions.length){
                 displayQuestion.innerHTML =  checkJson.questions[i].question
-                btn0.innerHTML = checkJson.questions[i].btn[0].btn
-                btn1.innerHTML = checkJson.questions[i].btn[1].btn
+                btn0.innerHTML = checkJson.questions[i].button[0].text
+                btn1.innerHTML = checkJson.questions[i].button[1].text
             }
             
     }
