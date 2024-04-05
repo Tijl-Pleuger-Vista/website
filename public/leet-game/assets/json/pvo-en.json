@@ -3,15 +3,15 @@
   "init":{
     "name": "PVO Game",
     "description": "EEN VEILIGE REIS VOOR EEN MKB-ONDERNEMER",
-    "hero": "Hero",
-    "enemy": "Enemy",
+    "player": "player",
+    "antagonist": "antagonist",
     "start": "Klick om te beginnen",
     "credits": "Vista-College Studenten",
     "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen"
   },
   "sprites":{
     "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/background.png",
-    "hero": 
+    "player": 
       {
         "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/idle.png",
         "idleMaxFrames": "8",
@@ -23,25 +23,25 @@
         "deathMaxFrames": "6"
       },
     
-    "villain": 
+    "antagonist": 
       {
-        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/idle.png",
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/idle.png",
         "idleMaxFrames": "4",
-        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack.png",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/attack.png",
         "attackMaxFrames": "4",
-        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage.png",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/damage.png",
         "damageMaxFrames": "3",
-        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/death.png",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/death.png",
         "deathMaxFrames": "7"
       }
   },
   "colors":{
-    "hero": 
+    "player": 
       {
         "min": "#6C192B",
         "max": "#AF2424"
       },
-    "villain": 
+    "antagonist": 
       {
         "min": "#004ff9",
         "max": "#333892"

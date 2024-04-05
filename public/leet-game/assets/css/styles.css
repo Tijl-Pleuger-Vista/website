@@ -10,10 +10,10 @@
 }
 
 :root {
-    --hero-min: #000000;
-    --hero-max: #000000;
-    --enemy-min: #000000;
-    --enemy-max: #000000;
+    --player-min: #000000;
+    --player-max: #000000;
+    --antagonist-min: #000000;
+    --antagonist-max: #000000;
 }
 
 * {
@@ -85,7 +85,7 @@ body {
 
 .playerHealthTotal {
     position: absolute;
-    background-image: linear-gradient(to right, var(--hero-min), var(--hero-max));
+    background-image: linear-gradient(to right, var(--player-min), var(--player-max));
     /* background-color: #8B5CF6; */
     top: 0;
     right: 0;

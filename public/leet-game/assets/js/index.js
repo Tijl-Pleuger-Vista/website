@@ -1,4 +1,4 @@
-import { player, enemy } from './Fighter.js'
+import { player, antagonist } from './Fighter.js'
 import { background } from './Sprite.js';
 
 let gameScope = () => {
@@ -15,10 +15,10 @@ let gameScope = () => {
         let checkJson = JSON.parse(localStorage.getItem("json"));
         console.log(checkJson)
 
-        root.style.setProperty('--hero-min', `${checkJson.colors.hero.min}`);
-        root.style.setProperty('--hero-max', `${checkJson.colors.hero.max}`);
-        root.style.setProperty('--enemy-min', `${checkJson.colors.villain.min}`);
-        root.style.setProperty('--enemy-max', `${checkJson.colors.villain.max}`);
+        root.style.setProperty('--player-min', `${checkJson.colors.player.min}`);
+        root.style.setProperty('--player-max', `${checkJson.colors.player.max}`);
+        root.style.setProperty('--antagonist-min', `${checkJson.colors.antagonist.min}`);
+        root.style.setProperty('--antagonist-max', `${checkJson.colors.antagonist.max}`);
 
     function startGame() {
         document.getElementById('menu').style.display = "none";
@@ -48,18 +48,18 @@ let gameScope = () => {
         window.requestAnimationFrame(animate);
         background.update();
         update(player);
-        update(enemy);
+        update(antagonist);
         player.velocity.x = 0;
-        enemy.velocity.x = 0;
+        antagonist.velocity.x = 0;
             if (!player.movement() && !player.isAttacking && !player.isTakingHit) {
                 player.switchSprite('idle');
             }
     
-            if (!enemy.movement() && !enemy.isAttacking && !enemy.isTakingHit) {
-                enemy.switchSprite('idle')
+            if (!antagonist.movement() && !antagonist.isAttacking && !antagonist.isTakingHit) {
+                antagonist.switchSprite('idle')
             }
-        player.attack(enemy);
-        enemy.attack(player);
+        player.attack(antagonist);
+        antagonist.attack(player);
     }
     
     function update(fighter) {
@@ -88,7 +88,7 @@ let gameScope = () => {
             player.isAttacking = true;
             nextQuestion(checkJson)
         } else {
-            enemy.isAttacking = true;
+            antagonist.isAttacking = true;
         }
     }
 }

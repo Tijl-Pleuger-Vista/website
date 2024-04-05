@@ -41,21 +41,21 @@ class Fighter extends Sprite {
         this.isTakingHit = false;   // Fighter is taking a hit from another fighter.
     }
 
-    attack(enemyFighter) {
+    attack(antagonistFighter) {
         if (this.isAttacking && this.health > 0 && this.attackCooldown) {
             this.attackCooldown = false;
             setTimeout(() => { this.attackCooldown = true }, 1000)
             this.switchSprite('attack')
-            if (this.isHitting(enemyFighter)) {
-                enemyFighter.health -= 10;
-                gsap.to('#' + enemyFighter.name + 'Health', { width: enemyFighter.health + '%' });
-                enemyFighter.switchSprite('takehit');
-                enemyFighter.isTakingHit = true;
+            if (this.isHitting(antagonistFighter)) {
+                antagonistFighter.health -= 10;
+                gsap.to('#' + antagonistFighter.name + 'Health', { width: antagonistFighter.health + '%' });
+                antagonistFighter.switchSprite('takehit');
+                antagonistFighter.isTakingHit = true;
             }
         }
     }
 
-    isHitting(enemyFighter) {
+    isHitting(antagonistFighter) {
         return true;
     }
 
@@ -170,31 +170,31 @@ export const player = new Fighter({
         x: 75,
         y: 0
     },
-    imageSrc: checkJson.sprites.hero.idle,
+    imageSrc: checkJson.sprites.player.idle,
     scale: 2.5,
-    maxFrames: checkJson.sprites.hero.idleMaxFrames,
+    maxFrames: checkJson.sprites.player.idleMaxFrames,
     holdFrames: 4,
     offsetFrame: { x: 215, y: 154 },
     sprites: {
         idle: {
-            imageSrc: checkJson.sprites.hero.idle,
-            maxFrames: checkJson.sprites.hero.idleMaxFrames,
+            imageSrc: checkJson.sprites.player.idle,
+            maxFrames: checkJson.sprites.player.idleMaxFrames,
         },
         fall: {
-            imageSrc: checkJson.sprites.hero.idle,
-            maxFrames: checkJson.sprites.hero.idleMaxFrames,
+            imageSrc: checkJson.sprites.player.idle,
+            maxFrames: checkJson.sprites.player.idleMaxFrames,
         },
         death: {
-            imageSrc: checkJson.sprites.hero.death,
-            maxFrames: checkJson.sprites.hero.deathMaxFrames,
+            imageSrc: checkJson.sprites.player.death,
+            maxFrames: checkJson.sprites.player.deathMaxFrames,
         },
         attack1: {
-            imageSrc: checkJson.sprites.hero.attack,
-            maxFrames: checkJson.sprites.hero.attackMaxFrames,
+            imageSrc: checkJson.sprites.player.attack,
+            maxFrames: checkJson.sprites.player.attackMaxFrames,
         },
         takeHit: {
-            imageSrc: checkJson.sprites.hero.damage,
-            maxFrames: checkJson.sprites.hero.damageMaxFrames,
+            imageSrc: checkJson.sprites.player.damage,
+            maxFrames: checkJson.sprites.player.damageMaxFrames,
         }
 
     },
@@ -215,8 +215,8 @@ export const player = new Fighter({
     attackTime: 400
 })
 
-export const enemy = new Fighter({
-    name: "enemy",
+export const antagonist = new Fighter({
+    name: "antagonist",
     position: {
         x: 260,
         y: 0
@@ -225,31 +225,31 @@ export const enemy = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: checkJson.sprites.villain.idle,
+    imageSrc: checkJson.sprites.antagonist.idle,
     scale: 2.5,
-    maxFrames: checkJson.sprites.villain.idleMaxframes,
+    maxFrames: checkJson.sprites.antagonist.idleMaxframes,
     holdFrames: 6,
     offsetFrame: { x: 215, y: 172 },
     sprites: {
         idle: {
-            imageSrc: checkJson.sprites.villain.idle,
-            maxFrames: checkJson.sprites.villain.idleMaxFrames,
+            imageSrc: checkJson.sprites.antagonist.idle,
+            maxFrames: checkJson.sprites.antagonist.idleMaxFrames,
         },
         fall: {
-            imageSrc: checkJson.sprites.villain.idle,
-            maxFrames: checkJson.sprites.villain.idleMaxFrames,
+            imageSrc: checkJson.sprites.antagonist.idle,
+            maxFrames: checkJson.sprites.antagonist.idleMaxFrames,
         },
         death: {
-            imageSrc: checkJson.sprites.villain.death,
-            maxFrames: checkJson.sprites.villain.deathMaxFrames,
+            imageSrc: checkJson.sprites.antagonist.death,
+            maxFrames: checkJson.sprites.antagonist.deathMaxFrames,
         },
         attack1: {
-            imageSrc: checkJson.sprites.villain.attack,
-            maxFrames: checkJson.sprites.villain.attackMaxFrames,
+            imageSrc: checkJson.sprites.antagonist.attack,
+            maxFrames: checkJson.sprites.antagonist.attackMaxFrames,
         },
         takeHit: {
-            imageSrc: checkJson.sprites.villain.damage,
-            maxFrames: checkJson.sprites.villain.damageMaxFrames,
+            imageSrc: checkJson.sprites.antagonist.damage,
+            maxFrames: checkJson.sprites.antagonist.damageMaxFrames,
         }
     },
     keys: {
