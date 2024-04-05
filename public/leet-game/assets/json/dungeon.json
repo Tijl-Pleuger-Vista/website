@@ -1,9 +1,9 @@
 {
   "lang": "EN",
   "init":{
-    "title": "Adventure Game",
-    "name": "THE ADVENTURE!",
-    "description": "Are you safe against cyber attacks?",
+    "title": "THE ADVENTURE!",
+    "name": "Adventure Game",
+    "description": "Fight and defeat the enemy knight to retrieve your gold",
     "player": "Goblin",
     "antagonist": "Enemy",
     "start": "Click here to start",
@@ -21,7 +21,7 @@
         "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack.png",
         "attackMaxFrames": "6",
         "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/dungeon/player/damage.png",
-        "damageMaxFrames": "2",
+        "damageMaxFrames": "4",
         "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png",
         "deathMaxFrames": "6"
       },
