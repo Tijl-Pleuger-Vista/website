@@ -1,13 +1,13 @@
 {
   "lang": "EN",
   "init":{
-    "title": "PVO - Game",
-    "name": "cybersecurity",
+    "title": "Adventure Game",
+    "name": "THE ADVENTURE!",
     "description": "Are you safe against cyber attacks?",
-    "player": "User",
-    "antagonist": "H4cker",
+    "player": "Goblin",
+    "antagonist": "Enemy",
     "start": "Click here to start",
-    "author": "Vista-College Students",
+    "author": "HeadBodyScript",
     "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen",
     "skip": "false",
     "css": ""
@@ -20,8 +20,8 @@
         "idleMaxFrames": "8",
         "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack.png",
         "attackMaxFrames": "6",
-        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage.png",
-        "damageMaxFrames": "4",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/dungeon/player/damage.png",
+        "damageMaxFrames": "2",
         "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png",
         "deathMaxFrames": "6"
       },
