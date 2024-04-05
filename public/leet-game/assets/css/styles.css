@@ -70,7 +70,7 @@ body {
 
 .flex {
     position: relative;
-    top: 5px;
+    top: 25px;
     width: 350px;
     height: 120px;
     display: grid;
