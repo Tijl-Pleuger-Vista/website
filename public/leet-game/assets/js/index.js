@@ -7,6 +7,10 @@ let gameScope = () => {
         const init = document.getElementById('init');
         const btn0 = document.getElementById('displayButtonAplha');
         const btn1 = document.getElementById('displayButtonBeta');
+        const btn2 = document.getElementById('displayButtonCharlie');
+        const btn3 = document.getElementById('displayButtonDelta');
+        const flex = document.getElementById('flex');
+
         
         var displayQuestion = document.getElementById('question');
         var i = -1
@@ -33,6 +37,48 @@ let gameScope = () => {
         var length = checkJson.questions.length
         var length = length - 1
         i++
+                var meow = checkJson.questions[i].button.length
+
+                btn0.classList.remove("active");
+                btn1.classList.remove("active");
+                btn2.classList.remove("active");
+                btn3.classList.remove("active");
+                flex.classList.remove("flex-1");
+                flex.classList.remove("flex-2");
+                flex.classList.remove("flex-3");
+                flex.classList.remove("flex-4");
+         
+                switch (meow) {
+                    case 0:
+                    break
+                    case 1:
+                        // console.log("I have 1 button")
+                        btn0.classList.add("active");
+                        flex.classList.add("flex-1");
+                    break
+                    case 2:
+                        // console.log("I have 2 buttons")
+                        btn0.classList.add("active");
+                        btn1.classList.add("active");
+                        flex.classList.add("flex-2");
+                    break
+                    case 3:
+                        // console.log("I have 3 buttons")
+                        btn0.classList.add("active");
+                        btn1.classList.add("active");
+                        btn2.classList.add("active");
+                        flex.classList.add("flex-3");
+                    break
+                    case 4:
+                        // console.log("I have 4 buttons")
+                        btn0.classList.add("active");
+                        btn1.classList.add("active");
+                        btn2.classList.add("active");
+                        btn3.classList.add("active");
+                        flex.classList.add("flex-4");
+                    break
+                }
+
             if (length < i){
                 localStorage.removeItem("json");
                 window.location.href = "https://vista-400927.web.app/leet-handbook/";

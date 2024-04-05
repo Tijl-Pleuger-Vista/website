@@ -1,13 +1,13 @@
 {
   "lang": "EN",
   "init":{
-    "title": "title",
-    "name": "PVO Game",
-    "description": "EEN VEILIGE REIS VOOR EEN MKB-ONDERNEMER",
-    "player": "player",
-    "antagonist": "antagonist",
-    "start": "Klick om te beginnen",
-    "author": "Vista-College Studenten",
+    "title": "PVO - Game",
+    "name": "cybersecurity",
+    "description": "Are you safe against cyber attacks?",
+    "player": "User",
+    "antagonist": "H4cker",
+    "start": "Click here to start",
+    "author": "Vista-College Students",
     "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen",
     "skip": "false",
     "css": ""
