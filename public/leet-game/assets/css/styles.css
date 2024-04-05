@@ -23,12 +23,14 @@ body {
     box-sizing: border-box;
     background-size: 100% 100dvh;
     background-image: url(https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/webp/2.webp);
+    background-attachment: fixed;
 }
 
 .container {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
+    justify-content: space-around;
 }
 
 .center {
@@ -72,6 +74,21 @@ body {
     display: grid;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+}
+
+.flex-select{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(50, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 12px;
+}
+.flex-select button{
+    display: block;
+    visibility: visible;
+    width: 100%;
+    height: max-content;
+    padding: 12px;
 }
 
 .flex-1 {
@@ -175,6 +192,9 @@ body {
     justify-content: center;
 }
 
+.description{
+    font-size: 30px;
+}
 #gameWindow {
     border: 2px solid black;
 }
@@ -183,8 +203,8 @@ body {
     font-family: silver;
     color: black;
     position: absolute;
-    width: 1024px;
-    height: 576px;
+    width: 350px;
+    height: 378px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,3 +290,5 @@ body {
 .mt-20{margin-top:20px}
 .mr-5{margin-right:5px}
 .ml-5{margin-left:5px}
+
+.h-150{height:150px}

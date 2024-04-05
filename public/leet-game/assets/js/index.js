@@ -10,7 +10,6 @@ let gameScope = () => {
         const btn2 = document.getElementById('displayButtonCharlie');
         const btn3 = document.getElementById('displayButtonDelta');
         const flex = document.getElementById('flex');
-
         
         var displayQuestion = document.getElementById('question');
         var i = -1
@@ -18,6 +17,15 @@ let gameScope = () => {
 
         let checkJson = JSON.parse(localStorage.getItem("json"));
         console.log(checkJson)
+
+        document.getElementById("displayTitle").innerHTML = checkJson.init.title;
+        document.getElementById("displayStart").innerHTML = checkJson.init.start;
+        document.getElementById("displayAuthor").innerHTML = checkJson.init.author;
+        document.getElementById("displayPlayerName").innerHTML = checkJson.init.player;
+        document.getElementById("displayAntagonistName").innerHTML = checkJson.init.antagonist;
+        document.getElementById("displayDescription").innerHTML = checkJson.init.description;
+
+        document.title = checkJson.init.name
 
         root.style.setProperty('--player-min', `${checkJson.colors.player.min}`);
         root.style.setProperty('--player-max', `${checkJson.colors.player.max}`);
@@ -37,6 +45,15 @@ let gameScope = () => {
         var length = checkJson.questions.length
         var length = length - 1
         i++
+            if (length < i){
+                localStorage.removeItem("json");
+                window.location.href = checkJson.init.href;
+            }
+            if (i < checkJson.questions.length){
+                displayQuestion.innerHTML =  checkJson.questions[i].question
+                btn0.innerHTML = checkJson.questions[i].button[0].text
+                btn1.innerHTML = checkJson.questions[i].button[1].text
+
                 var meow = checkJson.questions[i].button.length
 
                 btn0.classList.remove("active");
@@ -78,15 +95,6 @@ let gameScope = () => {
                         flex.classList.add("flex-4");
                     break
                 }
-
-            if (length < i){
-                localStorage.removeItem("json");
-                window.location.href = "https://vista-400927.web.app/leet-handbook/";
-            }
-            if (i < checkJson.questions.length){
-                displayQuestion.innerHTML =  checkJson.questions[i].question
-                btn0.innerHTML = checkJson.questions[i].button[0].text
-                btn1.innerHTML = checkJson.questions[i].button[1].text
             } 
     }
     
