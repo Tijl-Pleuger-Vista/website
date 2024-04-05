@@ -52,134 +52,144 @@
   },
   "questions": [
     {
-      "question": "Should you update your software regularly?",
-      "answer": "0",
-      "btn": [
+      "question": "How often do you update your devices",
+      "answer": "2",
+      "button": [
         {
-          "btn": "Yes"
+          "text": "When I have time"
         },
         {
-          "btn": "No"
+          "text": "I forget to update"
+        },
+        {
+          "text": "As soon as possible"
+        },
+        {
+          "text": "Never"
         }
       ],
-        "explanation": "Regular software updates help patch security vulnerabilities that hackers could exploit. Set up automatic updates if possible."
+        "explanation": "Regular software updates help patch security vulnerabilities that hackers could exploit. Set up automatic updates if possible"
     },
     {
-      "question": "What is 2FA",
+      "question": "Is it safe to re-use old passwords",
       "answer": "1",
-      "btn": [
+      "button": [
         {
-          "btn": "A football team"
+          "text": "Yes"
         },
         {
-          "btn": "Two Factor Authetecation"
+          "text": "No"
+        },
+        {
+          "text": "Sometimes"
         }
       ],
       "explanation": "(2FA) is an identity and access management security method that requires two forms of identification to access resources and data"
     },
     {
-      "question": "Do you teach your team how to stay safe online?",
+      "question": "Do you inform your team on how to stay safe online",
       "answer": "0",
-      "btn": [
+      "button": [
         {
-          "btn": "Yes"
+          "text": "Yes"
         },
         {
-          "btn": "No"
+          "text": "No"
         }
       ],
-      "explanation": "Provide cybersecurity training to your employees, covering topics like phishing awareness and safe internet browsing habits."
+      "explanation": "Provide cybersecurity training to your employees, covering topics like phishing awareness and safe internet browsing habits"
     },
     {
       "question": "Is it smart to click on unknown links",
       "answer": "1",
-      "btn": [
+      "button": [
         {
-          "btn": "Yes"
+          "text": "Yes"
         },
         {
-          "btn": "No"
+          "text": "No"
         }
       ],
-      "explanation": "Clicking on a phishing link can sometimes set off a malware download that contains malicious files capable of harvesting information stored on your device"
+      "explanation": "Clicking on an unknown link can set off a malware download that contains malicious files capable of harvesting information stored on your device"
     },
 
     {
-      "question": "Do you use encryption to keep your information safe from hackers?",
+      "question": "Does using encryption help you stay safe from hackers",
       "answer": "0",
-      "btn": [
+      "button": [
         {
-          "btn": "Yes"
+          "text": "Yes"
         },
         {
-          "btn": "No"
+          "text": "No"
         }
       ],
-      "explanation": "Use encryption for sensitive data, both in transit (e.g., using HTTPS) and at rest (e.g., encrypting files or databases)."
+      "explanation": "Use encryption for sensitive data, both in transit (e.g., using HTTPS) and at rest (e.g., encrypting files or databases)"
     },
     {
-      "question": "Do you have a plan for if something goes wrong with your data?",
+      "question": "Do you have a plan for when  your data is compromised",
       "answer": "0",
-      "btn": [
+      "button": [
         {
-          "btn": "Yes"
+          "text": "Yes"
         },
         {
-          "btn": "No"
+          "text": "No"
         }
       ],
-      "explanation": "Create a comprehensive disaster recovery plan outlining steps to take in case of a cyber incident, including data backup and restoration procedures."
+      "explanation": "Create a comprehensive disaster recovery plan outlining steps to take in case of a cyber incident, including data backup and restoration procedures"
     },
     {
-      "question": "Have you made sure your employees' home computers are safe for work?",
-      "answer": "0",
-      "btn": [
+      "question": "Should you disable your anti-virus if an app asks you to",
+      "answer": "1",
+      "button": [
         {
-          "btn": "Yes"
+          "text": "Yes"
         },
         {
-          "btn": "No"
+          "text": "No"
         }
       ],
-      "explanation": "Provide guidelines for securing home computers, such as installing antivirus software, enabling firewalls, and keeping software up to date."
+      "explanation": "Never disable your anti-virus"
     },
     {
-      "question": "Do you control who can access your company's files and systems?",
+      "question": "What does 2FA stand for",
       "answer": "0",
-      "btn": [
+      "button": [
         {
-          "btn": "Yes"
+          "text": "Two Factor Authetecation"
         },
         {
-          "btn": "No"
+          "text": "2 Football Association"
         }
-      ],      "explanation": "Implement access controls and user permissions to ensure that only authorized individuals can access sensitive company resources."
+      ],      
+      "explanation": "(2FA) is an identity and access management security method that requires two forms of identification to access resources and data"
     },
     {
-      "question": "Do you use two or more steps to log in to important accounts?",
-      "answer": "0",
-      "btn": [
+      "question": "Why should you use 2FA",
+      "answer": "1",
+      "button": [
         {
-          "btn": "Yes"
+          "text": "To make it more difficult to login"
         },
         {
-          "btn": "No"
-        }
-      ],
-      "explanation": "Enable multi-factor authentication (MFA) whenever possible to add an extra layer of security beyond just a password."
-    },
-    {
-      "question": "Do you have insurance in case something bad happens to your data?",
-      "answer": "0",
-      "btn": [
-        {
-          "btn": "Yes"
-        },
-        {
-          "btn": "No"
+          "text": "To make it more difficult for hackers to gain access to your account"
         }
       ],
-      "explanation": "Consider getting cybersecurity insurance to help mitigate financial losses and recovery costs in the event of a data breach or cyber incident."
+      "explanation": "Enable multi-factor authentication (MFA) (like 2FA) whenever possible to add an extra layer of security beyond just a password"
+    },
+    {
+      "question": "You find an USB on the street, should you stick it in your pc",
+      "answer": "1",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "explanation": "Someone could have put a virus on the USB, sticking it in your PC for even 1 second is enough to compromise your device"
     }
   ]
 }
