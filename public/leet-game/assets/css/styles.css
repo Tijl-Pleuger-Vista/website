@@ -70,9 +70,9 @@ body {
 
 .flex {
     position: relative;
-    top: 8px;
+    top: 4px;
     width: 350px;
-    height: 120px;
+    height: 110px;
     display: grid;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
