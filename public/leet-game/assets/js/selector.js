@@ -21,5 +21,5 @@ async function wait(fetchJson) {
     var checkJson = await checkJson.json();
     localStorage.setItem("json", JSON.stringify(checkJson));
     console.log(checkJson)
-    window.location.href = "http://127.0.0.1:5500/public/leet-game/game.html";
+    window.location.href = "https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/game.html";
 }
