@@ -51,8 +51,33 @@ let gameScope = () => {
             }
             if (i < checkJson.questions.length){
                 displayQuestion.innerHTML =  checkJson.questions[i].question
-                btn0.innerHTML = checkJson.questions[i].button[0].text
-                btn1.innerHTML = checkJson.questions[i].button[1].text
+
+                var buttonLength = checkJson.questions[i].button.length
+
+                switch (buttonLength) {
+                    case 1:
+                        btn0.innerHTML = checkJson.questions[i].button[0].text
+                    break;
+                    case 2:
+                        btn0.innerHTML = checkJson.questions[i].button[0].text
+                        btn1.innerHTML = checkJson.questions[i].button[1].text
+                    break;
+                    case 3:
+                        btn0.innerHTML = checkJson.questions[i].button[0].text
+                        btn1.innerHTML = checkJson.questions[i].button[1].text
+                        btn2.innerHTML = checkJson.questions[i].button[2].text
+                    break;
+                    case 4:
+                        btn0.innerHTML = checkJson.questions[i].button[0].text
+                        btn1.innerHTML = checkJson.questions[i].button[1].text
+                        btn2.innerHTML = checkJson.questions[i].button[2].text
+                        btn3.innerHTML = checkJson.questions[i].button[3].text
+                    break;
+                    default:
+                        break;
+                }
+                
+
 
                 var meow = checkJson.questions[i].button.length
 
