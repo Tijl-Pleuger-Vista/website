@@ -96,7 +96,7 @@ body {
 
 .antagonistHealthTotal {
     position: absolute;
-    background-image: linear-gradient(to right, var(--enemy-min), var(--enemy-max));
+    background-image: linear-gradient(to right, var(--antagonist-min), var(--antagonist-max));
     /* background-color: #8B5CF6; */
     top: 0;
     right: 0;
