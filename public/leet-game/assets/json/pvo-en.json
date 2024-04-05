@@ -179,7 +179,7 @@
       "explanation": "Enable multi-factor authentication (MFA) (like 2FA) whenever possible to add an extra layer of security beyond just a password."
     },
     {
-      "question": "You find an USB on the streen, should you stick it in your pc?",
+      "question": "You find an USB on the street, should you stick it in your pc?",
       "answer": "1",
       "button": [
         {

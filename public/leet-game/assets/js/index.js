@@ -51,35 +51,7 @@ let gameScope = () => {
             }
             if (i < checkJson.questions.length){
                 displayQuestion.innerHTML =  checkJson.questions[i].question
-
                 var buttonLength = checkJson.questions[i].button.length
-
-                switch (buttonLength) {
-                    case 1:
-                        btn0.innerHTML = checkJson.questions[i].button[0].text
-                    break;
-                    case 2:
-                        btn0.innerHTML = checkJson.questions[i].button[0].text
-                        btn1.innerHTML = checkJson.questions[i].button[1].text
-                    break;
-                    case 3:
-                        btn0.innerHTML = checkJson.questions[i].button[0].text
-                        btn1.innerHTML = checkJson.questions[i].button[1].text
-                        btn2.innerHTML = checkJson.questions[i].button[2].text
-                    break;
-                    case 4:
-                        btn0.innerHTML = checkJson.questions[i].button[0].text
-                        btn1.innerHTML = checkJson.questions[i].button[1].text
-                        btn2.innerHTML = checkJson.questions[i].button[2].text
-                        btn3.innerHTML = checkJson.questions[i].button[3].text
-                    break;
-                    default:
-                        break;
-                }
-                
-
-
-                var meow = checkJson.questions[i].button.length
 
                 btn0.classList.remove("active");
                 btn1.classList.remove("active");
@@ -89,28 +61,35 @@ let gameScope = () => {
                 flex.classList.remove("flex-2");
                 flex.classList.remove("flex-3");
                 flex.classList.remove("flex-4");
-         
-                switch (meow) {
-                    case 0:
-                    break
+
+                switch (buttonLength) {
                     case 1:
                         // console.log("I have 1 button")
                         btn0.classList.add("active");
                         flex.classList.add("flex-1");
-                    break
+
+                        btn0.innerHTML = checkJson.questions[i].button[0].text
+                    break;
                     case 2:
                         // console.log("I have 2 buttons")
                         btn0.classList.add("active");
                         btn1.classList.add("active");
                         flex.classList.add("flex-2");
-                    break
+
+                        btn0.innerHTML = checkJson.questions[i].button[0].text
+                        btn1.innerHTML = checkJson.questions[i].button[1].text
+                    break;
                     case 3:
                         // console.log("I have 3 buttons")
                         btn0.classList.add("active");
                         btn1.classList.add("active");
                         btn2.classList.add("active");
                         flex.classList.add("flex-3");
-                    break
+
+                        btn0.innerHTML = checkJson.questions[i].button[0].text
+                        btn1.innerHTML = checkJson.questions[i].button[1].text
+                        btn2.innerHTML = checkJson.questions[i].button[2].text
+                    break;
                     case 4:
                         // console.log("I have 4 buttons")
                         btn0.classList.add("active");
@@ -118,10 +97,15 @@ let gameScope = () => {
                         btn2.classList.add("active");
                         btn3.classList.add("active");
                         flex.classList.add("flex-4");
-                    break
+
+                        btn0.innerHTML = checkJson.questions[i].button[0].text
+                        btn1.innerHTML = checkJson.questions[i].button[1].text
+                        btn2.innerHTML = checkJson.questions[i].button[2].text
+                        btn3.innerHTML = checkJson.questions[i].button[3].text
+                    break;
                 }
             } 
-    }
+        }
     
     function animate() {
         window.requestAnimationFrame(animate);
