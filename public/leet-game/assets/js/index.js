@@ -158,6 +158,9 @@ let gameScope = () => {
 
     btn0.addEventListener("click", () => {answerCheck(0)});
     btn1.addEventListener("click", () => {answerCheck(1)});
+    btn2.addEventListener("click", () => {answerCheck(2)});
+    btn3.addEventListener("click", () => {answerCheck(3)});
+
 
     function answerCheck(check){
         
