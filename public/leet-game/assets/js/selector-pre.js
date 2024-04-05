@@ -3,7 +3,7 @@ localStorage.removeItem("json");
 function caseCheck(check){
     switch (check) {
         case 0:
-            var fetchJson = "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/json/pvo.json"
+            var fetchJson = "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/json/pvo-1.json"
             // var fetchJson = "./assets/json/pvo-1.json"
 
             wait(fetchJson)

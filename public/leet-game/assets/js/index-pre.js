@@ -24,8 +24,8 @@ let gameScope = () => {
         document.getElementById('menu').style.display = "none";
         c.fillRect(0, 0, canvas.width, canvas.height);
         setTimeout(() => {
-            animate();
-            document.getElementById('hud').style.display = "flex";
+        animate();
+        document.getElementById('hud').style.display = "flex";
         }, 10)
     }
 
@@ -41,7 +41,8 @@ let gameScope = () => {
                 displayQuestion.innerHTML =  checkJson.questions[i].question
                 btn0.innerHTML = checkJson.questions[i].button[0].text
                 btn1.innerHTML = checkJson.questions[i].button[1].text
-            } 
+            }
+            
     }
     
     function animate() {

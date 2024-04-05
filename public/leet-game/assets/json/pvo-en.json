@@ -1,4 +1,14 @@
 {
+  "lang": "NL",
+  "init":{
+    "name": "PVO Game",
+    "description": "EEN VEILIGE REIS VOOR EEN MKB-ONDERNEMER",
+    "hero": "Hero",
+    "enemy": "Enemy",
+    "start": "Klick om te beginnen",
+    "credits": "Vista-College Studenten",
+    "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen"
+  },
   "sprites":{
     "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/background.png",
     "hero": 
