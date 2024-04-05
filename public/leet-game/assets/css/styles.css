@@ -69,6 +69,8 @@ body {
 }
 
 .flex {
+    position: relative;
+    top: 5px;
     width: 350px;
     height: 120px;
     display: grid;
