@@ -1,6 +1,7 @@
 import { player, enemy } from './Fighter.js'
 import { background } from './Sprite.js';
 
+
 let gameScope = () => {
 
     // var
@@ -16,6 +17,14 @@ let gameScope = () => {
 
         let checkJson = JSON.parse(localStorage.getItem("json"));
         console.log(checkJson)
+
+        var root = document.querySelector(':root');
+        root.style.setProperty('--hero-min', `${checkJson.colors.hero.min}`);
+        root.style.setProperty('--hero-max', `${checkJson.colors.hero.max}`);
+        root.style.setProperty('--enemy-min', `${checkJson.colors.villain.min}`);
+        root.style.setProperty('--enemy-max', `${checkJson.colors.villain.max}`);
+
+
     // var
 
     // if(localStorage.getItem("reboot") === "true") {

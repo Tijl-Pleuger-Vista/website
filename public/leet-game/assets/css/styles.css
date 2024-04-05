@@ -9,6 +9,13 @@
     src: url(https://fonts.gstatic.com/s/madimione/v1/2V0YKIEADpA8U6RygDnZVC8iB7HM.woff2) format('woff2');
 }
 
+:root {
+    --hero-min: #000000;
+    --hero-max: #000000;
+    --enemy-min: #000000;
+    --enemy-max: #000000;
+}
+
 * {
     margin: 0;
 }
@@ -65,8 +72,19 @@ body {
     align-items: center;
 }
 
-.healthLayout {
+.healthLayoutHero {
     position: absolute;
+    left: 50%;
+    height: 30px;
+    width: 100%;
+    border-style:solid;
+    border-radius: 2px;
+    border-color: #fff;
+}
+
+.healthLayoutEnemy {
+    position: absolute;
+    bottom: 352px;
     left: 50%;
     height: 30px;
     width: 100%;
@@ -81,9 +99,20 @@ body {
     width: 100%;
 }
 
-.totalHealthBar {
+.totalHealthBarHero {
     position: absolute;
-    background-image: linear-gradient(to right, #6C192B, #AF2424);
+    background-image: linear-gradient(to right, var(--hero-min), var(--hero-max));
+    /* background-color: #8B5CF6; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.totalHealthBarEnemy {
+    position: absolute;
+    background-image: linear-gradient(to right, var(--enemy-min), var(--enemy-max));
     /* background-color: #8B5CF6; */
     top: 0;
     right: 0;

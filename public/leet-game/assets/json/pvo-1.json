@@ -28,13 +28,13 @@
   "colors":{
     "hero": 
       {
-        "min": "6C192B",
-        "max": "AF2424"
+        "min": "#6C192B",
+        "max": "#AF2424"
       },
     "villain": 
       {
-        "min": "004ff9",
-        "max": "000000"
+        "min": "#004ff9",
+        "max": "#000000"
       }
   },
   "questions": [

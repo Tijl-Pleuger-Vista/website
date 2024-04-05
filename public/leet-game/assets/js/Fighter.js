@@ -177,29 +177,29 @@ export const player = new Fighter({
     },
     imageSrc: checkJson.sprites.hero.idle,
     scale: 2.5,
-    maxFrames: checkJson.sprites.hero.idleMaxframes,
+    maxFrames: checkJson.sprites.hero.idleMaxFrames,
     holdFrames: 4,
     offsetFrame: { x: 215, y: 154 },
     sprites: {  // Sprites for different animations.
         idle: {
             imageSrc: checkJson.sprites.hero.idle,
-            maxFrames: checkJson.sprites.hero.idleMaxframes,
+            maxFrames: checkJson.sprites.hero.idleMaxFrames,
         },
         fall: {
             imageSrc: checkJson.sprites.hero.idle,
-            maxFrames: checkJson.sprites.hero.idleMaxframes,
+            maxFrames: checkJson.sprites.hero.idleMaxFrames,
         },
         death: {
             imageSrc: checkJson.sprites.hero.death,
-            maxFrames: checkJson.sprites.hero.deathMaxframes,
+            maxFrames: checkJson.sprites.hero.deathMaxFrames,
         },
         attack1: {
             imageSrc: checkJson.sprites.hero.attack,
-            maxFrames: checkJson.sprites.hero.attackMaxframes,
+            maxFrames: checkJson.sprites.hero.attackMaxFrames,
         },
         takeHit: {
             imageSrc: checkJson.sprites.hero.damage,
-            maxFrames: checkJson.sprites.hero.damageMaxframes,
+            maxFrames: checkJson.sprites.hero.damageMaxFrames,
         }
 
     },
@@ -231,31 +231,31 @@ export const enemy = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: checkJson.sprites.enemy.idle,
+    imageSrc: checkJson.sprites.villain.idle,
     scale: 2.5,
-    maxFrames: checkJson.sprites.enemy.idleMaxframes,
+    maxFrames: checkJson.sprites.villain.idleMaxframes,
     holdFrames: 6,
     offsetFrame: { x: 215, y: 172 },
     sprites: {   // Sprites for different animations.
         idle: {
-            imageSrc: checkJson.sprites.enemy.idle,
-            maxFrames: checkJson.sprites.enemy.idleMaxframes,
+            imageSrc: checkJson.sprites.villain.idle,
+            maxFrames: checkJson.sprites.villain.idleMaxFrames,
         },
         fall: {
-            imageSrc: checkJson.sprites.enemy.idle,
-            maxFrames: checkJson.sprites.enemy.idleMaxframes,
+            imageSrc: checkJson.sprites.villain.idle,
+            maxFrames: checkJson.sprites.villain.idleMaxFrames,
         },
         death: {
-            imageSrc: checkJson.sprites.enemy.death,
-            maxFrames: checkJson.sprites.enemy.deathMaxframes,
+            imageSrc: checkJson.sprites.villain.death,
+            maxFrames: checkJson.sprites.villain.deathMaxFrames,
         },
         attack1: {
-            imageSrc: checkJson.sprites.enemy.attack,
-            maxFrames: checkJson.sprites.enemy.attackMaxframes,
+            imageSrc: checkJson.sprites.villain.attack,
+            maxFrames: checkJson.sprites.villain.attackMaxFrames,
         },
         takeHit: {
-            imageSrc: checkJson.sprites.enemy.damage,
-            maxFrames: checkJson.sprites.enemy.damageMaxframes,
+            imageSrc: checkJson.sprites.villain.damage,
+            maxFrames: checkJson.sprites.villain.damageMaxFrames,
         }
     },
     keys: {
