@@ -20,8 +20,8 @@
         "idleMaxFrames": "8",
         "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack.png",
         "attackMaxFrames": "6",
-        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/dungeon/player/damage.png",
-        "damageMaxFrames": "2",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage.png",
+        "damageMaxFrames": "4",
         "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png",
         "deathMaxFrames": "6"
       },
@@ -193,4 +193,3 @@
     }
   ]
 }
-
