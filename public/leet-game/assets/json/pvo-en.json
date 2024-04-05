@@ -68,7 +68,7 @@
           "text": "Never"
         }
       ],
-        "explanation": "Regular software updates help patch security vulnerabilities that hackers could exploit. Set up automatic updates if possible."
+        "explanation": "Regular software updates help patch security vulnerabilities that hackers could exploit. Set up automatic updates if possible"
     },
     {
       "question": "Is it safe to re-use old passwords",
@@ -87,7 +87,7 @@
       "explanation": "(2FA) is an identity and access management security method that requires two forms of identification to access resources and data"
     },
     {
-      "question": "Do you inform your team on how to stay safe online?",
+      "question": "Do you inform your team on how to stay safe online",
       "answer": "0",
       "button": [
         {
@@ -97,7 +97,7 @@
           "text": "No"
         }
       ],
-      "explanation": "Provide cybersecurity training to your employees, covering topics like phishing awareness and safe internet browsing habits."
+      "explanation": "Provide cybersecurity training to your employees, covering topics like phishing awareness and safe internet browsing habits"
     },
     {
       "question": "Is it smart to click on unknown links",
@@ -114,7 +114,7 @@
     },
 
     {
-      "question": "Does using encryption help you stay safe from hackers?",
+      "question": "Does using encryption help you stay safe from hackers",
       "answer": "0",
       "button": [
         {
@@ -124,7 +124,7 @@
           "text": "No"
         }
       ],
-      "explanation": "Use encryption for sensitive data, both in transit (e.g., using HTTPS) and at rest (e.g., encrypting files or databases)."
+      "explanation": "Use encryption for sensitive data, both in transit (e.g., using HTTPS) and at rest (e.g., encrypting files or databases)"
     },
     {
       "question": "Do you have a plan for when  your data is compromised",
@@ -137,7 +137,7 @@
           "text": "No"
         }
       ],
-      "explanation": "Create a comprehensive disaster recovery plan outlining steps to take in case of a cyber incident, including data backup and restoration procedures."
+      "explanation": "Create a comprehensive disaster recovery plan outlining steps to take in case of a cyber incident, including data backup and restoration procedures"
     },
     {
       "question": "Should you disable your anti-virus if an app asks you to",
@@ -176,10 +176,10 @@
           "text": "To make it more difficult for hackers to gain access to your account"
         }
       ],
-      "explanation": "Enable multi-factor authentication (MFA) (like 2FA) whenever possible to add an extra layer of security beyond just a password."
+      "explanation": "Enable multi-factor authentication (MFA) (like 2FA) whenever possible to add an extra layer of security beyond just a password"
     },
     {
-      "question": "You find an USB on the street, should you stick it in your pc?",
+      "question": "You find an USB on the street, should you stick it in your pc",
       "answer": "1",
       "button": [
         {

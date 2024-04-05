@@ -1,26 +1,54 @@
 {
+  "lang": "EN",
+  "init":{
+    "title": "PVO - Game",
+    "name": "cybersecurity",
+    "description": "Are you safe against cyber attacks?",
+    "player": "User",
+    "antagonist": "H4cker",
+    "start": "Click here to start",
+    "author": "Vista-College Students",
+    "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen",
+    "skip": "false",
+    "css": ""
+  },
   "sprites":{
     "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/background.png",
-    "hero": [
+    "player": 
       {
         "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/idle.png",
-        "attack0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack0.png",
-        "attack1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack1.png",
-        "damage0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage0.png",
-        "damage1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage1.png",
-        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png"
-      }
-    ],
-    "villain": [
+        "idleMaxFrames": "8",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack.png",
+        "attackMaxFrames": "6",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/dungeon/player/damage.png",
+        "damageMaxFrames": "2",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png",
+        "deathMaxFrames": "6"
+      },
+    
+    "antagonist": 
       {
-        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/idle.png",
-        "attack0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack0.png",
-        "attack1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack1.png",
-        "damage0": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage0.png",
-        "damage1": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage1.png",
-        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/death.png"
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/idle.png",
+        "idleMaxFrames": "4",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/attack.png",
+        "attackMaxFrames": "4",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/damage.png",
+        "damageMaxFrames": "3",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/death.png",
+        "deathMaxFrames": "7"
       }
-    ]
+  },
+  "colors":{
+    "player": 
+      {
+        "min": "#6C192B",
+        "max": "#AF2424"
+      },
+    "antagonist": 
+      {
+        "min": "#004ff9",
+        "max": "#333892"
+      }
   },
   "questions": [
     {
