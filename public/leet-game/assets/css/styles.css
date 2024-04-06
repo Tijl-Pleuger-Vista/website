@@ -287,6 +287,11 @@ body {
     height: 50px;
 }
 
+.icon{
+    width: 16px;
+    height: 16px;
+}
+
 .w{width: 100%}
 .mw{width: 350px;}
 .h{height: 100dvh}
@@ -294,6 +299,7 @@ body {
 .mt-10{margin-top:10px}
 .mt-20{margin-top:20px}
 .mr-5{margin-right:5px}
+.mr-15{margin-right:15px}
 .ml-5{margin-left:5px}
 
 .h-150{height:150px}
