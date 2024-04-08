@@ -12,15 +12,37 @@
 
         <link rel="stylesheet" href="assets/css/styles.css">
         <title>Score</title>
-
-        <script type="text/javascript" src="assets/js/score.js"></script>
     </head>
 <body>
-    <div class="center">
+    <div class="w h center column">
         <div id="score"></div>
+        <div>
+            <div class="skill">
+                <div class="outer">
+                    <div class="inner column">
+                        <div id="displayExperience">0%</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="80px" height="80px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#562468" />
+                            <stop offset="100%" stop-color="#F499BF" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="40" cy="40" r="35" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
         <!-- circle thingy -->
-        <div>a message like "you did great"</div>
-        <button>Link to that page</button>
+        <div class="row mt-20">
+            <div>Based on your performance your security is</div>
+            <div id="performance">
+            </div>
+        </div>
+        <div id="meow" class="mt-20">
+        </div>
     </div>
+    <script type="text/javascript" src="assets/js/score.js"></script>
 </body>
 </html>

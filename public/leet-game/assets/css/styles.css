@@ -14,6 +14,7 @@
     --player-max: #000000;
     --antagonist-min: #000000;
     --antagonist-max: #000000;
+    --experience: 0;
 }
 
 * {
@@ -303,3 +304,78 @@ body {
 .ml-5{margin-left:5px}
 
 .h-150{height:150px}
+
+svg {
+    position: relative;
+    bottom: 80px;
+}
+/* SKILL */
+.skill {
+    width: 80px;
+    height: 80px;
+}
+
+.outer {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, .15),
+        -6px -6px 10px -1px rgba(255, 255, 255, .7);
+    /* padding: 10px; */
+}
+
+.inner {
+    position: relative;
+    left: 8.5px;
+    top: 8.5px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, .2),
+        inset -6px -6px 10px -1px rgba(255, 255, 255, .7),
+        /* -0.5px -0.5px 0px rgba(255,255,255,1), */
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#experience {
+    font-weight: 600;
+    font-size: large;
+    color: var(--txt);
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 10px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+
+}
+
+@keyframes anim {
+    100% {
+        stroke-dashoffset: var(--experience);
+        /* stroke-dashoffset: 400; */
+    }
+}
+
+.weak{
+    margin-left: 10px;
+    text-decoration: underline;
+    /* text-decoration-color: red; */
+}
+.strong{
+    margin-left: 6px;
+    text-decoration: underline;
+    /* text-decoration-color: yellow; */
+}
+.very-strong{
+    margin-left: 10px;
+    text-decoration: underline;
+    /* text-decoration-color: green; */
+}

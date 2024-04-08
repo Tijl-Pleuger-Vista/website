@@ -13,6 +13,7 @@ let gameScope = () => {
         
         var displayQuestion = document.getElementById('question');
         var i = -1
+        var amount = 0 
         var root = document.querySelector(':root');
 
         let checkJson = JSON.parse(localStorage.getItem("json"));
@@ -46,8 +47,15 @@ let gameScope = () => {
         var length = length - 1
         i++
             if (length < i){
-                localStorage.removeItem("json");
-                window.location.href = checkJson.init.href;
+
+                const jsonData = { 
+                    "amount": amount, 
+                    "total": checkJson.questions.length,
+                  };
+
+                  localStorage.setItem("data", JSON.stringify(jsonData));
+                    window.location.href = "post-game.html";
+                // window.location.href = checkJson.init.href;
             }
             if (i < checkJson.questions.length){
                 displayQuestion.innerHTML =  checkJson.questions[i].question
@@ -155,6 +163,7 @@ let gameScope = () => {
             nextQuestion(checkJson)
         } else {
             antagonist.isAttacking = true;
+            amount++
         }
     }
 }
