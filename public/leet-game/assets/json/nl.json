@@ -1,17 +1,20 @@
 {
-  "lang": "NL",
+  "lang": "EN",
   "init":{
-    "name": "PVO Game",
-    "description": "EEN VEILIGE REIS VOOR EEN MKB-ONDERNEMER",
-    "hero": "Hero",
-    "enemy": "Enemy",
-    "start": "Klick om te beginnen",
-    "credits": "Vista-College Studenten",
-    "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen"
+    "title": "PVO - Game",
+    "name": "cybersecurity",
+    "description": "Bent u veilig tegen cyberaanvallen?",
+    "player": "User",
+    "antagonist": "H4cker",
+    "start": "Klik hier om te starten",
+    "author": "Vista-College Studenten",
+    "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen",
+    "skip": "false",
+    "css": ""
   },
   "sprites":{
     "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/background.png",
-    "hero": 
+    "player": 
       {
         "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/idle.png",
         "idleMaxFrames": "8",
@@ -23,25 +26,25 @@
         "deathMaxFrames": "6"
       },
     
-    "villain": 
+    "antagonist": 
       {
-        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/idle.png",
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/idle.png",
         "idleMaxFrames": "4",
-        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack.png",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/attack.png",
         "attackMaxFrames": "4",
-        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage.png",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/damage.png",
         "damageMaxFrames": "3",
-        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/death.png",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/death.png",
         "deathMaxFrames": "7"
       }
   },
   "colors":{
-    "hero": 
+    "player": 
       {
         "min": "#6C192B",
         "max": "#AF2424"
       },
-    "villain": 
+    "antagonist": 
       {
         "min": "#004ff9",
         "max": "#333892"
@@ -49,134 +52,144 @@
   },
   "questions": [
     {
-      "question": "Should you update your software regularly?",
-      "answer": "0",
+      "question": "Hoe vaak update u uw apparaten",
+      "answer": "2",
       "button": [
         {
-          "text": "Yes"
+          "text": "Wanneer ik tijd heb"
         },
         {
-          "text": "No"
+          "text": "Ik vergeet te updaten"
+        },
+        {
+          "text": "Zo spoedig mogelijk"
+        },
+        {
+          "text": "Nooit"
         }
       ],
-        "explanation": "Regular software updates help patch security vulnerabilities that hackers could exploit. Set up automatic updates if possible."
+        "explanation": "Regelmatige software-updates helpen beveiligingskwetsbaarheden te verhelpen die hackers kunnen misbruiken. Stel indien mogelijk automatische updates in"
     },
     {
-      "question": "What is 2FA",
+      "question": "Is het veilig om oude wachtwoorden opnieuw te gebruiken",
       "answer": "1",
       "button": [
         {
-          "text": "A football team"
+          "text": "Ja"
         },
         {
-          "text": "Two Factor Authetecation"
+          "text": "Nee"
+        },
+        {
+          "text": "Soms"
         }
       ],
-      "explanation": "(2FA) is an identity and access management security method that requires two forms of identification to access resources and data"
+      "explanation": ""
     },
     {
-      "question": "Do you teach your team how to stay safe online?",
+      "question": "Informeert u uw team over hoe ze online veilig kunnen blijven",
       "answer": "0",
       "button": [
         {
-          "text": "Yes"
+          "text": "Ja"
         },
         {
-          "text": "No"
+          "text": "Nee"
         }
       ],
-      "explanation": "Provide cybersecurity training to your employees, covering topics like phishing awareness and safe internet browsing habits."
+      "explanation": "Bied uw medewerkers cyberbeveiligingstrainingen aan, waarin onderwerpen als phishing-bewustzijn en veilig surfgedrag op internet aan de orde komen"
     },
     {
-      "question": "Is it smart to click on unknown links",
+      "question": "Is het slim om op onbekende links te klikken",
       "answer": "1",
       "button": [
         {
-          "text": "Yes"
+          "text": "Ja"
         },
         {
-          "text": "No"
+          "text": "Nee"
         }
       ],
-      "explanation": "Clicking on a phishing link can sometimes set off a malware download that contains malicious files capable of harvesting information stored on your device"
+      "explanation": "Als u op een onbekende link klikt, kan er een malwaredownload worden geactiveerd die schadelijke bestanden bevat die informatie kunnen verzamelen die op uw apparaat is opgeslagen"
     },
 
     {
-      "question": "Do you use encryption to keep your information safe from hackers?",
+      "question": "Helpt het gebruik van encryptie u veilig te blijven tegen hackers",
       "answer": "0",
       "button": [
         {
-          "text": "Yes"
+          "text": "Ja"
         },
         {
-          "text": "No"
+          "text": "Nee"
         }
       ],
-      "explanation": "Use encryption for sensitive data, both in transit (e.g., using HTTPS) and at rest (e.g., encrypting files or databases)."
+      "explanation": "Gebruik versleuteling voor gevoelige gegevens, zowel tijdens de overdracht (bijvoorbeeld via HTTPS) als in rust (bijvoorbeeld bij het versleutelen van bestanden of databases)"
     },
     {
-      "question": "Do you have a plan for if something goes wrong with your data?",
+      "question": "Heeft u een plan voor als uw gegevens in gevaar komen",
       "answer": "0",
       "button": [
         {
-          "text": "Yes"
+          "text": "Je"
         },
         {
-          "text": "No"
+          "text": "Nee"
         }
       ],
-      "explanation": "Create a comprehensive disaster recovery plan outlining steps to take in case of a cyber incident, including data backup and restoration procedures."
+      "explanation": "Maak een uitgebreid noodherstelplan waarin de stappen worden beschreven die moeten worden genomen in het geval van een cyberincident, inclusief procedures voor het maken van back-ups en het herstellen van gegevens"
     },
     {
-      "question": "Have you made sure your employees' home computers are safe for work?",
-      "answer": "0",
+      "question": "Moet u uw antivirusprogramma uitschakelen als een app u daarom vraagt",
+      "answer": "1",
       "button": [
         {
-          "text": "Yes"
+          "text": "Ja"
         },
         {
-          "text": "No"
+          "text": "Nee"
         }
       ],
-      "explanation": "Provide guidelines for securing home computers, such as installing antivirus software, enabling firewalls, and keeping software up to date."
+      "explanation": "Schakel uw antivirusprogramma nooit uit"
     },
     {
-      "question": "Do you control who can access your company's files and systems?",
+      "question": "Waar staat 2FA voor",
       "answer": "0",
       "button": [
         {
-          "text": "Yes"
+          "text": "Two Factor Authetecation"
         },
         {
-          "text": "No"
+          "text": "2 Football Association"
         }
-      ],      "explanation": "Implement access controls and user permissions to ensure that only authorized individuals can access sensitive company resources."
+      ],      
+      "explanation": "(2FA) is een beveiligingsmethode voor identiteits- en toegangsbeheer die twee vormen van identificatie vereist om toegang te krijgen tot bronnen en gegevens"
     },
     {
-      "question": "Do you use two or more steps to log in to important accounts?",
-      "answer": "0",
+      "question": "Waarom zou u 2FA gebruiken",
+      "answer": "1",
       "button": [
         {
-          "text": "Yes"
+          "text": "Om het jezelf moeilijker te maken om in te loggen"
         },
         {
-          "text": "No"
-        }
-      ],
-      "explanation": "Enable multi-factor authentication (MFA) whenever possible to add an extra layer of security beyond just a password."
-    },
-    {
-      "question": "Do you have insurance in case something bad happens to your data?",
-      "answer": "0",
-      "button": [
-        {
-          "text": "Yes"
-        },
-        {
-          "text": "No"
+          "text": "Om het voor hackers moeilijker te maken om toegang te krijgen tot uw account"
         }
       ],
-      "explanation": "Consider getting cybersecurity insurance to help mitigate financial losses and recovery costs in the event of a data breach or cyber incident."
+      "explanation": "Schakel waar mogelijk multi-factor authenticatie (MFA) (zoals 2FA) in om een ​​extra beveiligingslaag toe te voegen die verder gaat dan alleen een wachtwoord"
+    },
+    {
+      "question": "Je vindt een USB op straat, ga je deze in je pc steken",
+      "answer": "1",
+      "button": [
+        {
+          "text": "Ja"
+        },
+        {
+          "text": "Nee"
+        }
+      ],
+      "explanation": "Iemand zou een virus op de USB kunnen hebben geplaatst; zelfs maar 1 seconde op uw pc plakken is voldoende om uw apparaat in gevaar te brengen"
     }
   ]
 }
