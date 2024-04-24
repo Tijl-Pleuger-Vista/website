@@ -1,0 +1,196 @@
+{
+  "lang": "EN",
+  "init":{
+    "title": "PVO - Game",
+    "name": "cybersecurity",
+    "description": "Bent u veilig tegen cyberaanvallen?",
+    "player": "User",
+    "antagonist": "H4cker",
+    "start": "Klik hier om te starten",
+    "author": "Vista-College Studenten",
+    "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen",
+    "skip": "false",
+    "css": ""
+  },
+  "sprites":{
+    "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/background.png",
+    "player": 
+      {
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/idle.png",
+        "idleMaxFrames": "8",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack.png",
+        "attackMaxFrames": "6",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage.png",
+        "damageMaxFrames": "4",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png",
+        "deathMaxFrames": "6"
+      },
+    
+    "antagonist": 
+      {
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/idle.png",
+        "idleMaxFrames": "4",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/attack.png",
+        "attackMaxFrames": "4",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/damage.png",
+        "damageMaxFrames": "3",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-antagonist/death.png",
+        "deathMaxFrames": "7"
+      }
+  },
+  "colors":{
+    "player": 
+      {
+        "min": "#6C192B",
+        "max": "#AF2424"
+      },
+    "antagonist": 
+      {
+        "min": "#004ff9",
+        "max": "#333892"
+      }
+  },
+  "questions": [
+    {
+      "question": "Hoe vaak update u uw apparaten",
+      "answer": "2",
+      "button": [
+        {
+          "text": "Wanneer ik tijd heb"
+        },
+        {
+          "text": "Ik vergeet te updaten"
+        },
+        {
+          "text": "Zo spoedig mogelijk"
+        },
+        {
+          "text": "Nooit"
+        }
+      ],
+        "explanation": "Regelmatige software-updates helpen beveiligingskwetsbaarheden te verhelpen die hackers kunnen misbruiken. Stel indien mogelijk automatische updates in"
+    },
+    {
+      "question": "Is het veilig om oude wachtwoorden opnieuw te gebruiken",
+      "answer": "1",
+      "button": [
+        {
+          "text": "Ja"
+        },
+        {
+          "text": "Nee"
+        },
+        {
+          "text": "Soms"
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "question": "Informeert u uw team over hoe ze online veilig kunnen blijven",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Ja"
+        },
+        {
+          "text": "Nee"
+        }
+      ],
+      "explanation": "Bied uw medewerkers cyberbeveiligingstrainingen aan, waarin onderwerpen als phishing-bewustzijn en veilig surfgedrag op internet aan de orde komen"
+    },
+    {
+      "question": "Is het slim om op onbekende links te klikken",
+      "answer": "1",
+      "button": [
+        {
+          "text": "Ja"
+        },
+        {
+          "text": "Nee"
+        }
+      ],
+      "explanation": "Als u op een onbekende link klikt, kan er een malwaredownload worden geactiveerd die schadelijke bestanden bevat die informatie kunnen verzamelen die op uw apparaat is opgeslagen"
+    },
+
+    {
+      "question": "Helpt het gebruik van encryptie u veilig te blijven tegen hackers",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Ja"
+        },
+        {
+          "text": "Nee"
+        }
+      ],
+      "explanation": "Gebruik versleuteling voor gevoelige gegevens, zowel tijdens de overdracht (bijvoorbeeld via HTTPS) als in rust (bijvoorbeeld bij het versleutelen van bestanden of databases)"
+    },
+    {
+      "question": "Heeft u een plan voor als uw gegevens in gevaar komen",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Je"
+        },
+        {
+          "text": "Nee"
+        }
+      ],
+      "explanation": "Maak een uitgebreid noodherstelplan waarin de stappen worden beschreven die moeten worden genomen in het geval van een cyberincident, inclusief procedures voor het maken van back-ups en het herstellen van gegevens"
+    },
+    {
+      "question": "Moet u uw antivirusprogramma uitschakelen als een app u daarom vraagt",
+      "answer": "1",
+      "button": [
+        {
+          "text": "Ja"
+        },
+        {
+          "text": "Nee"
+        }
+      ],
+      "explanation": "Schakel uw antivirusprogramma nooit uit"
+    },
+    {
+      "question": "Waar staat 2FA voor",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Two Factor Authetecation"
+        },
+        {
+          "text": "2 Football Association"
+        }
+      ],      
+      "explanation": "(2FA) is een beveiligingsmethode voor identiteits- en toegangsbeheer die twee vormen van identificatie vereist om toegang te krijgen tot bronnen en gegevens"
+    },
+    {
+      "question": "Waarom zou u 2FA gebruiken",
+      "answer": "1",
+      "button": [
+        {
+          "text": "Om het jezelf moeilijker te maken om in te loggen"
+        },
+        {
+          "text": "Om het voor hackers moeilijker te maken om toegang te krijgen tot uw account"
+        }
+      ],
+      "explanation": "Schakel waar mogelijk multi-factor authenticatie (MFA) (zoals 2FA) in om een ​​extra beveiligingslaag toe te voegen die verder gaat dan alleen een wachtwoord"
+    },
+    {
+      "question": "Je vindt een USB op straat, ga je deze in je pc steken",
+      "answer": "1",
+      "button": [
+        {
+          "text": "Ja"
+        },
+        {
+          "text": "Nee"
+        }
+      ],
+      "explanation": "Iemand zou een virus op de USB kunnen hebben geplaatst; zelfs maar 1 seconde op uw pc plakken is voldoende om uw apparaat in gevaar te brengen"
+    }
+  ]
+}
+

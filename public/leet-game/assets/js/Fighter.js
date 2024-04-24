@@ -4,6 +4,9 @@ let checkJson = JSON.parse(localStorage.getItem("json"));
 
 const canvas = document.querySelector('canvas');
 
+var dmg = 100 / checkJson.questions.length
+console.log(dmg)
+
 // Canvas' dimension.
 canvas.width = 350;
 canvas.height = 376;
@@ -47,7 +50,8 @@ class Fighter extends Sprite {
             setTimeout(() => { this.attackCooldown = true }, 1000)
             this.switchSprite('attack')
             if (this.isHitting(antagonistFighter)) {
-                antagonistFighter.health -= 10;
+                
+                antagonistFighter.health -= dmg;
                 gsap.to('#' + antagonistFighter.name + 'Health', { width: antagonistFighter.health + '%' });
                 antagonistFighter.switchSprite('takehit');
                 antagonistFighter.isTakingHit = true;
