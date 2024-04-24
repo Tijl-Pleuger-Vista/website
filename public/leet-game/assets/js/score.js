@@ -47,5 +47,5 @@ if (calc <= 40) {
 } else if (calc <= 70){
     document.getElementById("performance").innerHTML = `<div class="strong">Strong</div>`
 } else if (calc <= 100){
-    document.getElementById("performance").innerHTML = `<div class="very-strong">Vey strong</div>`
+    document.getElementById("performance").innerHTML = `<div class="very-strong">Very strong</div>`
 }

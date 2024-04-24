@@ -10,6 +10,7 @@ let gameScope = () => {
         const btn2 = document.getElementById('displayButtonCharlie');
         const btn3 = document.getElementById('displayButtonDelta');
         const flex = document.getElementById('flex');
+        var hit = 0
         
         var displayQuestion = document.getElementById('question');
         var i = -1
@@ -161,9 +162,17 @@ let gameScope = () => {
         if (answer == check){
             player.isAttacking = true;
             nextQuestion(checkJson)
+            hit = 0
         } else {
-            antagonist.isAttacking = true;
-            amount++
+            if (hit == 0){
+                antagonist.isAttacking = true;
+                amount++
+                hit++
+                console.log("hit effect")
+            }
+            else if (hit == 1){
+                console.log("hit no effect")
+            }
         }
     }
 }
