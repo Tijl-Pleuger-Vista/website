@@ -1,19 +1,20 @@
 # Github / Firebase hosting
 
 ## Currently hosting the following projects:
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-...snip...
-<a name="headers"/>
-## Headers
-</br>
-## Test website
-###Challenge-1
-[Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)
+-[Test](#Test)
+-[Fundraiser website](#Fundraiser)
+-[Webshop](#Webshop)
+-[Portfolio](#Portfolio)
+-[Pokedex](#Pokedex)
+-[PVO (BPV)](#PVO (BPV))
+<br>
+### Test
+*Challenge 1*
+[test Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-1)
 ![Picture of a pokemon](test.png)
 
-### Fundraiser website
+### Fundraiser
 *Challenge 2*
 [Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/team-trees/)
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-2)
@@ -23,7 +24,7 @@
 > This repo is not owned by any corpo and isn't connected to any official fundraiser
 
 Credit: 
-- Jerom
+@ Jerom
 
 ### Webshop
 *Challenge 3*
@@ -32,7 +33,7 @@ Credit:
 ![Picture of a man in a suit](webshop.png)
 
 Credit: 
-- Jerom
+@ Jerom
 
 ### Portfolio
 *Challenge 4*
@@ -50,12 +51,10 @@ Credit:
 > Do not fill in any sensitive data since the Database in not protected
 
 Credit: 
--jeerast
--Tayfun
--Jerom
+@jeerast @Tayfun @Jerom
 
 ### PVO (BPV)
-###Challenge-6
+*Challenge-6*
 [PVO Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/)
 [PVO Web Game Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/)
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-6)
