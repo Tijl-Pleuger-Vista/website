@@ -1,7 +1,7 @@
 # Github / Firebase hosting
 
 ## Currently hosting the following projects:
-- [Test website](https://github.com/tijl-pleuger-vista/website.github.io?tab=readme-ov-file###Challenge-6)
+- [Test website](https://github.com/tijl-pleuger-vista/website.github.io/?tab=readme-ov-file###Challenge-6)
 - [Test website](https://github.com/Tijl-Pleuger-Vista/website.github.io?tab=readme-ov-file####Challenge-6)
 
 ## Test website
