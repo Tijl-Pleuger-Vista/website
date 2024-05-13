@@ -1,7 +1,7 @@
 # Github / Firebase hosting
 
 ## Currently hosting the following projects:
--[Test](#Test)
+*[Test](#Test)
 -[Fundraiser website](#Fundraiser)
 -[Webshop](#Webshop)
 -[Portfolio](#Portfolio)
