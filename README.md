@@ -11,7 +11,7 @@
 <br>
 
 ### Test website<br>
-### 1<br>
+### Challenge ### 1<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)<br>
 [Github](https://github.com/Tijl-Pleuger-Vista/project-1)<br>
 ![Test ICON](test.png)<br>
@@ -19,7 +19,7 @@
 <br><br><br>
 
 ### Fundraiser<br>
-### 2<br>
+### Challenge ### 2<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/team-trees/)<br>
 [Github](https://github.com/Tijl-Pleuger-Vista/project-2)<br>
 ![Funraiser ICON](teamtree.png)<br>
@@ -37,7 +37,7 @@ Credit:
 <br><br><br>
 
 ### Webshop<br>
-### 1<br>
+### Challenge ### 3<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/webshop/)<br>
 [Github](https://github.com/Tijl-Pleuger-Vista/project-3)<br>
 ![Webshop ICON](webshop.png)<br>
@@ -50,7 +50,7 @@ Credit:
 <br><br><br>
 
 ### Portfolio<br>
-### 1<br>
+### Challenge ### 4<br>
 [Website](https://headbodyscript.github.io/ign-index)<br>
 [Github](https://github.com/Tijl-Pleuger-Vista/project-4)<br>
 ![HeadBodyScript ICON](portfolio.png)<br>
@@ -58,7 +58,7 @@ Credit:
 <br><br><br>
 
 ### Pokedex<br>
-### 1<br>
+### Challenge ### 5<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/pokedex/)<br>
 [Github](https://github.com/Tijl-Pleuger-Vista/project-5)<br>
 ![Pokemon ICON](pokedex.png)<br>
@@ -74,9 +74,10 @@ Credit:
 @jeerast @Tayfun @Jerom
 
 <br><br><br>
+<bl>
 
 ### PVO (BPV)<br>
-### 1<br>
+### Challenge ### 6<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/)<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/)<br>
 [Github](https://github.com/Tijl-Pleuger-Vista/project-6)<br>
