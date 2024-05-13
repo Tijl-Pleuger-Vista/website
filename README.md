@@ -1,11 +1,11 @@
 # Github / Firebase hosting
 
 ## Currently hosting the following projects:
-- Pokedex
-- PVO Leet Handbook
+- [Test website](https://github.com/Tijl-Pleuger-Vista/project-1?tab=readme-ov-file####Challenge-1)
+- [Test website](https://github.com/Tijl-Pleuger-Vista/project-1?tab=readme-ov-file####Challenge-6)
 
-### Test website
-*Challenge 1*
+## Test website
+###Challenge-1
 [Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-1)
 ![Picture of a pokemon](test.png)
@@ -52,7 +52,7 @@ Credit:
 -Jerom
 
 ### PVO (BPV)
-*Challenge 6*
+###Challenge-1
 [PVO Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/)
 [PVO Web Game Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/)
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-6)
