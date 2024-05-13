@@ -1,12 +1,12 @@
 # Github / Firebase hosting
 
 ## Currently hosting the following projects:
-*[Test](#Test)
--[Fundraiser website](#Fundraiser)
--[Webshop](#Webshop)
--[Portfolio](#Portfolio)
--[Pokedex](#Pokedex)
--[PVO (BPV)](#PVO (BPV))
+- [Test](#Test)
+- [Fundraiser website](#Fundraiser)
+- [Webshop](#Webshop)
+- [Portfolio](#Portfolio)
+- [Pokedex](#Pokedex)
+- [PVO (BPV)](#PVO (BPV))
 <br>
 ### Test
 *Challenge 1*
