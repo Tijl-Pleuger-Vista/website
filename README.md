@@ -7,12 +7,16 @@
 - [Portfolio](#Portfolio)
 - [Pokedex](#Pokedex)
 - [PVO (BPV)](#PVO (BPV))
+
 <br>
+
 ### Test
 *Challenge 1*
 [test Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-1)
 ![Picture of a pokemon](test.png)
+
+<br><br><br>
 
 ### Fundraiser
 *Challenge 2*
@@ -20,11 +24,17 @@
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-2)
 ![Picture of a pokemon](teamtree.png)
 
+<br>
+
 > [!IMPORTANT]
 > This repo is not owned by any corpo and isn't connected to any official fundraiser
 
+<br>
+
 Credit: 
 @ Jerom
+
+<br><br><br>
 
 ### Webshop
 *Challenge 3*
@@ -32,8 +42,12 @@ Credit:
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-3)
 ![Picture of a man in a suit](webshop.png)
 
+<br>
+
 Credit: 
 @ Jerom
+
+<br><br><br>
 
 ### Portfolio
 *Challenge 4*
@@ -41,17 +55,25 @@ Credit:
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-4)
 ![The HeadBodyScript Logo](portfolio.png)
 
+<br><br><br>
+
 ### Pokedex
 *Challenge 5*
 [Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/pokedex/)
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-5)
 ![Picture of a pokemon](pokedex.png)
 
+<br>
+
 > [!CAUTION]
 > Do not fill in any sensitive data since the Database in not protected
 
+<br>
+
 Credit: 
 @jeerast @Tayfun @Jerom
+
+<br><br><br>
 
 ### PVO (BPV)
 *Challenge-6*
@@ -60,9 +82,13 @@ Credit:
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-6)
 ![Logo from PVO](pvo.png)
 
+<br>
+
 > [!CAUTION]
 > Do not fill in any sensitive data since the Database in not protected
 > This repo is not owned by PVO and all data is for educational purposes only
+
+<br>
 
 Credit: 
 @jeerast
