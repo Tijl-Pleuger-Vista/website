@@ -11,7 +11,7 @@
 <br>
 
 ### Test website<br>
-*Challenge 1*
+*Challenge 1*<br>
 ![Test ICON](test.png)<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)<br>
 [Github](https://github.com/Tijl-Pleuger-Vista/project-1)<br><br>
