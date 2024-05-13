@@ -1,94 +1,75 @@
-# Github / Firebase hosting
+# Github / Firebase hosting<br><br>
 
-## Currently hosting the following projects:
-- [Test](#Test)
-- [Fundraiser website](#Fundraiser)
-- [Webshop](#Webshop)
-- [Portfolio](#Portfolio)
-- [Pokedex](#Pokedex)
-- [PVO (BPV)](#PVO (BPV))
-
-<br>
-
-### Test
-*Challenge 1*
-[test Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)
-[Github Repo](https://github.com/Tijl-Pleuger-Vista/project-1)
-![Picture of a pokemon](test.png)
-
-<br><br><br>
-
-### Fundraiser
-*Challenge 2*
-[Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/team-trees/)
-[Github Repo](https://github.com/Tijl-Pleuger-Vista/project-2)
-![Picture of a pokemon](teamtree.png)
+## Currently hosting the following projects:<br><br>
+- [Challenge 1](#1)
+- [Challenge 2](#2)
+- [Challenge 3](#3)
+- [Challenge 4](#4)
+- [Challenge 5](#5)
+- [Challenge 6](#pvo-bpv)
 
 <br>
+
+### Test website<br>
+*Challenge 1*<br>
+![Test ICON](test.png)<br>
+[Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)<br>
+[Github](https://github.com/Tijl-Pleuger-Vista/project-1)<br><br>
+
+---
+### Fundraiser<br>
+*Challenge 2*<br>
+![Funraiser ICON](teamtree.png)<br>
+[Website](https://tijl-pleuger-vista.github.io/website.github.io/public/team-trees/)<br>
+[Github](https://github.com/Tijl-Pleuger-Vista/project-2)<br><br>
 
 > [!IMPORTANT]
 > This repo is not owned by any corpo and isn't connected to any official fundraiser
 
-<br>
+Credit: 
+@ Jerom
+
+---
+### Webshop<br>
+*Challenge 3*<br>
+![Webshop ICON](webshop.png)<br>
+[Website](https://tijl-pleuger-vista.github.io/website.github.io/public/webshop/)<br>
+[Github](https://github.com/Tijl-Pleuger-Vista/project-3)<br><br>
 
 Credit: 
 @ Jerom
 
-<br><br><br>
+---
+### Portfolio<br>
+*Challenge 4*<br>
+![HeadBodyScript ICON](portfolio.png)<br>
+[Website](https://headbodyscript.github.io/ign-index)<br>
+[Github](https://github.com/Tijl-Pleuger-Vista/project-4)<br><br>
 
-### Webshop
-*Challenge 3*
-[Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/webshop/)
-[Github Repo](https://github.com/Tijl-Pleuger-Vista/project-3)
-![Picture of a man in a suit](webshop.png)
-
-<br>
-
-Credit: 
-@ Jerom
-
-<br><br><br>
-
-### Portfolio
-*Challenge 4*
-[Portfolio Website](https://headbodyscript.github.io/ign-index)
-[Github Repo](https://github.com/Tijl-Pleuger-Vista/project-4)
-![The HeadBodyScript Logo](portfolio.png)
-
-<br><br><br>
-
-### Pokedex
-*Challenge 5*
-[Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/pokedex/)
-[Github Repo](https://github.com/Tijl-Pleuger-Vista/project-5)
-![Picture of a pokemon](pokedex.png)
-
-<br>
+---
+### Pokedex<br>
+*Challenge 5*<br>
+![Pokemon ICON](pokedex.png)<br>
+[Website](https://tijl-pleuger-vista.github.io/website.github.io/public/pokedex/)<br>
+[Github](https://github.com/Tijl-Pleuger-Vista/project-5)<br><br>
 
 > [!CAUTION]
-> Do not fill in any sensitive data since the Database in not protected
-
-<br>
+> Do not fill in any sensitive data since the Database in not protected<br>
 
 Credit: 
-@jeerast @Tayfun @Jerom
+@jeerast @Tayfun @Jerom<br><br>
 
-<br><br><br>
-
-### PVO (BPV)
-*Challenge-6*
-[PVO Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/)
-[PVO Web Game Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/)
-[Github Repo](https://github.com/Tijl-Pleuger-Vista/project-6)
-![Logo from PVO](pvo.png)
-
-<br>
+---
+### PVO (BPV)<br>
+*Challenge 6*<br>
+![PVO ICON](pvo.png)<br>
+- [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/)<br>
+- [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/)<br>
+- [Github](https://github.com/Tijl-Pleuger-Vista/project-6)<br><br>
 
 > [!CAUTION]
 > Do not fill in any sensitive data since the Database in not protected
 > This repo is not owned by PVO and all data is for educational purposes only
-
-<br>
 
 Credit: 
 @jeerast
