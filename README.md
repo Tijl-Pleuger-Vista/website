@@ -1,9 +1,12 @@
 # Github / Firebase hosting
 
 ## Currently hosting the following projects:
-- [Test website](https://github.com/tijl-pleuger-vista/website.github.io/?tab=readme-ov-file###Challenge-6)
-- [Test website](https://github.com/Tijl-Pleuger-Vista/website.github.io?tab=readme-ov-file####Challenge-6)
-
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...
+<a name="headers"/>
+## Headers
+</br>
 ## Test website
 ###Challenge-1
 [Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)
