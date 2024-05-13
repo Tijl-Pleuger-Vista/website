@@ -1,11 +1,11 @@
 # Github / Firebase hosting<br><br>
 
 ## Currently hosting the following projects:<br><br>
-- [Challenge 1](#1)
-- [Challenge 2](#2)
-- [Challenge 3](#3)
-- [Challenge 4](#4)
-- [Challenge 5](#5)
+- [Challenge 1](#test-website)
+- [Challenge 2](#fundraiser)
+- [Challenge 3](#webshop)
+- [Challenge 4](#portfolio)
+- [Challenge 5](#pokedex)
 - [Challenge 6](#pvo-bpv)
 
 <br>
@@ -68,7 +68,7 @@ Credit:
 - [Github](https://github.com/Tijl-Pleuger-Vista/project-6)<br><br>
 
 > [!CAUTION]
-> Do not fill in any sensitive data since the Database in not protected
+> Do not fill in any sensitive data since the Database in not protected<br>
 > This repo is not owned by PVO and all data is for educational purposes only
 
 Credit: 
