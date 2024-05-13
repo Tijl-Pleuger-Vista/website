@@ -1,25 +1,25 @@
-# Github / Firebase hosting
+# Github / Firebase hosting<br><br>
 
-## Currently hosting the following projects:
-- [Test](#Test)
-- [Fundraiser website](#Fundraiser)
-- [Webshop](#Webshop)
-- [Portfolio](#Portfolio)
-- [Pokedex](#Pokedex)
-- [PVO (BPV)](#PVO (BPV))
+## Currently hosting the following projects:<br><br>
+- [Challenge 1](#1)
+- [Challenge 2](#2)
+- [Challenge 3](#3)
+- [Challenge 4](#4)
+- [Challenge 5](#5)
+- [Challenge 6](#6)
 
 <br>
 
-### Test
-*Challenge 1*
+### Test website<br>
+### 1<br>
 [test Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)<br>
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-1)<br>
 ![Picture of a pokemon](test.png)<br>
 
 <br><br><br>
 
-### Fundraiser
-*Challenge 2*
+### Fundraiser<br>
+### 2<br>
 [Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/team-trees/)<br>
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-2)<br>
 ![Picture of a pokemon](teamtree.png)<br>
@@ -36,8 +36,8 @@ Credit:
 
 <br><br><br>
 
-### Webshop
-*Challenge 3*
+### Webshop<br>
+### 1<br>
 [Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/webshop/)<br>
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-3)<br>
 ![Picture of a man in a suit](webshop.png)<br>
@@ -49,7 +49,8 @@ Credit:
 
 <br><br><br>
 
-### Portfolio
+### Portfolio<br>
+### 1<br>
 *Challenge 4*
 [Portfolio Website](https://headbodyscript.github.io/ign-index)<br>
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-4)<br>
@@ -57,7 +58,8 @@ Credit:
 
 <br><br><br>
 
-### Pokedex
+### Pokedex<br>
+### 1<br>
 *Challenge 5*
 [Pokedex Website](https://tijl-pleuger-vista.github.io/website.github.io/public/pokedex/)<br>
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-5)<br>
@@ -75,7 +77,8 @@ Credit:
 
 <br><br><br>
 
-### PVO (BPV)
+### PVO (BPV)<br>
+### 1<br>
 *Challenge-6*
 [PVO Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/)<br>
 [PVO Web Game Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/)<br>
