@@ -6,12 +6,12 @@
 - [Challenge 3](#3)
 - [Challenge 4](#4)
 - [Challenge 5](#5)
-- <a name="[headers](https://github.com/Tijl-Pleuger-Vista/website.github.io?tab=readme-ov-file#pvo-bpv)"/>
+- [Challenge 6](#PVO-(BPV))
 
 <br>
 
 ### Test website<br>
-### Challenge ### 1<br>
+*Challenge 1*<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/test/)<br>
 [Github](https://github.com/Tijl-Pleuger-Vista/project-1)<br>
 ![Test ICON](test.png)<br>
@@ -77,7 +77,7 @@ Credit:
 <bl>
 
 ### PVO (BPV)<br>
-### Challenge ### 6<br>
+*Challenge 6*<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/)<br>
 [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/)<br>
 [Github](https://github.com/Tijl-Pleuger-Vista/project-6)<br>
