@@ -6,7 +6,7 @@
 - [Challenge 3](#3)
 - [Challenge 4](#4)
 - [Challenge 5](#5)
-- [Challenge 6](#PVO-(BPV))
+- [Challenge 6](#pvo-bpv)
 
 <br>
 
