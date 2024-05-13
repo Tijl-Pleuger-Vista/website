@@ -6,7 +6,7 @@
 - [Challenge 3](#3)
 - [Challenge 4](#4)
 - [Challenge 5](#5)
-- [Challenge 6](#6)
+- <a name="[headers](https://github.com/Tijl-Pleuger-Vista/website.github.io?tab=readme-ov-file#pvo-bpv)"/>
 
 <br>
 
