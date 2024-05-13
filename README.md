@@ -20,7 +20,7 @@
 > This repo is not owned by any corpo and isn't connected to any official fundraiser
 <br/>
 Credit: 
-@Jerom
+- Jerom
 <br/><br/><br/>
 ### Webshop
 *Challenge 3*
@@ -29,7 +29,7 @@ Credit:
 ![Picture of a man in a suit](webshop.png)
 <br/>
 Credit: 
-@Jerom
+- Jerom
 <br/><br/><br/>
 ### Portfolio
 *Challenge 4*
@@ -47,7 +47,9 @@ Credit:
 > Do not fill in any sensitive data since the Database in not protected
 <br/>
 Credit: 
-@jeerast @Tayfun @Jerom
+-jeerast
+-Tayfun
+-Jerom
 <br/><br/><br/>
 ### PVO (BPV)
 *Challenge 6*
