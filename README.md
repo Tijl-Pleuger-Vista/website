@@ -1,7 +1,7 @@
 # Github / Firebase hosting
 
 ## Currently hosting the following projects:
-- [Test website](https://github.com/Tijl-Pleuger-Vista/website.github.io?tab=readme-ov-file####Challenge-1)
+- [Test website](https://github.com/tijl-pleuger-vista/website.github.io?tab=readme-ov-file###Challenge-6)
 - [Test website](https://github.com/Tijl-Pleuger-Vista/website.github.io?tab=readme-ov-file####Challenge-6)
 
 ## Test website
@@ -52,7 +52,7 @@ Credit:
 -Jerom
 
 ### PVO (BPV)
-###Challenge-1
+###Challenge-6
 [PVO Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/)
 [PVO Web Game Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/)
 [Github Repo](https://github.com/Tijl-Pleuger-Vista/project-6)
