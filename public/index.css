@@ -1,0 +1,35 @@
+:root {
+    --txt: #000000;
+}
+.container{
+    width: 100%;
+    height: 100dvh;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--txt);
+}
+
+a:visited {
+    color: var(--txt);
+}
+
+a:hover {
+    color: var(--txt);
+    text-decoration: underline;
+}
