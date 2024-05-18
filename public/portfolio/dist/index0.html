@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/app.ae05fb60.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://headbodyscript.github.io/assets/css/app-0.css">
+    <link rel="stylesheet" href="https://headbodyscript.github.io/assets/css/app-1.css">
+    <title>Document</title>
+<script src="/app.ae05fb60.js"></script></head>
+<body>
+    <script src="https://headbodyscript.nl/assets/js/sidebar.js"></script>
+    <div class="splash-intro">
+        <h1 class="splash-logo-header">
+            <span class="splash-logo">Head</span><span class="splash-logo">Body</span><span class="splash-logo">Script</span>
+        </h1>
+    </div>
+    
+
+
+        <script>var intro = document.querySelector('.splash-intro');
+var logo = document.querySelector('.splash-logo-header');
+var logoSpan = document.querySelectorAll('.splash-logo');
+window.addEventListener('DOMContentLoaded', function () {
+  setTimeout(function () {
+    logoSpan.forEach(function (span, idx) {
+      setTimeout(function () {
+        span.classList.add('active');
+      }, (idx + 1) * 400);
+    });
+    setTimeout(function () {
+      logoSpan.forEach(function (span, idx) {
+        setTimeout(function () {
+          span.classList.remove('active');
+          span.classList.add('fade');
+        }, (idx + 1) * 50);
+      });
+    }, 2000);
+    setTimeout(function () {
+      intro.style.top = '-100vh';
+    }, 2300);
+  });
+});</script>
+</body>
+</html>
