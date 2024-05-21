@@ -10,6 +10,7 @@ let gameScope = () => {
         const btn2 = document.getElementById('displayButtonCharlie');
         const btn3 = document.getElementById('displayButtonDelta');
         const flex = document.getElementById('flex');
+        
         var hit = 0
         
         var displayQuestion = document.getElementById('question');
@@ -28,6 +29,7 @@ let gameScope = () => {
         document.getElementById("displayDescription").innerHTML = checkJson.init.description;
 
         document.title = checkJson.init.name
+        var skip = checkJson.init.skip
 
         root.style.setProperty('--player-min', `${checkJson.colors.player.min}`);
         root.style.setProperty('--player-max', `${checkJson.colors.player.max}`);
@@ -169,6 +171,10 @@ let gameScope = () => {
                 amount++
                 hit++
                 console.log("hit effect")
+                console.log(skip)
+                if(skip == false){
+
+                }
             }
             else if (hit == 1){
                 console.log("hit no effect")
