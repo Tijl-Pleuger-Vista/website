@@ -25,16 +25,18 @@ console.log(amount)
 console.log(total)
 
 
-var calc = total - amount
+// var calc = total - amount
+var calc = (100 * amount) / total;
+let _calc = Math.round(calc);
 
-console.log("calc " + calc)
+console.log("calc " + _calc)
 document.getElementById("meow").innerHTML = `<a href="${checkJson.init.href}">Click here to learn more</a>`
 
-var userExperience = 471 - calc - calc
+var userExperience = 471 - _calc - _calc
 root.style.setProperty('--experience', userExperience);
 
 setInterval(() => {
-    if(countExperience == calc){
+    if(countExperience == _calc){
         clearInterval();
     }else{
         countExperience += 1;

@@ -172,8 +172,9 @@ let gameScope = () => {
                 hit++
                 console.log("hit effect")
                 console.log(skip)
-                if(skip == false){
-
+                if(skip == "true"){
+                    nextQuestion(checkJson)
+                    hit = 0
                 }
             }
             else if (hit == 1){
