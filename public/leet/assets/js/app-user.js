@@ -163,4 +163,3 @@ function checkUserReconnectLogin(auth, userCreds, userPass) {
         console.log(error.message);
     })
 }
-var myVar = oldVar.stuff

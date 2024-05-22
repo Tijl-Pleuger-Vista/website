@@ -19,7 +19,6 @@ var total = total * 10
 
 var calc = (100 * amount) / total;
 
-console.log("calc " + calc)
 document.getElementById("meow").innerHTML = `<a href="${checkJson.init.href}">Click here to learn more</a>`
 
 var userExperience = 471 - calc - calc

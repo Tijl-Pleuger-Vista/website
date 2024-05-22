@@ -17,7 +17,6 @@ let gameScope = () => {
         var root = document.querySelector(':root');
 
         let checkJson = JSON.parse(localStorage.getItem("json"));
-        console.log(checkJson)
 
         document.getElementById("displayTitle").innerHTML = checkJson.init.title;
         document.getElementById("displayStart").innerHTML = checkJson.init.start;
