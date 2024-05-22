@@ -62,9 +62,9 @@ Credit:
 ---
 ### PVO (BPV)<br>
 *Challenge 6*<br>
-![PVO ICON](pvo.png)<br>
-- [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/)<br>
-- [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet-game/)<br>
+![PVO ICON](https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/icon/icon.svg)<br>
+- [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet/handbook/)<br>
+- [Website](https://tijl-pleuger-vista.github.io/website.github.io/public/leet/game/)<br>
 - [Github](https://github.com/Tijl-Pleuger-Vista/project-6)<br><br>
 
 > [!CAUTION]
