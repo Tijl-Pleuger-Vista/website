@@ -10,7 +10,7 @@ let gameScope = () => {
         const btn2 = document.getElementById('displayButtonCharlie');
         const btn3 = document.getElementById('displayButtonDelta');
         const flex = document.getElementById('flex');
-        
+
         var displayQuestion = document.getElementById('question');
         var i = -1
         var amount = 0 
@@ -56,7 +56,7 @@ let gameScope = () => {
 
                   localStorage.setItem("data", JSON.stringify(jsonData));
                     window.location.href = "post-game.html";
-                // window.location.href = checkJson.init.href;
+
             }
             if (i < checkJson.questions.length){
                 displayQuestion.innerHTML =  checkJson.questions[i].question
@@ -73,14 +73,14 @@ let gameScope = () => {
 
                 switch (buttonLength) {
                     case 1:
-                        // console.log("I have 1 button")
+
                         btn0.classList.add("active");
                         flex.classList.add("flex-1");
 
                         btn0.innerHTML = checkJson.questions[i].button[0].text
                     break;
                     case 2:
-                        // console.log("I have 2 buttons")
+
                         btn0.classList.add("active");
                         btn1.classList.add("active");
                         flex.classList.add("flex-2");
@@ -89,7 +89,7 @@ let gameScope = () => {
                         btn1.innerHTML = checkJson.questions[i].button[1].text
                     break;
                     case 3:
-                        // console.log("I have 3 buttons")
+
                         btn0.classList.add("active");
                         btn1.classList.add("active");
                         btn2.classList.add("active");
@@ -100,7 +100,7 @@ let gameScope = () => {
                         btn2.innerHTML = checkJson.questions[i].button[2].text
                     break;
                     case 4:
-                        // console.log("I have 4 buttons")
+
                         btn0.classList.add("active");
                         btn1.classList.add("active");
                         btn2.classList.add("active");
@@ -115,7 +115,7 @@ let gameScope = () => {
                 }
             } 
         }
-    
+
     function animate() {
         window.requestAnimationFrame(animate);
         background.update();
@@ -126,14 +126,14 @@ let gameScope = () => {
             if (!player.movement() && !player.isAttacking && !player.isTakingHit) {
                 player.switchSprite('idle');
             }
-    
+
             if (!antagonist.movement() && !antagonist.isAttacking && !antagonist.isTakingHit) {
                 antagonist.switchSprite('idle')
             }
         player.attack(antagonist);
         antagonist.attack(player);
     }
-    
+
     function update(fighter) {
         if (fighter.health > 0) {
             fighter.update();
@@ -154,9 +154,8 @@ let gameScope = () => {
     btn2.addEventListener("click", () => {answerCheck(2)});
     btn3.addEventListener("click", () => {answerCheck(3)});
 
-
     function answerCheck(check){
-        
+
         var answer = checkJson.questions[i].answer
 
         if (answer == check){
