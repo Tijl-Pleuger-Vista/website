@@ -27,6 +27,7 @@ let gameScope = () => {
         document.getElementById("displayDescription").innerHTML = checkJson.init.description;
 
         document.title = checkJson.init.name
+        var skip = checkJson.init.skip
 
         root.style.setProperty('--player-min', `${checkJson.colors.player.min}`);
         root.style.setProperty('--player-max', `${checkJson.colors.player.max}`);
@@ -161,9 +162,13 @@ let gameScope = () => {
         if (answer == check){
             player.isAttacking = true;
             nextQuestion(checkJson)
+
         } else {
             antagonist.isAttacking = true;
             amount++
+            if(skip == "true"){
+                nextQuestion(checkJson) 
+            }
         }
     }
 }
