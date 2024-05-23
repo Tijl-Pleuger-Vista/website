@@ -38,3 +38,6 @@ public/Challenge-6/README.md
 firebase.json
 firebase.exe
 firebase-new.exe
+.firebase/
+*.cache
+.firebase/hosting.cHVibGlj.cache
